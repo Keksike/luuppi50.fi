@@ -1,13 +1,24 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
+
+import logo from '../static/images/eventtikuva2.png'
+
+const LogoContainer = styled.div`
+  flex: 1;
+  justify-self: center;
+  align-self: center;
+  padding: 0 20px;
+`;
+
+const Logo = styled.img`
+  width: 100%;
+`;
 
 const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
+  <LogoContainer>
+    <Logo src={logo} alt="logo"/>
+  </LogoContainer>
 )
 
 export default IndexPage
