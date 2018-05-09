@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import logo from '../static/images/eventtikuva2.png'
+import logo from '../static/images/eventtikuva3.png'
 
 const LogoContainer = styled.div`
   flex: 1;
