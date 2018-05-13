@@ -3,27 +3,29 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
-import Header from '../components/header'
 import './index.css'
+import Navigation from '../components/Navigation'
+// import logoStrap from '../static/images/logonauha2.png'
 
 const PageContainer = styled.div`
   height: 100vh;
   width: 100vw;
-`;
+`
 
 const ContentContainer = styled.div`
   margin: 0 auto;
   max-width: 960px;
-  padding-top: 0;
+  padding: 0 5rem;
   height: 100vh;
   display: flex;
-`;
+  flex-direction: column;
+`
 
 const Layout = ({ children, data }) => (
   <PageContainer>
-    <Helmet title={data.site.siteMetadata.title}/>
-    {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+    <Helmet title={data.site.siteMetadata.title} />
     <ContentContainer>
+      <Navigation />
       {children()}
     </ContentContainer>
   </PageContainer>
