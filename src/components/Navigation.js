@@ -44,11 +44,11 @@ const NavigationWrapper = styled.div`
 
 const StyledLink = styled(Link)`
   font-family: 'Crimson Text', serif;
-  font-size: 17px;
+  font-size: 18px;
   margin-right: 1rem;
   padding: 0.5rem;
   &:hover {
-    border-bottom: 1px solid ${themeColors.textBlack};
+    border-bottom: 1px solid ${themeColors.secondaryGreyLighter};
   }
 
   &:last-child {
@@ -60,7 +60,7 @@ const renderNavigationLink = page => (
   <StyledLink
     exact
     to={page.link}
-    activeStyle={{ borderBottom: `2px solid ${themeColors.textBlack}` }}
+    activeStyle={{ borderBottom: `1px solid ${themeColors.textBlack}` }}
   >
     {page.text}
   </StyledLink>

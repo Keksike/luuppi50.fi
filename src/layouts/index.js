@@ -7,12 +7,12 @@ import './index.css'
 import Navigation from '../components/Navigation'
 // import logoStrap from '../static/images/logonauha2.png'
 
-const PageContainer = styled.div`
+const Page = styled.div`
   height: 100vh;
   width: 100vw;
 `
 
-const ContentContainer = styled.div`
+const PageContainer = styled.div`
   margin: 0 auto;
   max-width: 960px;
   padding: 0 5rem;
@@ -21,14 +21,20 @@ const ContentContainer = styled.div`
   flex-direction: column;
 `
 
+const ContentContainer = styled.div`
+  padding: 1.5rem 1rem;
+`
+
 const Layout = ({ children, data }) => (
-  <PageContainer>
+  <Page>
     <Helmet title={data.site.siteMetadata.title} />
-    <ContentContainer>
+    <PageContainer>
       <Navigation />
-      {children()}
-    </ContentContainer>
-  </PageContainer>
+      <ContentContainer>
+        {children()}
+      </ContentContainer>
+    </PageContainer>
+  </Page>
 )
 
 Layout.propTypes = {
