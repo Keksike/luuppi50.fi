@@ -1,4 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+
+
 html, body {
   margin: 0;
   height: 100%;
+  background-color: #fafafa;
+  color: #1A1A1A;
+}
+
+a {
+  color: #1A1A1A;
+  background-color: #fafafa;
+  text-decoration: none; /* no underline */
 }

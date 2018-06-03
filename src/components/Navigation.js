@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+import { themeColors } from '../layouts/themeStyles';
+
 const pages = [
   {
     text: 'Etusivu',
@@ -12,33 +14,54 @@ const pages = [
     link: '/vuosijuhlaviikko',
   },
   {
-    text: 'Pääjuhla',
+    text: 'Seminaari',
+    link: '/seminaari',
+  },
+  {
+    text: 'Pääjuhla & sillis',
     link: '/paajuhla',
   },
   {
-    text: 'Sillis',
-    link: '/sillis',
+    text: 'Etiketti',
+    link: '/etiketti',
   },
   {
-    text: 'Kumppanit',
+    text: 'Kumppanit & edut',
     link: '/kumppanit',
   },
   {
-    text: 'Yhteystiedot',
-    link: '/yhteystiedot',
+    text: 'Ilmoittautuminen',
+    link: '/ilmoittautuminen',
   },
 ]
 
 const NavigationWrapper = styled.div`
-  height: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `
 
 const StyledLink = styled(Link)`
-  background-color: white;
+  font-family: 'Crimson Text', serif;
+  font-size: 17px;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  &:hover {
+    border-bottom: 1px solid ${themeColors.textBlack};
+  }
+
+  &:last-child {
+    margin: 0;
+  }
 `
 
 const renderNavigationLink = page => (
-  <StyledLink exact to={page.link} activeStyle={{ backgroundColor: 'grey' }}>
+  <StyledLink
+    exact
+    to={page.link}
+    activeStyle={{ borderBottom: `2px solid ${themeColors.textBlack}` }}
+  >
     {page.text}
   </StyledLink>
 )
