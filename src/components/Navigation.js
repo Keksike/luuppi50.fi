@@ -47,6 +47,7 @@ const StyledLink = styled(Link)`
   font-size: 18px;
   margin-right: 1rem;
   padding: 0.5rem;
+  color: #1A1A1A;
   &:hover {
     border-bottom: 1px solid ${themeColors.secondaryGreyLighter};
   }
@@ -56,8 +57,9 @@ const StyledLink = styled(Link)`
   }
 `
 
-const renderNavigationLink = page => (
+const renderNavigationLink = (page, idx) => (
   <StyledLink
+    key={idx}
     exact
     to={page.link}
     activeStyle={{ borderBottom: `1px solid ${themeColors.textBlack}` }}
@@ -68,7 +70,7 @@ const renderNavigationLink = page => (
 
 const Navigation = ({ siteTitle }) => (
   <NavigationWrapper>
-    {pages.map(page => renderNavigationLink(page))}
+    {pages.map((page, idx) => renderNavigationLink(page, idx))}
   </NavigationWrapper>
 )
 export default Navigation

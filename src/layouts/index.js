@@ -5,18 +5,20 @@ import styled from 'styled-components'
 
 import './index.css'
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 // import logoStrap from '../static/images/logonauha2.png'
 
 const Page = styled.div`
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 `
 
 const PageContainer = styled.div`
+  flex: 1;
   margin: 0 auto;
   max-width: 960px;
   padding: 0 5rem;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 `
@@ -27,6 +29,7 @@ const ContentContainer = styled.div`
 
 const Layout = ({ children, data }) => (
   <Page>
+
     <Helmet title={data.site.siteMetadata.title} />
     <PageContainer>
       <Navigation />
@@ -34,6 +37,7 @@ const Layout = ({ children, data }) => (
         {children()}
       </ContentContainer>
     </PageContainer>
+    <Footer />
   </Page>
 )
 
