@@ -19,11 +19,12 @@ const SponsorsWrapper = styled.div`
 
 const SponsorsText = styled.div`
   font-size: 12px;
-  color: ${themeColors.secondaryGreyLighter};
+  color: ${themeColors.secondaryGreyLight};
 `
 
 const ContactsWrapper = styled.div`
   text-align: right;
+  color: ${themeColors.secondaryGreyLight};
 `
 
 const Footer = ({ siteTitle }) => (

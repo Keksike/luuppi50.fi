@@ -24,12 +24,11 @@ const PageContainer = styled.div`
 `
 
 const ContentContainer = styled.div`
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1.5rem;
 `
 
 const Layout = ({ children, data }) => (
   <Page>
-
     <Helmet title={data.site.siteMetadata.title} />
     <PageContainer>
       <Navigation />

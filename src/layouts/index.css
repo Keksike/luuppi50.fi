@@ -6,11 +6,19 @@ html, body {
   background-color: #fafafa;
   color: #1A1A1A;
   font-family: 'Raleway', sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 15px;
 }
 
 a {
   background-color: #fafafa;
   text-decoration: none; /* no underline */
+  color: rgb(211, 166, 2);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h3 {
+  margin-top: 2rem;
 }

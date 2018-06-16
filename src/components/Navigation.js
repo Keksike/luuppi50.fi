@@ -43,12 +43,14 @@ const NavigationWrapper = styled.div`
 `
 
 const StyledLink = styled(Link)`
+  text-decoration: none;
   font-family: 'Crimson Text', serif;
   font-size: 18px;
   margin-right: 1rem;
   padding: 0.5rem;
   color: #1A1A1A;
   &:hover {
+    text-decoration: none;
     border-bottom: 1px solid ${themeColors.secondaryGreyLighter};
   }
 
