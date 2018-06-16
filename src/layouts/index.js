@@ -3,30 +3,41 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
-import Header from '../components/header'
 import './index.css'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+// import logoStrap from '../static/images/logonauha2.png'
+
+const Page = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`
 
 const PageContainer = styled.div`
-  height: 100vh;
-  width: 100vw;
-`;
-
-const ContentContainer = styled.div`
+  flex: 1;
   margin: 0 auto;
   max-width: 960px;
-  padding-top: 0;
-  height: 100vh;
+  padding: 0 5rem;
   display: flex;
-`;
+  flex-direction: column;
+`
+
+const ContentContainer = styled.div`
+  padding: 1.5rem 1.5rem;
+`
 
 const Layout = ({ children, data }) => (
-  <PageContainer>
-    <Helmet title={data.site.siteMetadata.title}/>
-    {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-    <ContentContainer>
-      {children()}
-    </ContentContainer>
-  </PageContainer>
+  <Page>
+    <Helmet title={data.site.siteMetadata.title} />
+    <PageContainer>
+      <Navigation />
+      <ContentContainer>
+        {children()}
+      </ContentContainer>
+    </PageContainer>
+    <Footer />
+  </Page>
 )
 
 Layout.propTypes = {
