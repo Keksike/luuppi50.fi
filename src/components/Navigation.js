@@ -49,6 +49,9 @@ const StyledLink = styled(Link)`
   margin-right: 1rem;
   padding: 0.5rem;
   color: #1A1A1A;
+  white-space: nowrap;
+
+
   &:hover {
     text-decoration: none;
     border-bottom: 1px solid ${themeColors.secondaryGreyLighter};
