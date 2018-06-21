@@ -31,6 +31,7 @@ const StyledLink = styled(Link)`
   padding: 0.5rem;
   color: #1A1A1A;
   white-space: nowrap;
+  border-bottom: 1px solid transparent;
 
   &:hover {
     text-decoration: none;
@@ -48,7 +49,7 @@ const Logo = styled.img`
   opacity: 0.58;
 
   @media (max-width: 1050px) {
-    display: inline-block !important;
+    display: inline-block;
   }
 `;
 
