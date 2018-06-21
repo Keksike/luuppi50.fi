@@ -45,7 +45,7 @@ const StyledLink = styled(Link)`
 const Logo = styled.img`
   display: none;
   width: 100px;
-  opacity: 0.66;
+  opacity: 0.58;
 
   @media (max-width: 1050px) {
     display: inline-block !important;
