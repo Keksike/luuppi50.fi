@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 import './index.css'
+import { theme } from './theme';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import MobileNavigation from '../components/MobileNavigation';
@@ -24,27 +25,33 @@ const PageContainer = styled.div`
   flex-direction: column;
   box-sizing: border-box;
 
-  @media (max-width: 700px) {
-    padding: 5vw;
+  @media (max-width: 1050px) {
+    padding: 0;
   }
 `
 
 const ContentContainer = styled.div`
   padding: 1.5rem 1.5rem;
+
+  @media (max-width: 1050px) {
+    padding: 0 1.5rem;
+  }
 `
 
 const Layout = ({ children, data }) => (
-  <Page>
-    <Helmet title={data.site.siteMetadata.title} />
-    <MobileNavigation />
-    <PageContainer>
-      <Navigation />
-      <ContentContainer>
-        {children()}
-      </ContentContainer>
-    </PageContainer>
-    <Footer />
-  </Page>
+  <ThemeProvider theme={theme}>
+    <Page>
+      <Helmet title={data.site.siteMetadata.title} />
+      <MobileNavigation />
+      <PageContainer>
+        <Navigation />
+        <ContentContainer>
+          {children()}
+        </ContentContainer>
+      </PageContainer>
+      <Footer />
+    </Page>
+  </ThemeProvider>
 )
 
 Layout.propTypes = {
