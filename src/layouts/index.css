@@ -12,7 +12,7 @@ html, body {
 
 a {
   background-color: #fafafa;
-  text-decoration: none; /* no underline */
+  text-decoration: none;
   color: rgb(211, 166, 2);
 }
 a:hover {

@@ -29,4 +29,4 @@ const pages = [
   },
 ]
 
-export default pages;
+export default pages
