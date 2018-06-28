@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import { themeColors } from '../layouts/themeStyles'
 import pages from '../pages'
+import luuppiLogo from '../static/images/luuppi-logo.png'
 
 const NavigationWrapper = styled.div`
   height: 50px;
@@ -12,7 +12,14 @@ const NavigationWrapper = styled.div`
   justify-content: space-between;
 
   @media (max-width: 1050px) {
-    display: none;
+    margin: 1rem;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid ${props => props.theme.secondaryGreyLightest};
+
+    > * {
+      display: none;
+    }
   }
 `
 
@@ -27,7 +34,7 @@ const StyledLink = styled(Link)`
 
   &:hover {
     text-decoration: none;
-    border-bottom: 1px solid ${themeColors.secondaryGreyLighter};
+    border-bottom: 1px solid ${props => props.theme.secondaryGreyLighter};
   }
 
   &:last-child {
@@ -35,12 +42,22 @@ const StyledLink = styled(Link)`
   }
 `
 
+const Logo = styled.img`
+  display: none;
+  width: 100px;
+  opacity: 0.58;
+
+  @media (max-width: 1050px) {
+    display: inline-block !important;
+  }
+`;
+
 const renderNavigationLink = (page, idx) => (
   <StyledLink
     key={idx}
     exact
     to={page.link}
-    activeStyle={{ borderBottom: `1px solid ${themeColors.textBlack}` }}
+    activeStyle={{ borderBottom: `1px solid ${props => props.theme.textBlack}` }}
   >
     {page.text}
   </StyledLink>
@@ -48,6 +65,7 @@ const renderNavigationLink = (page, idx) => (
 
 const Navigation = ({ siteTitle }) => (
   <NavigationWrapper>
+    <Logo src={luuppiLogo} />
     {pages.map((page, idx) => renderNavigationLink(page, idx))}
   </NavigationWrapper>
 )
