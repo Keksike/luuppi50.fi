@@ -1,9 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import Layout from '../components/Layout'
+import SignupForm from '../components/SignupForm';
 
 const FormWrapper = styled.div`
   width: 100%;
+  padding-top: 1rem;
 `
 
 const SignupPage = () => (
@@ -16,7 +19,9 @@ const SignupPage = () => (
       lomakkeella.
     </p>
     <h3>Kutsuvierasilmoittautuminen</h3>
-    <FormWrapper />
+    <FormWrapper>
+     <SignupForm />
+    </FormWrapper>
   </Layout>
 )
 
