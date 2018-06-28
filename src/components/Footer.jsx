@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { media } from '../theme'
+
 const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -8,9 +10,9 @@ const FooterWrapper = styled.div`
   z-index: 2;
   border-top: 1px solid ${props => props.theme.secondaryGreyLightest};
 
-  @media (max-width: 1050px) {
+  ${media.desktop`
     margin: 0 1rem;
-  }
+  `};
 `
 
 const SponsorsWrapper = styled.div`
@@ -28,19 +30,18 @@ const ContactsWrapper = styled.div`
   color: ${props => props.theme.secondaryGreyLight};
 `
 
-const Footer = ({ siteTitle }) => (
+const Footer = () => (
   <FooterWrapper>
     <SponsorsWrapper>
-      <SponsorsText>
-        Yhteistyössä
-      </SponsorsText>
+      <SponsorsText>Yhteistyössä</SponsorsText>
     </SponsorsWrapper>
     <ContactsWrapper>
       <div>
-        <a href="https://www.luuppi.fi/">luuppi.fi</a> 
+        <a href="https://www.luuppi.fi/">luuppi.fi</a>
       </div>
       © Luuppi ry 2018
     </ContactsWrapper>
   </FooterWrapper>
 )
+
 export default Footer

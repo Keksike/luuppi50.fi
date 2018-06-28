@@ -1,8 +1,10 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
+import { Link } from 'gatsby'
+import styled, { withTheme } from 'styled-components'
+import PropTypes from 'prop-types'
 
 import pages from '../pages'
+import { media } from '../theme'
 import luuppiLogo from '../static/images/luuppi-logo.png'
 
 const NavigationWrapper = styled.div`
@@ -11,16 +13,16 @@ const NavigationWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 1050px) {
+  ${media.desktop`
     margin: 1rem;
     margin-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid ${props => props.theme.secondaryGreyLightest};
 
-    > * {
+    > a {
       display: none;
     }
-  }
+  `};
 `
 
 const StyledLink = styled(Link)`
@@ -29,8 +31,9 @@ const StyledLink = styled(Link)`
   font-size: 18px;
   margin-right: 1rem;
   padding: 0.5rem;
-  color: #1A1A1A;
+  color: #1a1a1a;
   white-space: nowrap;
+  border-bottom: 1px solid transparent;
 
   &:hover {
     text-decoration: none;
@@ -47,26 +50,30 @@ const Logo = styled.img`
   width: 100px;
   opacity: 0.58;
 
-  @media (max-width: 1050px) {
-    display: inline-block !important;
-  }
-`;
+  ${media.desktop`
+    display: inline-block;
+  `};
+`
 
-const renderNavigationLink = (page, idx) => (
-  <StyledLink
-    key={idx}
-    exact
-    to={page.link}
-    activeStyle={{ borderBottom: `1px solid ${props => props.theme.textBlack}` }}
-  >
+const renderNavigationLink = (page, activeStyle) => (
+  <StyledLink key={page.text} exact to={page.link} activeStyle={activeStyle}>
     {page.text}
   </StyledLink>
 )
 
-const Navigation = ({ siteTitle }) => (
+const Navigation = ({ theme }) => (
   <NavigationWrapper>
     <Logo src={luuppiLogo} />
-    {pages.map((page, idx) => renderNavigationLink(page, idx))}
+    {pages.map(page =>
+      renderNavigationLink(page, {
+        borderBottom: `1px solid ${theme.textBlack}`,
+      })
+    )}
   </NavigationWrapper>
 )
-export default Navigation
+
+Navigation.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.string).isRequired,
+}
+
+export default withTheme(Navigation)

@@ -1,11 +1,20 @@
 import React from 'react'
-import { navigateTo } from 'gatsby-link'
+import { push } from 'gatsby'
 import styled from 'styled-components'
 import { slide as Menu } from 'react-burger-menu'
 
 import pages from '../pages'
+import { media } from '../theme'
 
 const MobileWrapper = styled.div`
+  display: none;
+
+  ${media.desktop`
+    display: block;
+  `};
+`
+
+const MenuStyleWrapper = styled.div`
   .bm-burger-button {
     position: fixed;
     width: 1.8rem;
@@ -42,16 +51,13 @@ const MobileWrapper = styled.div`
     display: block;
     background: ${props => props.theme.secondaryGreyDark};
     color: ${props => props.theme.milkyWhite};
+
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
   }
 
   .bm-overlay {
-    background: rgba(0, 0, 0, 0.5);
-  }
-
-  display: none;
-
-  @media (max-width: 1050px) {
-    display: block;
+    background: rgba(0, 0, 0, 0.5) !important;
   }
 `
 
@@ -60,25 +66,25 @@ class MobileNavigation extends React.Component {
     isOpen: false,
   }
 
-  handleStateChange(state) {
-    this.setState({ isOpen: state.isOpen })
-  }
-
-  closeMenu() {
-    this.setState({ isOpen: false })
-  }
-
-  goToPage(page) {
-    this.closeMenu()
-    navigateTo(page)
-  }
-
   handleClick = event => {
     event.preventDefault()
 
     const { to } = event.currentTarget.dataset
 
     this.goToPage(to)
+  }
+
+  goToPage(page) {
+    this.closeMenu()
+    push(page)
+  }
+
+  handleStateChange(state) {
+    this.setState({ isOpen: state.isOpen })
+  }
+
+  closeMenu() {
+    this.setState({ isOpen: false })
   }
 
   render() {
@@ -97,13 +103,15 @@ class MobileNavigation extends React.Component {
 
     return (
       <MobileWrapper>
-        <Menu
-          right
-          isOpen={isOpen}
-          onStateChange={state => this.handleStateChange(state)}
-        >
-          {pages.map((page, idx) => renderNavigationLink(page, idx))}
-        </Menu>
+        <MenuStyleWrapper>
+          <Menu
+            right
+            isOpen={isOpen}
+            onStateChange={state => this.handleStateChange(state)}
+          >
+            {pages.map((page, idx) => renderNavigationLink(page, idx))}
+          </Menu>
+        </MenuStyleWrapper>
       </MobileWrapper>
     )
   }
