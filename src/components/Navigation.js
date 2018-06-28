@@ -2,44 +2,18 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import { themeColors } from '../layouts/themeStyles';
-
-const pages = [
-  {
-    text: 'Etusivu',
-    link: '',
-  },
-  {
-    text: 'Vuosijuhlaviikko',
-    link: '/vuosijuhlaviikko',
-  },
-  {
-    text: 'Seminaari',
-    link: '/seminaari',
-  },
-  {
-    text: 'Pääjuhla & sillis',
-    link: '/paajuhla',
-  },
-  {
-    text: 'Etiketti',
-    link: '/etiketti',
-  },
-  {
-    text: 'Kumppanit & edut',
-    link: '/kumppanit',
-  },
-  {
-    text: 'Ilmoittautuminen',
-    link: '/ilmoittautuminen',
-  },
-]
+import { themeColors } from '../layouts/themeStyles'
+import pages from '../pages'
 
 const NavigationWrapper = styled.div`
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1050px) {
+    display: none;
+  }
 `
 
 const StyledLink = styled(Link)`
@@ -49,6 +23,8 @@ const StyledLink = styled(Link)`
   margin-right: 1rem;
   padding: 0.5rem;
   color: #1A1A1A;
+  white-space: nowrap;
+
   &:hover {
     text-decoration: none;
     border-bottom: 1px solid ${themeColors.secondaryGreyLighter};
