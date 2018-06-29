@@ -8,6 +8,7 @@ import { theme, media } from '../theme'
 import Navigation from './Navigation'
 import Footer from './Footer'
 import MobileNavigation from './MobileNavigation'
+import headerLogo from '../static/images/header3.png'
 // import logoStrap from '../static/images/logonauha2.png'
 
 // eslint-disable-next-line no-unused-expressions
@@ -58,6 +59,17 @@ const PageContainer = styled.div`
   `};
 `
 
+const HeaderLogo = styled.img`
+  align-self: center;
+  opacity: 0.70;
+  max-width: 45%;
+  margin: 2rem 0;
+
+  ${media.desktop`
+    display: none;
+  `};
+`
+
 const ContentContainer = styled.div`
   padding: 1.5rem 1.5rem;
 
@@ -89,6 +101,7 @@ const Layout = ({ title, children }) => (
             </Helmet>
             <MobileNavigation />
             <PageContainer>
+              <HeaderLogo src={headerLogo} alt="Luuppi 50 logo"/>
               <Navigation />
               <ContentContainer>{children}</ContentContainer>
             </PageContainer>
