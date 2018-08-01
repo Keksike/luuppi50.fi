@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import pages from '../pages'
 import { media } from '../theme'
-import luuppiLogo from '../static/images/luuppi-logo.png'
+import luuppiLogo from '../static/images/header3.png'
 
 const NavigationWrapper = styled.div`
   height: 50px;
@@ -47,8 +47,8 @@ const StyledLink = styled(Link)`
 
 const Logo = styled.img`
   display: none;
-  width: 100px;
-  opacity: 0.58;
+  width: 155px;
+  opacity: 0.70;
 
   ${media.desktop`
     display: inline-block;
