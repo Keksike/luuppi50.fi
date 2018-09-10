@@ -1,14 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
 
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
 import SignupForm from '../components/SignupForm';
-
-const FormWrapper = styled.div`
-  width: 100%;
-  padding-top: 1rem;
-  margin-left: 1rem;
-`
 
 const SignupPage = () => (
   <Layout title="Ilmottautuminen">
@@ -19,11 +12,10 @@ const SignupPage = () => (
       </a>. <b>Kutsuvieraat</b> voivat ilmoittautua vuosijuhlaan alla olevalla
       lomakkeella.
     </p>
+    
     <h3>Kutsuvierasilmoittautuminen</h3>
-    <FormWrapper>
-     <SignupForm />
-    </FormWrapper>
+    <SignupForm />
   </Layout>
-)
+);
 
-export default SignupPage
+export default SignupPage;
