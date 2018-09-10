@@ -4,15 +4,9 @@ import Layout from '../components/Layout'
 const IndexPage = () => (
   <Layout>
     <div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      <p>Luuppi on perustettu vuonna 1969 matematiikan ja tietojenkäsittelyn oppiaineiden ainejärjestöksi. Tätä 50-vuotista taivalta Luuppi juhlistaa 23.2.2019 järjestettävillä vuosijuhlillaan.</p>
+      <p>Luupin historiaan mahtuu paljon tapahtumia: …</p>
+      <p>50-vuotisjuhlia vietetään ennennäkemättömällä tavalla. Tapahtumaa riittää koko vuosijuhlaviikon, jonka ohjelma löytyy TÄÄLTÄ. Itse pääjuhla järjestetään 23.2. Paja Kongressissa aivan Torni-hotellin juuressa. Lippu juhliin maksaa 100 euroa jäsenille (120 euroa ei-jäsenille) ja se sisältää pääsyn pääjuhlaan, pääjuhlan jatkoille, pääjuhlan jatkojen...</p>
     </div>
   </Layout>
 )
