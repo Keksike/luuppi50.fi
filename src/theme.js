@@ -9,6 +9,7 @@ export const theme = {
   secondaryGreyLight: '#898d8d',
   secondaryGreyLighter: '#9ea2a2',
   secondaryGreyLightest: '#e7e8e8',
+  error: '#ce1010',
 }
 
 export const sizes = {

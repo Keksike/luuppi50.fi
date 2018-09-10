@@ -25,6 +25,10 @@ injectGlobal`
     font-size: 15px;
   }
 
+  button {
+    font-family: 'Raleway', sans-serif;
+  }
+
   a {
     background-color: #fafafa;
     text-decoration: none;
@@ -36,6 +40,8 @@ injectGlobal`
 
   h3 {
     margin-top: 2rem;
+    font-size: 2.7rem;
+    font-family: 'Crimson Text', serif;
   }
 `
 
