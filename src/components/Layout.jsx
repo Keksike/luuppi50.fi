@@ -61,7 +61,7 @@ const PageContainer = styled.div`
 
 const HeaderLogo = styled.img`
   align-self: center;
-  opacity: 0.70;
+  opacity: 0.7;
   max-width: 45%;
   margin: 2rem 0;
 

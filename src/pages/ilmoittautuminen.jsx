@@ -7,6 +7,7 @@ import SignupForm from '../components/SignupForm';
 const FormWrapper = styled.div`
   width: 100%;
   padding-top: 1rem;
+  margin-left: 1rem;
 `
 
 const SignupPage = () => (
