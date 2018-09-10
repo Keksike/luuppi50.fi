@@ -1,94 +1,192 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import { Formik, Form, Field } from 'formik'
 
-const TextInput = styled.input`
+const TextInput = styled(Field)`
   background: ${props => props.theme.milkyWhite};
   border: 0;
   border-bottom: 1px solid ${props => props.theme.secondaryGreyLight};
   display: block;
   font-size: 16px;
   font-weight: 100;
-  margin-bottom: 1rem;
   min-width: 370px;
   padding: 0.5rem 0.5rem;
 
   &::placeholder {
-    color: ${props => props.theme.secondaryGreyLighter}
+    color: ${props => props.theme.secondaryGreyLighter};
   }
 `
 
-// const Select = styled.select`
-//   border: none;
-//   color: ${props => props.theme.secondaryGreyDark};
-//   cursor: pointer;
-//   font-size: 16px;
-//   margin-bottom: 2rem;
-//   padding: 0.8rem 0.5rem;
-// `
-
 const RadioContainer = styled.div`
-  margin-bottom: 1.3rem;
   margin-top: 0.5rem;
-`;
+`
 
 const InputLabel = styled.span`
   display: block;
   margin-bottom: 0.2rem;
-`;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.85rem;
+`
 
-const RadioInput = styled.input`
+const RadioInput = styled(Field)`
   margin-right: 1.6rem;
   margin-left: 0.25rem;
+`
+
+const errorAnimation = keyframes`
+  0% {
+    transform: translateX(0.75rem);
+  }
+
+  25% {
+    transform: translateX(0rem);
+  }
+
+  40% {
+    transform: translateX(0.5rem);
+  }
+
+  60% {
+    transform: translateX(0);
+  }
+
+  80% {
+    transform: translateX(0.3rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+`
+
+const ErrorBox = styled.div`
+  color: ${props => props.theme.error};
+  height: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+
+  &:not(:empty) {
+    animation: ${errorAnimation} 300ms;
+  }
+`
+
+const SubmitButton = styled.button`
+  padding: 2rem;
+  text-transform: uppercase;
+  background: ${props => props.theme.white};
+  border: 1px solid ${props => props.theme.secondaryGreyLight};
+  font-size: 1.2rem;
 `;
 
-const onSubmit = (event) => {
-  console.log('submit');
-  console.log(event);
-}
-
 const SignupForm = () => (
-  <form>
-    <InputLabel>Nimi:</InputLabel>
-    <TextInput type="text" name="name"/>
-    <InputLabel>Sähköposti:</InputLabel>
-    <TextInput type="email" name="email"/>
-    {/* <Select>
-      <option selected disabled>Valitse organisaatio</option>
-      {organizations.map(((org) => <option key={org.value} value={org.value}>{org.name}</option>))}
-    </Select> */}
-    <InputLabel>Puhelinnumero:</InputLabel>
-    <TextInput type="text" name="phone"/>
-    <InputLabel>Edustamani taho:</InputLabel>
-    <TextInput type="text" name="organization"/>
-    <InputLabel>Osallistun coctail-tilaisuuteen:</InputLabel>
-    <RadioContainer>
-      Kyllä <RadioInput type="radio" name="coctail" value="true"/>
-      Ei <RadioInput type="radio" name="coctail" value="false"/>
-    </RadioContainer>
-    <InputLabel>Esitän edustamani tahon tervehdyksen coctail-tilaisuudessa:</InputLabel>
-    <RadioContainer>
-      Kyllä <RadioInput type="radio" name="greeting" value="true"/>
-      Ei <RadioInput type="radio" name="greeting" value="false"/>
-    </RadioContainer>
-    <InputLabel>Juomavaihtoehto:</InputLabel>
-    <RadioContainer>
-      Punaviini <RadioInput type="radio" name="drink" value="redwine"/>
-      Valkoviini <RadioInput type="radio" name="drink" value="whitewine"/>
-      Alkoholiton <RadioInput type="radio" name="drink" value="nonalcoholic"/>
-    </RadioContainer>
-    <InputLabel>Erityisruokavaliot:</InputLabel>
-    <TextInput type="text" name="allergies"/>
-    <InputLabel>Osallistun seuraavan päivän sillikselle:</InputLabel>
-    <RadioContainer>
-      Kyllä <RadioInput type="radio" name="sillis" value="true"/>
-      Ei <RadioInput type="radio" name="sillis" value="false"/>
-    </RadioContainer>
-    <InputLabel>Avec / pöytäseuratoive:</InputLabel>
-    <TextInput type="text" name="avec"/>
-    <InputLabel>Muuta huomioitavaa / terveisiä:</InputLabel>
-    <TextInput type="text" name="other"/>
-    <input onClick={onSubmit} type="button" value="Lähetä"/>
-  </form>
+  <Formik
+    initialValues={{
+      name: '',
+      email: '',
+      phone: '',
+      organization: '',
+      cocktail: undefined,
+      greeting: undefined,
+      drink: 0,
+      specialDiet: '',
+      sillis: undefined,
+      avec: '',
+      other: '',
+    }}
+    validate={values => {
+      const errors = {}
+
+      if (!values.name) {
+        errors.name = 'Nimi puuttuu'
+      }
+
+      if (!values.email) {
+        errors.email = 'Email puuttuu'
+      }
+
+      if (!values.drink) {
+        errors.drink = 'Juomatoive puuttuu'
+      }
+
+      return errors
+    }}
+    onSubmit={(values, { setSubmitting }) => {
+      setTimeout(() => {
+        console.log(values)
+        setSubmitting(false)
+      }, 500)
+    }}
+  >
+    {({ touched, errors, isSubmitting }) => (
+      <Form>
+        <InputLabel>Nimi</InputLabel>
+        <TextInput type="text" name="name" />
+        <ErrorBox>{touched.name && errors.name}</ErrorBox>
+
+        <InputLabel>Sähköposti</InputLabel>
+        <TextInput type="email" name="email" />
+        <ErrorBox>{touched.email && errors.email}</ErrorBox>
+
+        <InputLabel>Puhelinnumero</InputLabel>
+        <TextInput type="text" name="phone" />
+        <ErrorBox />
+
+        <InputLabel>Edustamani taho</InputLabel>
+        <TextInput type="text" name="organization" />
+        <ErrorBox />
+
+        <InputLabel>Osallistun coctail-tilaisuuteen</InputLabel>
+        <RadioContainer>
+          Kyllä <RadioInput type="radio" name="cocktail" value />
+          Ei <RadioInput type="radio" name="cocktail" value={false} />
+        </RadioContainer>
+        <ErrorBox />
+
+        <InputLabel>
+          Esitän edustamani tahon tervehdyksen cocktail-tilaisuudessa
+        </InputLabel>
+        <RadioContainer>
+          Kyllä <RadioInput type="radio" name="greeting" value />
+          Ei <RadioInput type="radio" name="greeting" value={false} />
+        </RadioContainer>
+        <ErrorBox />
+
+        <InputLabel>Juomavaihtoehto</InputLabel>
+        <RadioContainer>
+          Punaviini <RadioInput type="radio" name="drink" value="redwine" />
+          Valkoviini <RadioInput type="radio" name="drink" value="whitewine" />
+          Alkoholiton
+          <RadioInput type="radio" name="drink" value="nonalcoholic" />
+        </RadioContainer>
+        <ErrorBox>{touched.drink && errors.drink}</ErrorBox>
+
+        <InputLabel>Erityisruokavaliot</InputLabel>
+        <TextInput type="text" name="specialDiet" />
+        <ErrorBox />
+
+        <InputLabel>Osallistun seuraavan päivän sillikselle</InputLabel>
+        <RadioContainer>
+          Kyllä <RadioInput type="radio" name="sillis" value />
+          Ei <RadioInput type="radio" name="sillis" value={false} />
+        </RadioContainer>
+        <ErrorBox />
+
+        <InputLabel>Avec / pöytäseuratoive</InputLabel>
+        <TextInput type="text" name="avec" />
+        <ErrorBox />
+
+        <InputLabel>Muuta huomioitavaa / terveisiä</InputLabel>
+        <TextInput type="text" name="other" />
+        <ErrorBox />
+
+        <SubmitButton type="submit" disabled={isSubmitting}>
+          Ilmottaudu
+        </SubmitButton>
+      </Form>
+    )}
+  </Formik>
 )
 
 export default SignupForm
