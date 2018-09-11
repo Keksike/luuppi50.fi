@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
-import { StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 
 import { theme, media } from '../theme'
 import Navigation from './Navigation'
@@ -86,7 +86,6 @@ const ContentContainer = styled.div`
 
 const Layout = ({ title, children }) => (
   <StaticQuery
-    // eslint-disable-next-line no-undef
     query={graphql`
       query LayoutQuery {
         site {
