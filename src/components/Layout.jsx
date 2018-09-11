@@ -43,6 +43,12 @@ injectGlobal`
     font-size: 2.7rem;
     font-family: 'Crimson Text', serif;
   }
+
+  ${media.desktop`
+    h3 {
+      font-size: 1.9rem;
+    }
+  `}
 `
 
 const Page = styled.div`
