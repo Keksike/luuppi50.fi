@@ -1,6 +1,24 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Formik, Form, Field } from 'formik'
+import { media } from '../theme'
+
+const Separator = styled.div`
+  height: 3px;
+  background: ${props => props.theme.textBlack};
+  transform: scaleX(0) translateY(-2px);
+  transform-origin: 50%;
+  opacity: 0;
+  transition: all 0.15s linear;
+`
+
+const InputWrapper = styled.div`
+  width: 50%;
+
+  ${media.desktop`
+    width: 100%;
+  `};
+`
 
 const TextInput = styled(Field)`
   background: ${props => props.theme.milkyWhite};
@@ -9,11 +27,17 @@ const TextInput = styled(Field)`
   display: block;
   font-size: 16px;
   font-weight: 100;
-  min-width: 370px;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
 
-  &::placeholder {
-    color: ${props => props.theme.secondaryGreyLighter};
+  &:focus {
+    outline: none;
+  }
+
+  &:focus + ${Separator} {
+    transform: scaleX(1) translateY(-2px);
+    opacity: 1;
   }
 `
 
@@ -30,8 +54,8 @@ const InputLabel = styled.span`
 `
 
 const RadioInput = styled(Field)`
-  margin-right: 1.6rem;
-  margin-left: 0.25rem;
+  margin-left: 0.8rem;
+  margin-right: 0.4rem;
 `
 
 const errorAnimation = keyframes`
@@ -73,12 +97,12 @@ const ErrorBox = styled.div`
 `
 
 const SubmitButton = styled.button`
-  padding: 2rem;
+  padding: 1.5rem;
   text-transform: uppercase;
-  background: ${props => props.theme.white};
-  border: 1px solid ${props => props.theme.secondaryGreyLight};
-  font-size: 1.2rem;
-`;
+  background: ${props => props.theme.textBlack};
+  color: ${props => props.theme.milkyWhite};
+  font-size: 1rem;
+`
 
 const SignupForm = () => (
   <Formik
@@ -121,65 +145,153 @@ const SignupForm = () => (
   >
     {({ touched, errors, isSubmitting }) => (
       <Form>
-        <InputLabel>Nimi</InputLabel>
-        <TextInput type="text" name="name" />
-        <ErrorBox>{touched.name && errors.name}</ErrorBox>
+        <InputWrapper>
+          <InputLabel>Nimi</InputLabel>
+          <TextInput type="text" name="name" />
+          <Separator />
+          <ErrorBox>{touched.name && errors.name}</ErrorBox>
+        </InputWrapper>
 
-        <InputLabel>Sähköposti</InputLabel>
-        <TextInput type="email" name="email" />
-        <ErrorBox>{touched.email && errors.email}</ErrorBox>
+        <InputWrapper>
+          <InputLabel>Sähköposti</InputLabel>
+          <TextInput type="email" name="email" />
+          <Separator />
+          <ErrorBox>{touched.email && errors.email}</ErrorBox>
+        </InputWrapper>
 
-        <InputLabel>Puhelinnumero</InputLabel>
-        <TextInput type="text" name="phone" />
-        <ErrorBox />
+        <InputWrapper>
+          <InputLabel>Puhelinnumero</InputLabel>
+          <TextInput type="text" name="phone" />
+          <Separator />
+          <ErrorBox />
+        </InputWrapper>
 
-        <InputLabel>Edustamani taho</InputLabel>
-        <TextInput type="text" name="organization" />
-        <ErrorBox />
+        <InputWrapper>
+          <InputLabel>Edustamani taho</InputLabel>
+          <TextInput type="text" name="organization" />
+          <Separator />
+          <ErrorBox />
+        </InputWrapper>
 
-        <InputLabel>Osallistun coctail-tilaisuuteen</InputLabel>
-        <RadioContainer>
-          Kyllä <RadioInput type="radio" name="cocktail" value />
-          Ei <RadioInput type="radio" name="cocktail" value={false} />
-        </RadioContainer>
-        <ErrorBox />
+        <>
+          <InputLabel>Osallistun cocktail-tilaisuuteen</InputLabel>
+          <RadioContainer>
+            <label htmlFor="cocktail_yes">
+              <RadioInput
+                type="radio"
+                id="cocktail_yes"
+                name="cocktail"
+                value
+              />
+              Kyllä
+            </label>
+            <label htmlFor="cocktail_no">
+              <RadioInput
+                type="radio"
+                id="cocktail_no"
+                name="cocktail"
+                value={false}
+              />
+              Ei
+            </label>
+          </RadioContainer>
+          <ErrorBox />
+        </>
+        
+        <>
+          <InputLabel>
+            Esitän edustamani tahon tervehdyksen cocktail-tilaisuudessa
+          </InputLabel>
+          <RadioContainer>
+            <label htmlFor="greeting_yes">
+              <RadioInput
+                type="radio"
+                id="greeting_yes"
+                name="greeting"
+                value
+              />
+              Kyllä
+            </label>
+            <label htmlFor="greeting_no">
+              <RadioInput
+                type="radio"
+                id="greeting_no"
+                name="greeting"
+                value={false}
+              />
+              Ei
+            </label>
+          </RadioContainer>
+          <ErrorBox />
+        </>
 
-        <InputLabel>
-          Esitän edustamani tahon tervehdyksen cocktail-tilaisuudessa
-        </InputLabel>
-        <RadioContainer>
-          Kyllä <RadioInput type="radio" name="greeting" value />
-          Ei <RadioInput type="radio" name="greeting" value={false} />
-        </RadioContainer>
-        <ErrorBox />
+        <>
+          <InputLabel>Juomavaihtoehto</InputLabel>
+          <RadioContainer>
+            <label htmlFor="redwine">
+              <RadioInput
+                type="radio"
+                name="drink"
+                id="redwine"
+                value="redwine"
+              />
+              Punaviini
+            </label>
+            <label htmlFor="whitewine">
+              <RadioInput
+                type="radio"
+                name="drink"
+                id="whitewine"
+                value="whitewine"
+              />
+              Valkoviini
+            </label>
+            <label htmlFor="nonalcoholic">
+              <RadioInput
+                type="radio"
+                name="drink"
+                id="nonalcoholic"
+                value="nonalcoholic"
+              />
+              Alkoholiton
+            </label>
+          </RadioContainer>
+          <ErrorBox>{touched.drink && errors.drink}</ErrorBox>
+        </>
 
-        <InputLabel>Juomavaihtoehto</InputLabel>
-        <RadioContainer>
-          Punaviini <RadioInput type="radio" name="drink" value="redwine" />
-          Valkoviini <RadioInput type="radio" name="drink" value="whitewine" />
-          Alkoholiton
-          <RadioInput type="radio" name="drink" value="nonalcoholic" />
-        </RadioContainer>
-        <ErrorBox>{touched.drink && errors.drink}</ErrorBox>
+        <InputWrapper>
+          <InputLabel>Erityisruokavaliot</InputLabel>
+          <TextInput type="text" name="specialDiet" />
+          <Separator />
+          <ErrorBox />
+        </InputWrapper>
 
-        <InputLabel>Erityisruokavaliot</InputLabel>
-        <TextInput type="text" name="specialDiet" />
-        <ErrorBox />
+        <>
+          <InputLabel>Osallistun seuraavan päivän sillikselle</InputLabel>
+          <RadioContainer>
+            <label htmlFor="sillis_yes">
+              <RadioInput type="radio" name="sillis" value /> Kyllä
+            </label>
+            <label htmlFor="sillis_no">
+              <RadioInput type="radio" name="sillis" value={false} /> Ei
+            </label>
+          </RadioContainer>
+          <ErrorBox />
+        </>
 
-        <InputLabel>Osallistun seuraavan päivän sillikselle</InputLabel>
-        <RadioContainer>
-          Kyllä <RadioInput type="radio" name="sillis" value />
-          Ei <RadioInput type="radio" name="sillis" value={false} />
-        </RadioContainer>
-        <ErrorBox />
+        <InputWrapper>
+          <InputLabel>Avec / pöytäseuratoive</InputLabel>
+          <TextInput type="text" name="avec" />
+          <Separator />
+          <ErrorBox />
+        </InputWrapper>
 
-        <InputLabel>Avec / pöytäseuratoive</InputLabel>
-        <TextInput type="text" name="avec" />
-        <ErrorBox />
-
-        <InputLabel>Muuta huomioitavaa / terveisiä</InputLabel>
-        <TextInput type="text" name="other" />
-        <ErrorBox />
+        <InputWrapper>
+          <InputLabel>Muuta huomioitavaa / terveisiä</InputLabel>
+          <TextInput type="text" name="other" />
+          <Separator />
+          <ErrorBox />
+        </InputWrapper>
 
         <SubmitButton type="submit" disabled={isSubmitting}>
           Ilmottaudu
