@@ -77,10 +77,11 @@ const HeaderLogo = styled.img`
 `
 
 const ContentContainer = styled.div`
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 0;
 
   ${media.desktop`
-    padding: 0 1.5rem;
+    padding: 1.5rem;
+    padding-top: 0;
   `};
 `
 
