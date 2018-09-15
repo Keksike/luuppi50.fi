@@ -16,14 +16,14 @@ const MobileWrapper = styled.div`
 
 const MenuStyleWrapper = styled.div`
   .bm-burger-button {
-    position: fixed;
+    position: absolute;
     width: 1.8rem;
     height: 1.5rem;
     right: 1.5rem;
     top: 1.5rem;
 
     .bm-burger-bars {
-      background: ${props => props.theme.secondaryGreyLight};
+      background: ${props => props.theme.textBlack};
     }
   }
 
@@ -37,7 +37,7 @@ const MenuStyleWrapper = styled.div`
   }
 
   .bm-menu {
-    background: ${props => props.theme.secondaryGreyDark};
+    background: ${props => props.theme.textBlack};
     padding: 2.5rem 1.5rem 0;
     font-size: 1.15rem;
   }
@@ -49,7 +49,7 @@ const MenuStyleWrapper = styled.div`
   .bm-item {
     padding: 0.7rem;
     display: block;
-    background: ${props => props.theme.secondaryGreyDark};
+    background: ${props => props.theme.textBlack};
     color: ${props => props.theme.milkyWhite};
 
     font-family: 'Crimson Text', serif;

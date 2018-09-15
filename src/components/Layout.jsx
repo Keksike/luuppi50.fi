@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
-import { StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 
 import { theme, media } from '../theme'
 import Navigation from './Navigation'
@@ -43,6 +43,12 @@ injectGlobal`
     font-size: 2.7rem;
     font-family: 'Crimson Text', serif;
   }
+
+  ${media.desktop`
+    h3 {
+      font-size: 1.9rem;
+    }
+  `}
 `
 
 const Page = styled.div`
@@ -77,16 +83,16 @@ const HeaderLogo = styled.img`
 `
 
 const ContentContainer = styled.div`
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 0;
 
   ${media.desktop`
-    padding: 0 1.5rem;
+    padding: 1.5rem;
+    padding-top: 0;
   `};
 `
 
 const Layout = ({ title, children }) => (
   <StaticQuery
-    // eslint-disable-next-line no-undef
     query={graphql`
       query LayoutQuery {
         site {
