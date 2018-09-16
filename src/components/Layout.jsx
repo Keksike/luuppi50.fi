@@ -44,7 +44,7 @@ injectGlobal`
 
   ${media.desktop`
     h3 {
-      font-size: 1.9rem;
+      font-size: 1.8rem;
     }
   `}
 `
