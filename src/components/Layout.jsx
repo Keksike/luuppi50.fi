@@ -8,7 +8,9 @@ import { theme, media, sizes } from '../theme'
 import Navigation from './Navigation'
 import Footer from './Footer'
 import MobileNavigation from './MobileNavigation'
+
 import headerLogo from '../static/images/header3_white.png'
+import favicon from '../static/images/favicon2.png';
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
@@ -127,6 +129,7 @@ const Layout = ({ title, children }) => (
           >
             <title>{title}</title>
             <html lang="fi" />
+            <link rel="icon" type="image/png" href={favicon}/>
           </Helmet>
 
           <MobileNavigation />
