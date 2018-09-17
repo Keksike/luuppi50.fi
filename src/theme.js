@@ -24,6 +24,9 @@ export const sizes = {
   smallMobile: 700,
 }
 
+/*
+ * https://web.archive.org/web/20180914172900/https://www.styled-components.com/docs/advanced#media-templates
+ */
 export const media = Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (...args) => css`
     @media (max-width: ${sizes[label] / 16}em) {
