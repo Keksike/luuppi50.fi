@@ -91,6 +91,7 @@ const ContentContainer = styled.div`
   padding: 1.5rem 0;
   width: 100%;
   box-sizing: border-box;
+  flex: 1;
 `
 
 const Contrast = styled.div`
