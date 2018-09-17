@@ -103,7 +103,7 @@ function openFrontpage() {
   return push('/')
 }
 
-const Layout = ({ title, disableCenter, children }) => (
+const Layout = ({ title, children }) => (
   <StaticQuery
     query={graphql`
       query LayoutQuery {
@@ -122,6 +122,7 @@ const Layout = ({ title, disableCenter, children }) => (
             defaultTitle={data.site.siteMetadata.title}
           >
             <title>{title}</title>
+            <html lang="fi" />
           </Helmet>
 
           <MobileNavigation />
@@ -137,9 +138,7 @@ const Layout = ({ title, disableCenter, children }) => (
             </Center>
           </Contrast>
 
-          <ContentContainer>
-            {disableCenter ? children : <Center>{children}</Center>}
-          </ContentContainer>
+          <ContentContainer>{children}</ContentContainer>
 
           <Footer />
         </Page>
@@ -149,15 +148,13 @@ const Layout = ({ title, disableCenter, children }) => (
 )
 
 Layout.propTypes = {
-  title: PropTypes.string,
-  disableCenter: PropTypes.bool,
   children: PropTypes.node,
+  title: PropTypes.string,
 }
 
 Layout.defaultProps = {
-  title: null,
-  disableCenter: false,
   children: <div />,
+  title: null,
 }
 
 export default Layout
