@@ -10,7 +10,7 @@ import Footer from './Footer'
 import MobileNavigation from './MobileNavigation'
 
 import headerLogo from '../static/images/header3_white.png'
-import favicon from '../static/images/favicon2.png';
+import favicon from '../static/images/favicon2.png'
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
