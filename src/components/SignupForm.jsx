@@ -1,13 +1,14 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import PropTypes from 'prop-types'
 import { Formik, Form, Field } from 'formik'
 import { media } from '../theme'
 
 const Separator = styled.div`
-  height: 3px;
+  height: 2px;
   background: ${props => props.theme.textBlack};
   transform: scaleX(0) translateY(-2px);
-  transform-origin: 50%;
+  transform-origin: 0;
   opacity: 0;
   transition: all 0.15s linear;
 `
@@ -63,7 +64,7 @@ const RadioWrapper = styled.div`
   }
 
   input {
-    margin-right: 0.8rem;    
+    margin-right: 0.8rem;
   }
 `
 
@@ -116,12 +117,26 @@ const ErrorBox = styled.div`
 const SubmitButton = styled.button`
   padding: 1.5rem;
   text-transform: uppercase;
-  background: ${props => props.theme.textBlack};
+  background: #000 radial-gradient(circle, transparent 1%, #000 1%)
+    center/15000%;
   color: ${props => props.theme.milkyWhite};
   font-size: 1rem;
+  border: 0;
+  transition: background 0.6s;
+
+  &:active:not(:disabled) {
+    background-color: #bbb;
+    background-size: 100%;
+    transition: background 0s;
+  }
+
+  &:disabled {
+    color: #b0b0b0;
+    cursor: not-allowed;
+  }
 `
 
-const SignupForm = () => (
+const FormWrapper = ({ submitCallback }) => (
   <Formik
     initialValues={{
       name: '',
@@ -162,6 +177,7 @@ const SignupForm = () => (
       setTimeout(() => {
         console.log(values)
         setSubmitting(false)
+        submitCallback()
       }, 500)
     }}
   >
@@ -214,12 +230,7 @@ const SignupForm = () => (
           <InputLabel>Juomavaihtoehto</InputLabel>
           <RadioWrapper>
             <label htmlFor="redwine">
-              <Field
-                type="radio"
-                name="drink"
-                id="redwine"
-                value="redwine"
-              />
+              <Field type="radio" name="drink" id="redwine" value="redwine" />
               Punaviini
             </label>
             <label htmlFor="whitewine">
@@ -291,5 +302,40 @@ const SignupForm = () => (
     )}
   </Formik>
 )
+
+FormWrapper.propTypes = {
+  submitCallback: PropTypes.func.isRequired,
+}
+
+class SignupForm extends React.Component {
+  state = {
+    submitted: false,
+  }
+
+  submit() {
+    this.setState({
+      submitted: true,
+    })
+  }
+
+  render() {
+    const { submitted } = this.state
+
+    if (submitted) {
+      return (
+        <>
+          <p>
+            <b>Kiitos osallistumisestasi!</b>
+          </p>
+          <p>
+            Saat sähköpostiisi vahvistuksen osallistumisestasi.
+          </p>
+        </>
+      )
+    }
+
+    return <FormWrapper submitCallback={() => this.submit()} />
+  }
+}
 
 export default SignupForm

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled, { withTheme } from 'styled-components'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import pages from '../pages'
@@ -25,6 +25,14 @@ const NavigationWrapper = styled.div`
   `};
 `
 
+const Separator = styled.div`
+  height: 1px;
+  background: ${props => props.theme.textBlack};
+  transform: scaleX(0) translateY(10px);
+  transform-origin: 0;
+  transition: all 80ms linear;
+`
+
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-family: 'Crimson Text', serif;
@@ -37,7 +45,17 @@ const StyledLink = styled(Link)`
 
   &:hover {
     text-decoration: none;
-    border-bottom: 1px solid ${props => props.theme.secondaryGreyLighter};
+
+    ${Separator} {
+      transform: scaleX(1) translateY(10px);
+    }
+  }
+
+  &:active,
+  &.activeLink {
+    ${Separator} {
+      transform: scaleX(1) translateY(10px);
+    }
   }
 
   &:last-child {
@@ -48,32 +66,29 @@ const StyledLink = styled(Link)`
 const Logo = styled.img`
   display: none;
   width: 155px;
-  opacity: 0.70;
+  opacity: 0.7;
 
   ${media.desktop`
     display: inline-block;
   `};
 `
 
-const renderNavigationLink = (page, activeStyle) => (
-  <StyledLink key={page.text} exact to={page.link} activeStyle={activeStyle}>
+const NavigationLink = ({ page }) => (
+  <StyledLink key={page.text} exact to={page.link} activeClassName="activeLink">
     {page.text}
+    <Separator />
   </StyledLink>
 )
 
-const Navigation = ({ theme }) => (
+NavigationLink.propTypes = {
+  page: PropTypes.oneOf(pages).isRequired,
+}
+
+const Navigation = () => (
   <NavigationWrapper>
     <Logo src={luuppiLogo} />
-    {pages.map(page =>
-      renderNavigationLink(page, {
-        borderBottom: `1px solid ${theme.textBlack}`,
-      })
-    )}
+    {pages.map(page => <NavigationLink page={page} />)}
   </NavigationWrapper>
 )
 
-Navigation.propTypes = {
-  theme: PropTypes.objectOf(PropTypes.string).isRequired,
-}
-
-export default withTheme(Navigation)
+export default Navigation

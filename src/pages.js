@@ -1,7 +1,7 @@
 const pages = [
   {
     text: 'Etusivu',
-    link: '',
+    link: '/',
   },
   {
     text: 'Vuosijuhlaviikko',

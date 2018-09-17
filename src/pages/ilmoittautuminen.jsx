@@ -1,21 +1,29 @@
-import React from 'react';
+import React from 'react'
 
-import Layout from '../components/Layout';
-import SignupForm from '../components/SignupForm';
+import Layout from '../components/Layout'
+import SignupForm from '../components/SignupForm'
 
 const SignupPage = () => (
   <Layout title="Ilmottautuminen">
+    <h3>Luuppi ry:n jäsenet</h3>
+
     <p>
-      <b>Luuppi ry:n jäsenet</b> voivat ilmoittautua vuosijuhlaan{' '}
-      <a href="https://www.luuppi.fi/tapahtumat">
+      <b>Luupin jäsenet</b> voivat ilmottautua vuosijuhlaan{' '}
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.luuppi.fi/tapahtumat"
+      >
         Luupin tapahtumakalenterista
-      </a>. <b>Kutsuvieraat</b> voivat ilmoittautua vuosijuhlaan alla olevalla
-      lomakkeella.
+      </a>.
     </p>
-    
-    <h3>Kutsuvierasilmoittautuminen</h3>
+
+    <h3>
+      Kutsuvieras&shy;ilmoittautuminen
+    </h3>
+
     <SignupForm />
   </Layout>
-);
+)
 
-export default SignupPage;
+export default SignupPage

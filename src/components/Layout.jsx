@@ -34,19 +34,17 @@ injectGlobal`
     text-decoration: none;
     color: rgb(211, 166, 2);
   }
-  a:hover {
-    text-decoration: underline;
-  }
 
   h3 {
-    margin-top: 2rem;
-    font-size: 2.7rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
     font-family: 'Crimson Text', serif;
   }
 
   ${media.desktop`
     h3 {
-      font-size: 1.9rem;
+      font-size: 1.8rem;
     }
   `}
 `

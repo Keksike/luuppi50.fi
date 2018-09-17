@@ -6,7 +6,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.5.1",
     "formik": "^1.2.0",
-    "gatsby": "^2.0.0-beta.9",
+    "gatsby": "^2.0.0-rc.25",
     "gatsby-plugin-nprogress": "^1.0.14",
     "gatsby-plugin-react-helmet": "^3.0.0-beta.2",
     "gatsby-plugin-styled-components": "^3.0.0-beta.2",
