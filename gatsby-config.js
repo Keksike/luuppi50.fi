@@ -6,10 +6,9 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-plugin-nprogress`,
+      resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: `black`,
-        showSpinner: true,
+        color: '#f0ad00',
       },
     },
     {
