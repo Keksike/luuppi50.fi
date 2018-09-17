@@ -1,82 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { media } from '../theme'
 import Layout, { Center } from '../components/Layout'
+import { SkewedContrast, AfterSkewedContrast } from '../components/Skewed'
+import { Pair, Text, Image } from '../components/Pair'
 
 const Bigger = styled.p`
   font-size: 1.1rem;
-`
-
-const SkewedContrast = styled.div`
-  background: ${props => props.theme.contrastBackground};
-  transform: skewY(3deg);
-  position: relative;
-  color: ${props => props.theme.contrastText};
-  z-index: 100;
-  padding-bottom: 3rem;
-  overflow: hidden;
-  margin-top: 3rem;
-  margin-bottom: 6rem;
-
-  > ${Center} {
-    transform: skewY(-3deg);
-    padding: 0;
-  }
-`
-
-const AfterSkewedContrast = styled.div`
-  margin-top: -3rem;
-`
-
-const Pair = styled.div`
-  display: flex;
-
-  &:not(:first-child) {
-    margin-top: 2rem;
-  }
-
-  &:last-child {
-    margin-bottom: -5rem;
-  }
-
-  ${media.smallMobile`
-    flex-wrap: wrap;
-  `};
-`
-
-const Text = styled.div`
-  padding: 2rem 0;
-  margin: 0 2rem;
-
-  h3 {
-    color: ${props => props.theme.highlight};
-  }
-
-  ${Pair}:last-child & {
-    padding-bottom: 5rem;
-  }
-
-  ${media.mobile`
-    max-width: 50%;
-  `};
-
-  ${media.smallMobile`
-    max-width: none;
-  `};
-`
-
-const Image = styled.div`
-  background-image: url('https://comic-news.com/wp-content/uploads/2017/05/99a2ea397db015a4d30362f16151ff73.jpg');
-  background-size: cover;
-  width: 50rem;
-
-  ${media.smallMobile`
-    width: 100%;
-    height: 20rem;
-    order: -1;
-    margin-top: -1rem;
-  `};
 `
 
 const IndexPage = () => (
