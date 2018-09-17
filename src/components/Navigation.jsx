@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 
 import pages from '../pages'
 import { media } from '../theme'
-import luuppiLogo from '../static/images/header3.png'
 
 const NavigationWrapper = styled.div`
   height: 50px;
@@ -13,11 +12,8 @@ const NavigationWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  ${media.desktop`
-    margin: 1rem;
-    margin-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid ${props => props.theme.secondaryGreyLightest};
+  ${media.mobile`
+    height: 0;
 
     > a {
       display: none;
@@ -27,7 +23,7 @@ const NavigationWrapper = styled.div`
 
 const Separator = styled.div`
   height: 1px;
-  background: ${props => props.theme.textBlack};
+  background: #ebebeb;
   transform: scaleX(0) translateY(10px);
   transform-origin: 0;
   transition: all 80ms linear;
@@ -36,10 +32,10 @@ const Separator = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-family: 'Crimson Text', serif;
-  font-size: 18px;
+  font-size: 1.2rem;
   margin-right: 1rem;
   padding: 0.5rem;
-  color: #1a1a1a;
+  color: ${props => props.theme.contrastText};
   white-space: nowrap;
   border-bottom: 1px solid transparent;
 
@@ -58,19 +54,13 @@ const StyledLink = styled(Link)`
     }
   }
 
+  &.activeLink {
+    color: ${props => props.theme.contrastHighlight};
+  }
+
   &:last-child {
     margin: 0;
   }
-`
-
-const Logo = styled.img`
-  display: none;
-  width: 155px;
-  opacity: 0.7;
-
-  ${media.desktop`
-    display: inline-block;
-  `};
 `
 
 const NavigationLink = ({ page }) => (
@@ -86,7 +76,6 @@ NavigationLink.propTypes = {
 
 const Navigation = () => (
   <NavigationWrapper>
-    <Logo src={luuppiLogo} />
     {pages.map(page => <NavigationLink page={page} />)}
   </NavigationWrapper>
 )

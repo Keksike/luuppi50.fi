@@ -10,10 +10,20 @@ export const theme = {
   secondaryGreyLighter: '#9ea2a2',
   secondaryGreyLightest: '#e7e8e8',
   error: '#ce1010',
+
+  text: '#0a0a0a',
+  contrastText: '#b0b0b0',
+  contrastHighlight: '#fff',
+
+  background: '#fff',
+  contrastBackground: '#000',
+
+  highlight: '#f0ad00'
 }
 
 export const sizes = {
-  desktop: 1050,
+  mobile: 1100,
+  smallMobile: 700,
 }
 
 /*
@@ -22,7 +32,7 @@ export const sizes = {
 export const media = Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (...args) => css`
     @media (max-width: ${sizes[label] / 16}em) {
-      ${css(...args)}
+      ${css(...args)};
     }
   `
 

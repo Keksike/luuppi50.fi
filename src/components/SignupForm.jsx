@@ -16,7 +16,7 @@ const Separator = styled.div`
 const InputWrapper = styled.div`
   width: 50%;
 
-  ${media.desktop`
+  ${media.mobile`
     width: 100%;
   `};
 `
@@ -35,7 +35,7 @@ const Checkboxes = styled.div`
 `
 
 const TextInput = styled(Field)`
-  background: ${props => props.theme.milkyWhite};
+  background: transparent;
   border: 0;
   border-bottom: 1px solid ${props => props.theme.secondaryGreyLight};
   display: block;
@@ -117,9 +117,14 @@ const ErrorBox = styled.div`
 const SubmitButton = styled.button`
   padding: 1.5rem;
   text-transform: uppercase;
-  background: #000 radial-gradient(circle, transparent 1%, #000 1%)
+  background: ${props => props.theme.contrastBackground}
+    radial-gradient(
+      circle,
+      transparent 1%,
+      ${props => props.theme.contrastBackground} 1%
+    )
     center/15000%;
-  color: ${props => props.theme.milkyWhite};
+  color: ${props => props.theme.contrastText};
   font-size: 1rem;
   border: 0;
   transition: background 0.6s;
@@ -131,7 +136,6 @@ const SubmitButton = styled.button`
   }
 
   &:disabled {
-    color: #b0b0b0;
     cursor: not-allowed;
   }
 `
@@ -327,9 +331,7 @@ class SignupForm extends React.Component {
           <p>
             <b>Kiitos osallistumisestasi!</b>
           </p>
-          <p>
-            Saat sähköpostiisi vahvistuksen osallistumisestasi.
-          </p>
+          <p>Saat sähköpostiisi vahvistuksen osallistumisestasi.</p>
         </>
       )
     }

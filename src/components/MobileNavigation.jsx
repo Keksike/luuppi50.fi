@@ -9,9 +9,13 @@ import { media } from '../theme'
 const MobileWrapper = styled.div`
   display: none;
 
-  ${media.desktop`
+  ${media.mobile`
     display: block;
   `};
+
+  a {
+    text-decoration: none;
+  }
 `
 
 const MenuStyleWrapper = styled.div`
@@ -19,11 +23,11 @@ const MenuStyleWrapper = styled.div`
     position: absolute;
     width: 1.8rem;
     height: 1.5rem;
-    right: 1.5rem;
-    top: 1.5rem;
+    right: 1.8rem;
+    top: 1.8rem;
 
     .bm-burger-bars {
-      background: ${props => props.theme.textBlack};
+      background: ${props => props.theme.contrastText};
     }
   }
 
@@ -32,12 +36,12 @@ const MenuStyleWrapper = styled.div`
     width: 1rem;
 
     .bm-cross {
-      background: ${props => props.theme.milkyWhite};
+      background: ${props => props.theme.contrastHighlight};
     }
   }
 
   .bm-menu {
-    background: ${props => props.theme.textBlack};
+    background: ${props => props.theme.contrastBackground};
     padding: 2.5rem 1.5rem 0;
     font-size: 1.15rem;
   }
@@ -49,11 +53,9 @@ const MenuStyleWrapper = styled.div`
   .bm-item {
     padding: 0.7rem;
     display: block;
-    background: ${props => props.theme.textBlack};
-    color: ${props => props.theme.milkyWhite};
-
+    background: ${props => props.theme.contrastBackground};
+    color: ${props => props.theme.contrastHighlight};
     font-family: 'Crimson Text', serif;
-    font-size: 18px;
   }
 
   .bm-overlay {

@@ -1,18 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { media } from '../theme'
-
 const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0.5em 1em;
   z-index: 2;
-  border-top: 1px solid ${props => props.theme.secondaryGreyLightest};
-
-  ${media.desktop`
-    margin: 0 1rem;
-  `};
+  background: ${props => props.theme.contrastBackground};
 `
 
 const SponsorsWrapper = styled.div`
@@ -22,12 +16,12 @@ const SponsorsWrapper = styled.div`
 
 const SponsorsText = styled.div`
   font-size: 12px;
-  color: ${props => props.theme.secondaryGreyLight};
+  color: ${props => props.theme.contrastText};
 `
 
 const ContactsWrapper = styled.div`
   text-align: right;
-  color: ${props => props.theme.secondaryGreyLight};
+  color: ${props => props.theme.contrastText};
 `
 
 const Footer = () => (
