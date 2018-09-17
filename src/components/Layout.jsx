@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 import { StaticQuery, graphql, push } from 'gatsby'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 import { theme, media, sizes } from '../theme'
 import Navigation from './Navigation'
@@ -138,7 +139,9 @@ const Layout = ({ title, disableCenter, children }) => (
           </Contrast>
 
           <ContentContainer>
-            {disableCenter ? children : <Center>{children}</Center>}
+            <PageTransition>
+              {disableCenter ? children : <Center>{children}</Center>}
+            </PageTransition>
           </ContentContainer>
 
           <Footer />
