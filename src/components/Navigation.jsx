@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 
 import pages from '../pages'
 import { media } from '../theme'
-import luuppiLogo from '../static/images/header3_white.png'
 
 const NavigationWrapper = styled.div`
   height: 50px;
@@ -14,7 +13,7 @@ const NavigationWrapper = styled.div`
   justify-content: space-between;
 
   ${media.mobile`
-    margin: 1rem;
+    height: 0;
 
     > a {
       display: none;
@@ -64,16 +63,6 @@ const StyledLink = styled(Link)`
   }
 `
 
-const Logo = styled.img`
-  display: none;
-  width: 155px;
-  opacity: 0.95;
-
-  ${media.mobile`
-    display: inline-block;
-  `};
-`
-
 const NavigationLink = ({ page }) => (
   <StyledLink key={page.text} exact to={page.link} activeClassName="activeLink">
     {page.text}
@@ -87,7 +76,6 @@ NavigationLink.propTypes = {
 
 const Navigation = () => (
   <NavigationWrapper>
-    <Logo src={luuppiLogo} />
     {pages.map(page => <NavigationLink page={page} />)}
   </NavigationWrapper>
 )

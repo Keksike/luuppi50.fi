@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
-import { theme, media } from '../theme'
+import { theme, media, sizes } from '../theme'
 import Navigation from './Navigation'
 import Footer from './Footer'
 import MobileNavigation from './MobileNavigation'
@@ -58,16 +58,14 @@ export const Center = styled.div`
   display: flex;
   flex: 1;
   margin: 0 auto;
-  width: 1100px;
-  padding: 0 5rem;
+  width: ${sizes.mobile}px;
   flex-direction: column;
-  box-sizing: border-box;
   justify-content: center;
+  box-sizing: border-box;
+  padding: 0 1rem;
 
   ${media.mobile`
-    max-width: 1100px;
     width: 100%;
-    padding: 0;
   `};
 `
 
@@ -78,7 +76,11 @@ const HeaderLogo = styled.img`
   margin: 3rem 0 2rem 0;
 
   ${media.mobile`
-    display: none;
+    align-self: flex-start
+    width: 155px;
+    opacity: 0.95;
+    margin: 1rem 0;
+    max-width: none;
   `};
 `
 
@@ -86,15 +88,12 @@ const ContentContainer = styled.div`
   padding: 1.5rem 0;
   width: 100%;
   box-sizing: border-box;
-
-  ${media.mobile`
-    padding: 1.5rem;
-  `};
 `
 
 const Contrast = styled.div`
   background-color: ${props => props.theme.contrastBackground};
   padding-bottom: 2rem;
+  transition: 250ms;
 
   ${media.mobile`
     padding: 0;
@@ -121,6 +120,7 @@ const Layout = ({ title, disableCenter, children }) => (
           >
             <title>{title}</title>
           </Helmet>
+
           <MobileNavigation />
 
           <Contrast>

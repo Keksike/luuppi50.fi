@@ -21,6 +21,7 @@ export const theme = {
 
 export const sizes = {
   mobile: 1100,
+  smallMobile: 700,
 }
 
 export const media = Object.keys(sizes).reduce((acc, label) => {
