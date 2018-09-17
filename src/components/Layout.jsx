@@ -2,14 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, push } from 'gatsby'
 
 import { theme, media, sizes } from '../theme'
 import Navigation from './Navigation'
 import Footer from './Footer'
 import MobileNavigation from './MobileNavigation'
 import headerLogo from '../static/images/header3_white.png'
-// import logoStrap from '../static/images/logonauha2.png'
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
@@ -100,6 +99,10 @@ const Contrast = styled.div`
   `};
 `
 
+function openFrontpage() {
+  return push('/')
+}
+
 const Layout = ({ title, disableCenter, children }) => (
   <StaticQuery
     query={graphql`
@@ -125,7 +128,11 @@ const Layout = ({ title, disableCenter, children }) => (
 
           <Contrast>
             <Center>
-              <HeaderLogo src={headerLogo} alt="Luuppi 50 logo" />
+              <HeaderLogo
+                src={headerLogo}
+                alt="Luuppi 50"
+                onClick={openFrontpage}
+              />
               <Navigation />
             </Center>
           </Contrast>
