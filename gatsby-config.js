@@ -12,5 +12,11 @@ module.exports = {
         showSpinner: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: ['Crimson Text', 'Raleway'],
+      },
+    },
   ],
 }
