@@ -29,8 +29,12 @@ injectGlobal`
   }
 
   a {
-    text-decoration: underline;
-    color: #0a0a0a;
+    text-decoration: none;
+    color: ${theme.highlight};
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   h3 {

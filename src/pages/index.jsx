@@ -5,7 +5,7 @@ import { media } from '../theme'
 import Layout, { Center } from '../components/Layout'
 
 const Bigger = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 `
 
 const SkewedContrast = styled.div`
@@ -49,12 +49,8 @@ const Text = styled.div`
   padding: 2rem 0;
   margin: 0 2rem;
 
-  p {
-    font-size: 1.2rem;
-  }
-
   h3 {
-    color: #aa8c3e;
+    color: ${props => props.theme.highlight};
   }
 
   ${Pair}:last-child & {

@@ -22,10 +22,6 @@ const SponsorsText = styled.div`
 const ContactsWrapper = styled.div`
   text-align: right;
   color: ${props => props.theme.contrastText};
-
-  a {
-    color: #fff;
-  }
 `
 
 const Footer = () => (

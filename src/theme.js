@@ -17,6 +17,8 @@ export const theme = {
 
   background: '#fff',
   contrastBackground: '#000',
+
+  highlight: '#f0ad00'
 }
 
 export const sizes = {
