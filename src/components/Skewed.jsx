@@ -7,14 +7,15 @@ const SkewedContrast = styled.div`
   position: relative;
   color: ${props => props.theme.contrastText};
   z-index: 5;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
   padding-bottom: 3rem;
   overflow: hidden;
-  margin-top: 3rem;
-  margin-bottom: 6rem;
 
   > ${Center} {
     transform: skewY(-3deg);
     padding: 0;
+    background: inherit;
   }
 
   h3 {

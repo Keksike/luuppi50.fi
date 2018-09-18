@@ -22,6 +22,7 @@ const Text = styled.div`
   padding: 2rem 0;
   min-width: 60%;
   margin: 0 1rem;
+  margin-left: 3rem;
 
   ${media.mobile`
     max-width: 50%;
@@ -40,7 +41,6 @@ const Image = styled.div`
   background-image: url('https://comic-news.com/wp-content/uploads/2017/05/99a2ea397db015a4d30362f16151ff73.jpg');
   background-size: cover;
   width: 50rem;
-  margin: 0 1rem;
 
   ${media.mobile`
     margin: 0;

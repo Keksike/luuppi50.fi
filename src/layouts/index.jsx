@@ -11,12 +11,13 @@ import Footer from '../components/Footer'
 import MobileNavigation from '../components/MobileNavigation'
 import Center from '../components/Center'
 
-import headerLogo from '../static/images/header3_white.png'
+import headerLogo from '../static/images/header3.png'
 import favicon from '../static/images/favicon2.png'
+import logonauha from '../static/images/logonauha2.png'
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
-  html, body {
+  body {
     margin: 0;
     height: 100%;
     background-color: ${theme.background};
@@ -24,6 +25,16 @@ injectGlobal`
     font-family: 'Raleway', sans-serif;
     line-height: 1.6;
     font-size: 17px;
+
+    &::before {
+      content: '';
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: 2;
+      opacity: 0.2;
+      background-image: url(${logonauha});
+    }
   }
 
   button {
@@ -75,31 +86,13 @@ const HeaderLogo = styled.img`
 `
 
 const ContentContainer = styled.div`
-  padding: 1.5rem 0;
   width: 100%;
   box-sizing: border-box;
   flex: 1;
+  z-index: 5;
 `
 
-const Contrast = styled.div`
-  background-color: ${props => props.theme.contrastBackground};
-  padding-bottom: 2rem;
-  transition: 250ms;
-  z-index: 15;
-
-  ${media.mobile`
-    padding: 0;
-  `};
-`
-
-const RoutesContainer = posed.div({
-  enter: {
-    opacity: 1,
-  },
-  exit: {
-    opacity: 0,
-  },
-})
+const RoutesContainer = posed.div({})
 
 function openFrontpage() {
   return push('/')
@@ -145,16 +138,14 @@ class Layout extends React.Component {
 
               <MobileNavigation />
 
-              <Contrast>
-                <Center>
-                  <HeaderLogo
-                    src={headerLogo}
-                    alt="Luuppi 50"
-                    onClick={openFrontpage}
-                  />
-                  <Navigation />
-                </Center>
-              </Contrast>
+              <Center>
+                <HeaderLogo
+                  src={headerLogo}
+                  alt="Luuppi 50"
+                  onClick={openFrontpage}
+                />
+                <Navigation />
+              </Center>
 
               <ContentContainer>
                 <PoseGroup>

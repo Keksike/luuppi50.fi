@@ -6,12 +6,20 @@ import { SkewedContrast, AfterSkewedContrast } from '../components/Skewed'
 import { Pair, Text, Image } from '../components/Pair'
 
 const Bigger = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.08rem;
+`
+
+const TopCenter = styled(Center)`
+  padding-bottom: 5rem;
+`
+
+const BottomCenter = styled(Center)`
+  padding-top: 3rem;
 `
 
 const IndexPage = () => (
   <>
-    <Center>
+    <TopCenter>
       <Bigger>
         Luuppi on perustettu vuonna 1969 matematiikan ja tietojenkäsittelyn
         oppiaineiden ainejärjestöksi. Tätä 50-vuotista taivalta Luuppi juhlistaa{' '}
@@ -25,7 +33,7 @@ const IndexPage = () => (
       </Bigger>
 
       <Bigger>Luupin historiaan mahtuu paljon tapahtumia: …</Bigger>
-    </Center>
+    </TopCenter>
 
     <SkewedContrast>
       <Center>
@@ -74,7 +82,7 @@ const IndexPage = () => (
     </SkewedContrast>
 
     <AfterSkewedContrast>
-      <Center>
+      <BottomCenter>
         <Bigger>
           50-vuotisjuhlia vietetään ennennäkemättömällä tavalla. Tapahtumaa
           riittää koko vuosijuhlaviikon, jonka ohjelma löytyy TÄÄLTÄ. Itse
@@ -91,7 +99,7 @@ const IndexPage = () => (
           ilmoittautumislinkki. Yleinen ilmoittautuminen kaikille luuppilaisille
           alkaa marraskuussa.
         </Bigger>
-      </Center>
+      </BottomCenter>
     </AfterSkewedContrast>
   </>
 )
