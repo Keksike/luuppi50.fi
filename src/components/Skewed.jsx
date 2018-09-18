@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { Center } from './Layout'
+import Center from './Center'
 
 const SkewedContrast = styled.div`
   background: ${props => props.theme.contrastBackground};
   transform: skewY(3deg);
   position: relative;
   color: ${props => props.theme.contrastText};
-  z-index: 100;
+  z-index: 5;
   padding-bottom: 3rem;
   overflow: hidden;
   margin-top: 3rem;

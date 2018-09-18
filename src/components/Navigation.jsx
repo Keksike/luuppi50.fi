@@ -41,21 +41,14 @@ const StyledLink = styled(Link)`
 
   &:hover {
     text-decoration: none;
-
-    ${Separator} {
-      transform: scaleX(1) translateY(10px);
-    }
-  }
-
-  &:active,
-  &.activeLink {
-    ${Separator} {
-      transform: scaleX(1) translateY(10px);
-    }
   }
 
   &.activeLink {
     color: ${props => props.theme.contrastHighlight};
+
+    ${Separator} {
+      transform: scaleX(1) translateY(10px);
+    }
   }
 
   &:last-child {

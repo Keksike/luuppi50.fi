@@ -1,29 +1,32 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
-import Layout, { Center } from '../components/Layout'
+import Center from '../components/Center'
 import SignupForm from '../components/SignupForm'
 
 const SignupPage = () => (
-  <Layout title="Ilmottautuminen">
-    <Center>
-      <h3>Luuppi ry:n jäsenet</h3>
+  <Center>
+    <Helmet>
+      <title>Ilmottautuminen</title>
+    </Helmet>
 
-      <p>
-        <b>Luupin jäsenet</b> voivat ilmottautua vuosijuhlaan{' '}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.luuppi.fi/tapahtumat"
-        >
-          Luupin tapahtumakalenterista
-        </a>.
-      </p>
+    <h3>Luuppi ry:n jäsenet</h3>
 
-      <h3>Kutsuvieras&shy;ilmoittautuminen</h3>
+    <p>
+      <b>Luupin jäsenet</b> voivat ilmottautua vuosijuhlaan{' '}
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.luuppi.fi/tapahtumat"
+      >
+        Luupin tapahtumakalenterista
+      </a>.
+    </p>
 
-      <SignupForm />
-    </Center>
-  </Layout>
+    <h3>Kutsuvieras&shy;ilmoittautuminen</h3>
+
+    <SignupForm />
+  </Center>
 )
 
 export default SignupPage

@@ -6,7 +6,7 @@ const Pair = styled.div`
   display: flex;
 
   &:not(:first-child) {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 
   &:last-child {

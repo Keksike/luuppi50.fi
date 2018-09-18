@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Layout, { Center } from '../components/Layout'
+import Center from '../components/Center'
 import { SkewedContrast, AfterSkewedContrast } from '../components/Skewed'
 import { Pair, Text, Image } from '../components/Pair'
 
 const Bigger = styled.p`
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 `
 
 const IndexPage = () => (
-  <Layout disableCenter>
+  <>
     <Center>
       <Bigger>
         Luuppi on perustettu vuonna 1969 matematiikan ja tietojenkäsittelyn
@@ -32,12 +32,12 @@ const IndexPage = () => (
         <Pair>
           <Text>
             <h3>Luupin pikkujoulut</h3>
-            <p>
+            <Bigger>
               Luuppi on perustettu vuonna 1969 matematiikan ja
               tietojenkäsittelyn oppiaineiden ainejärjestöksi. Tätä 50-vuotista
               taivalta Luuppi juhlistaa <b>23.&nbsp;helmikuuta&nbsp;2019</b>{' '}
               järjestettävillä vuosijuhlillaan.
-            </p>
+            </Bigger>
           </Text>
 
           <Image />
@@ -48,24 +48,24 @@ const IndexPage = () => (
 
           <Text>
             <h3>Luupin pikkujoulujen jatkot</h3>
-            <p>
+            <Bigger>
               Luuppi on perustettu vuonna 1969 matematiikan ja
               tietojenkäsittelyn oppiaineiden ainejärjestöksi. Tätä 50-vuotista
               taivalta Luuppi juhlistaa <b>23.&nbsp;helmikuuta&nbsp;2019</b>{' '}
               järjestettävillä vuosijuhlillaan.
-            </p>
+            </Bigger>
           </Text>
         </Pair>
 
         <Pair>
           <Text>
             <h3>Luupin pikkujoulujen jatkojen jatkot</h3>
-            <p>
+            <Bigger>
               Luuppi on perustettu vuonna 1969 matematiikan ja
               tietojenkäsittelyn oppiaineiden ainejärjestöksi. Tätä 50-vuotista
               taivalta Luuppi juhlistaa <b>23.&nbsp;helmikuuta&nbsp;2019</b>{' '}
               järjestettävillä vuosijuhlillaan.
-            </p>
+            </Bigger>
           </Text>
 
           <Image />
@@ -93,7 +93,7 @@ const IndexPage = () => (
         </Bigger>
       </Center>
     </AfterSkewedContrast>
-  </Layout>
+  </>
 )
 
 export default IndexPage
