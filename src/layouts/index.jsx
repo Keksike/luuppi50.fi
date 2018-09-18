@@ -10,7 +10,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import MobileNavigation from '../components/MobileNavigation'
 import Center from '../components/Center'
-import SwipeAnimation from '../components/animations/SwipeAnimation'
 
 import headerLogo from '../static/images/header3_white.png'
 import favicon from '../static/images/favicon2.png'
@@ -96,11 +95,9 @@ const Contrast = styled.div`
 const RoutesContainer = posed.div({
   enter: {
     opacity: 1,
-    delay: 350,
   },
   exit: {
     opacity: 0,
-    delay: 300,
   },
 })
 
@@ -158,8 +155,6 @@ class Layout extends React.Component {
                   <Navigation />
                 </Center>
               </Contrast>
-
-              <SwipeAnimation key={location.key} />
 
               <ContentContainer>
                 <PoseGroup>

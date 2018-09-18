@@ -21,14 +21,6 @@ const NavigationWrapper = styled.div`
   `};
 `
 
-const Separator = styled.div`
-  height: 1px;
-  background: #ebebeb;
-  transform: scaleX(0) translateY(10px);
-  transform-origin: 0;
-  transition: all 80ms linear;
-`
-
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-family: 'Crimson Text', serif;
@@ -45,8 +37,20 @@ const StyledLink = styled(Link)`
 
   &.activeLink {
     color: ${props => props.theme.contrastHighlight};
+  }
 
-    ${Separator} {
+  &::after {
+    content: '';
+    height: 1px;
+    background: #ebebeb;
+    transform: scaleX(0) translateY(10px);
+    transform-origin: 0;
+    transition: all 80ms linear;
+    display: block;
+  }
+
+  &.activeLink {
+    &::after {
       transform: scaleX(1) translateY(10px);
     }
   }
@@ -59,7 +63,6 @@ const StyledLink = styled(Link)`
 const NavigationLink = ({ page }) => (
   <StyledLink key={page.text} exact to={page.link} activeClassName="activeLink">
     {page.text}
-    <Separator />
   </StyledLink>
 )
 
