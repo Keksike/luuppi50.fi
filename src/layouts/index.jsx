@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 import MobileNavigation from '../components/MobileNavigation'
 import Center from '../components/Center'
 
-import headerLogo from '../static/images/header3_white.png'
+import headerLogo from '../static/images/header3.png'
 import favicon from '../static/images/favicon2.png'
 
 // eslint-disable-next-line no-unused-expressions
@@ -32,7 +32,7 @@ injectGlobal`
 
   a {
     text-decoration: none;
-    color: ${theme.highlight};
+    color: ${theme.contrastHighlight};
 
     &:hover {
       text-decoration: underline;
@@ -81,20 +81,10 @@ const ContentContainer = styled.div`
   flex: 1;
 `
 
-const Contrast = styled.div`
-  background-color: ${props => props.theme.contrastBackground};
-  padding-bottom: 2rem;
-  transition: 250ms;
-  z-index: 15;
-
-  ${media.mobile`
-    padding: 0;
-  `};
-`
-
 const RoutesContainer = posed.div({
   enter: {
     opacity: 1,
+    delay: 200,
   },
   exit: {
     opacity: 0,
@@ -145,16 +135,14 @@ class Layout extends React.Component {
 
               <MobileNavigation />
 
-              <Contrast>
-                <Center>
-                  <HeaderLogo
-                    src={headerLogo}
-                    alt="Luuppi 50"
-                    onClick={openFrontpage}
-                  />
-                  <Navigation />
-                </Center>
-              </Contrast>
+              <Center>
+                <HeaderLogo
+                  src={headerLogo}
+                  alt="Luuppi 50"
+                  onClick={openFrontpage}
+                />
+                <Navigation />
+              </Center>
 
               <ContentContainer>
                 <PoseGroup>

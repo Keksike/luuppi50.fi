@@ -1,30 +1,25 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import Center from '../components/Center'
 import { SkewedContrast, AfterSkewedContrast } from '../components/Skewed'
 import { Pair, Text, Image } from '../components/Pair'
 
-const Bigger = styled.p`
-  font-size: 1.2rem;
-`
-
 const IndexPage = () => (
   <>
     <Center>
-      <Bigger>
+      <p>
         Luuppi on perustettu vuonna 1969 matematiikan ja tietojenkäsittelyn
         oppiaineiden ainejärjestöksi. Tätä 50-vuotista taivalta Luuppi juhlistaa{' '}
         <b>23.&nbsp;helmikuuta&nbsp;2019</b> järjestettävillä vuosijuhlillaan.
-      </Bigger>
+      </p>
 
-      <Bigger>
+      <p>
         Inasen verran täytettä vielä tänne! Inasen verran täytettä vielä tänne!
         Inasen verran täytettä vielä tänne! Inasen verran täytettä vielä tänne!
         Inasen verran täytettä vielä tänne!
-      </Bigger>
+      </p>
 
-      <Bigger>Luupin historiaan mahtuu paljon tapahtumia: …</Bigger>
+      <p>Luupin historiaan mahtuu paljon tapahtumia: …</p>
     </Center>
 
     <SkewedContrast>
@@ -32,12 +27,12 @@ const IndexPage = () => (
         <Pair>
           <Text>
             <h3>Luupin pikkujoulut</h3>
-            <Bigger>
+            <p>
               Luuppi on perustettu vuonna 1969 matematiikan ja
               tietojenkäsittelyn oppiaineiden ainejärjestöksi. Tätä 50-vuotista
               taivalta Luuppi juhlistaa <b>23.&nbsp;helmikuuta&nbsp;2019</b>{' '}
               järjestettävillä vuosijuhlillaan.
-            </Bigger>
+            </p>
           </Text>
 
           <Image />
@@ -48,24 +43,24 @@ const IndexPage = () => (
 
           <Text>
             <h3>Luupin pikkujoulujen jatkot</h3>
-            <Bigger>
+            <p>
               Luuppi on perustettu vuonna 1969 matematiikan ja
               tietojenkäsittelyn oppiaineiden ainejärjestöksi. Tätä 50-vuotista
               taivalta Luuppi juhlistaa <b>23.&nbsp;helmikuuta&nbsp;2019</b>{' '}
               järjestettävillä vuosijuhlillaan.
-            </Bigger>
+            </p>
           </Text>
         </Pair>
 
         <Pair>
           <Text>
             <h3>Luupin pikkujoulujen jatkojen jatkot</h3>
-            <Bigger>
+            <p>
               Luuppi on perustettu vuonna 1969 matematiikan ja
               tietojenkäsittelyn oppiaineiden ainejärjestöksi. Tätä 50-vuotista
               taivalta Luuppi juhlistaa <b>23.&nbsp;helmikuuta&nbsp;2019</b>{' '}
               järjestettävillä vuosijuhlillaan.
-            </Bigger>
+            </p>
           </Text>
 
           <Image />
@@ -75,7 +70,7 @@ const IndexPage = () => (
 
     <AfterSkewedContrast>
       <Center>
-        <Bigger>
+        <p>
           50-vuotisjuhlia vietetään ennennäkemättömällä tavalla. Tapahtumaa
           riittää koko vuosijuhlaviikon, jonka ohjelma löytyy TÄÄLTÄ. Itse
           pääjuhla järjestetään 23.2. Paja Kongressissa aivan Torni-hotellin
@@ -83,14 +78,14 @@ const IndexPage = () => (
           ei-jäsenille) ja se sisältää pääsyn pääjuhlaan, pääjuhlan jatkoille,
           pääjuhlan jatkojen jatkoille, seuraavan päivän sillikselle sekä
           silliksen jatkoille.
-        </Bigger>
+        </p>
 
-        <Bigger>
+        <p>
           Ilmoittautuminen vuosijuhlille tapahtuu Luupin verkkosivuilta sekä
           jäsenille että jäsenten aveceille. Kutsuvieraille on lähetetty oma
           ilmoittautumislinkki. Yleinen ilmoittautuminen kaikille luuppilaisille
           alkaa marraskuussa.
-        </Bigger>
+        </p>
       </Center>
     </AfterSkewedContrast>
   </>

@@ -27,7 +27,7 @@ const StyledLink = styled(Link)`
   font-size: 1.2rem;
   margin-right: 1rem;
   padding: 0.5rem;
-  color: ${props => props.theme.contrastText};
+  color: ${props => props.theme.text};
   white-space: nowrap;
   border-bottom: 1px solid transparent;
 
@@ -36,13 +36,13 @@ const StyledLink = styled(Link)`
   }
 
   &.activeLink {
-    color: ${props => props.theme.contrastHighlight};
+    color: ${props => props.theme.text};
   }
 
   &::after {
     content: '';
     height: 1px;
-    background: #ebebeb;
+    background: ${props => props.theme.text};
     transform: scaleX(0) translateY(10px);
     transform-origin: 0;
     transition: all 80ms linear;
