@@ -10,12 +10,10 @@ import Footer from './Footer'
 import MobileNavigation from './MobileNavigation'
 
 import headerLogo from '../static/images/header3_white.png'
-import favicon from '../static/images/favicon2.png';
+import favicon from '../static/images/favicon2.png'
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Raleway');
-
   html, body {
     margin: 0;
     height: 100%;
@@ -129,7 +127,7 @@ const Layout = ({ title, children }) => (
           >
             <title>{title}</title>
             <html lang="fi" />
-            <link rel="icon" type="image/png" href={favicon}/>
+            <link rel="icon" type="image/png" href={favicon} />
           </Helmet>
 
           <MobileNavigation />
