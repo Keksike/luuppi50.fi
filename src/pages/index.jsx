@@ -1,101 +1,29 @@
 import React from 'react'
-import styled from 'styled-components'
 
-import { media } from '../theme'
-import Layout, { Center } from '../components/Layout'
-
-const Bigger = styled.p`
-  font-size: 1.1rem;
-`
-
-const SkewedContrast = styled.div`
-  background: ${props => props.theme.contrastBackground};
-  transform: skewY(3deg);
-  position: relative;
-  color: ${props => props.theme.contrastText};
-  z-index: 100;
-  padding-bottom: 3rem;
-  overflow: hidden;
-  margin-top: 3rem;
-  margin-bottom: 6rem;
-
-  > ${Center} {
-    transform: skewY(-3deg);
-    padding: 0;
-  }
-`
-
-const AfterSkewedContrast = styled.div`
-  margin-top: -3rem;
-`
-
-const Pair = styled.div`
-  display: flex;
-
-  &:not(:first-child) {
-    margin-top: 2rem;
-  }
-
-  &:last-child {
-    margin-bottom: -5rem;
-  }
-
-  ${media.smallMobile`
-    flex-wrap: wrap;
-  `};
-`
-
-const Text = styled.div`
-  padding: 2rem 0;
-  margin: 0 2rem;
-
-  h3 {
-    color: ${props => props.theme.highlight};
-  }
-
-  ${Pair}:last-child & {
-    padding-bottom: 5rem;
-  }
-
-  ${media.mobile`
-    max-width: 50%;
-  `};
-
-  ${media.smallMobile`
-    max-width: none;
-  `};
-`
-
-const Image = styled.div`
-  background-image: url('https://comic-news.com/wp-content/uploads/2017/05/99a2ea397db015a4d30362f16151ff73.jpg');
-  background-size: cover;
-  width: 50rem;
-
-  ${media.smallMobile`
-    width: 100%;
-    height: 20rem;
-    order: -1;
-    margin-top: -1rem;
-  `};
-`
+import Center from '../components/Center'
+import { SkewedContrast, AfterSkewedContrast } from '../components/Skewed'
+import { Pair, Text, Image } from '../components/Pair'
 
 const IndexPage = () => (
-  <Layout disableCenter>
+  <>
     <Center>
-      <Bigger>
-        Luuppi on perustettu vuonna 1969 matematiikan ja tietojenkäsittelyn
-        oppiaineiden ainejärjestöksi. Tätä 50-vuotista taivalta Luuppi juhlistaa{' '}
-        <b>23.&nbsp;helmikuuta&nbsp;2019</b> järjestettävillä vuosijuhlillaan.
-      </Bigger>
+      <p>
+      Luuppi ry on toiminut Tampereen yliopiston tietojenkäsittelijöiden, matemaatikkojen ja
+      tilastotieteilijöiden ainejärjestönä jo puoli vuosisataa. Vuonna 1969 perustetun Luupin 50-vuotista
+      taivalta juhlistetaan ennennäkemättömällä tavalla koko viikon 8 ajan, joka huipentuu <b>23.&nbsp;helmikuuta&nbsp;2019</b>
+      { ' ' }Paja Kongressissa järjestettävään pääjuhlaan. Juhlaviikon ohjelman kokonaisuudessaan pääset näkemään täältä.
+      </p>
 
-      <Bigger>
-        Inasen verran täytettä vielä tänne! Inasen verran täytettä vielä tänne!
-        Inasen verran täytettä vielä tänne! Inasen verran täytettä vielä tänne!
-        Inasen verran täytettä vielä tänne!
-      </Bigger>
+      <p>
+        Lippu juhliin maksaa Luuppi ry:n jäsenille 100€ (muut 120€) sisältäen pääjuhlan, pääjuhlan jatkot, pääjuhlan
+        jatkojen jatkot, seuraavan päivän silliksen sekä silliksen jatkot. Ilmoittautuminen vuosijuhlille tapahtuu Luupin
+        verkkosivuilta sekä jäsenille että jäsenten aveceille. Kutsuvieraille on lähetetty oma ilmoittautumislinkki.
+        Yleinen ilmoittautuminen kaikille luuppilaisille alkaa marraskuussa.
+      </p>
 
-      <Bigger>Luupin historiaan mahtuu paljon tapahtumia: …</Bigger>
+      <p>Luupin historiaan mahtuu paljon tapahtumia: …</p>
     </Center>
+
 
     <SkewedContrast>
       <Center>
@@ -145,25 +73,13 @@ const IndexPage = () => (
 
     <AfterSkewedContrast>
       <Center>
-        <Bigger>
-          50-vuotisjuhlia vietetään ennennäkemättömällä tavalla. Tapahtumaa
-          riittää koko vuosijuhlaviikon, jonka ohjelma löytyy TÄÄLTÄ. Itse
-          pääjuhla järjestetään 23.2. Paja Kongressissa aivan Torni-hotellin
-          juuressa. Lippu juhliin maksaa 100 euroa jäsenille (120 euroa
-          ei-jäsenille) ja se sisältää pääsyn pääjuhlaan, pääjuhlan jatkoille,
-          pääjuhlan jatkojen jatkoille, seuraavan päivän sillikselle sekä
-          silliksen jatkoille.
-        </Bigger>
-
-        <Bigger>
-          Ilmoittautuminen vuosijuhlille tapahtuu Luupin verkkosivuilta sekä
-          jäsenille että jäsenten aveceille. Kutsuvieraille on lähetetty oma
-          ilmoittautumislinkki. Yleinen ilmoittautuminen kaikille luuppilaisille
-          alkaa marraskuussa.
-        </Bigger>
+        <p>
+          Tähän jotain?
+        </p>
       </Center>
     </AfterSkewedContrast>
-  </Layout>
+
+  </>
 )
 
 export default IndexPage

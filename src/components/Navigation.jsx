@@ -21,41 +21,38 @@ const NavigationWrapper = styled.div`
   `};
 `
 
-const Separator = styled.div`
-  height: 1px;
-  background: #ebebeb;
-  transform: scaleX(0) translateY(10px);
-  transform-origin: 0;
-  transition: all 80ms linear;
-`
-
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-family: 'Crimson Text', serif;
   font-size: 1.2rem;
   margin-right: 1rem;
   padding: 0.5rem;
-  color: ${props => props.theme.contrastText};
+  color: ${props => props.theme.text};
   white-space: nowrap;
   border-bottom: 1px solid transparent;
 
   &:hover {
     text-decoration: none;
-
-    ${Separator} {
-      transform: scaleX(1) translateY(10px);
-    }
-  }
-
-  &:active,
-  &.activeLink {
-    ${Separator} {
-      transform: scaleX(1) translateY(10px);
-    }
   }
 
   &.activeLink {
-    color: ${props => props.theme.contrastHighlight};
+    color: ${props => props.theme.text};
+  }
+
+  &::after {
+    content: '';
+    height: 1px;
+    background: ${props => props.theme.text};
+    transform: scaleX(0) translateY(10px);
+    transform-origin: 0;
+    transition: all 80ms linear;
+    display: block;
+  }
+
+  &.activeLink {
+    &::after {
+      transform: scaleX(1) translateY(10px);
+    }
   }
 
   &:last-child {
@@ -66,7 +63,6 @@ const StyledLink = styled(Link)`
 const NavigationLink = ({ page }) => (
   <StyledLink key={page.text} exact to={page.link} activeClassName="activeLink">
     {page.text}
-    <Separator />
   </StyledLink>
 )
 
