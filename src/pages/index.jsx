@@ -42,11 +42,11 @@ const IndexPage = () => (
             </p>
           </Text>
 
-          <Image />
+          <Image src="https://images.unsplash.com/photo-1501255133540-c675b2234546?ixlib=rb-0.3.5…EyMDd9&s=2dd7424…&auto=format&fit=crop&w=1950&q=80" />
         </Pair>
 
         <Pair>
-          <Image />
+          <Image src="https://images.unsplash.com/photo-1501255133540-c675b2234546?ixlib=rb-0.3.5…EyMDd9&s=2dd7424…&auto=format&fit=crop&w=1950&q=80" />
 
           <Text>
             <h3>Luupin pikkujoulujen jatkot</h3>
@@ -70,7 +70,7 @@ const IndexPage = () => (
             </p>
           </Text>
 
-          <Image />
+          <Image src="https://images.unsplash.com/photo-1501255133540-c675b2234546?ixlib=rb-0.3.5…EyMDd9&s=2dd7424…&auto=format&fit=crop&w=1950&q=80" />
         </Pair>
       </Center>
     </SkewedContrast>

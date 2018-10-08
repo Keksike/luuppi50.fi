@@ -6,7 +6,7 @@ The repo has pre-commit Prettier -hook, which makes the code look similar as all
 
 1.  `npm install` - installs required dependencies
 2.  `npm run develop` - starts Gatsby's development server
-3.  Open `http://localhost:3000` - this should start automatically
+3.  Open `http://localhost:8000`
 
 ## Build
 
