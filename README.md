@@ -1,26 +1,13 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# Luuppi 50v
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+The repo has pre-commit Prettier -hook, which makes the code look similar as all other code.
 
-## Install
+## Development
 
-Make sure that you have the Gatsby CLI program installed:
-```sh
-npm install --global gatsby-cli
-```
+1.  `npm install` - installs required dependencies
+2.  `npm run develop` - starts Gatsby's development server
+3.  Open `http://localhost:3000` - this should start automatically
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
+## Build
 
-Then you can run it by:
-```sh
-cd gatsby-example-site
-npm run develop
-```
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+1.  `npm run build` - builds Gatsby to public/ -folder

@@ -8,22 +8,26 @@ const IndexPage = () => (
   <>
     <Center>
       <p>
-      Luuppi ry on toiminut Tampereen yliopiston tietojenkäsittelijöiden, matemaatikkojen ja
-      tilastotieteilijöiden ainejärjestönä jo puoli vuosisataa. Vuonna 1969 perustetun Luupin 50-vuotista
-      taivalta juhlistetaan ennennäkemättömällä tavalla koko viikon 8 ajan, joka huipentuu <b>23.&nbsp;helmikuuta&nbsp;2019</b>
-      { ' ' }Paja Kongressissa järjestettävään pääjuhlaan. Juhlaviikon ohjelman kokonaisuudessaan pääset näkemään täältä.
+        Luuppi ry on toiminut Tampereen yliopiston tietojenkäsittelijöiden,
+        matemaatikkojen ja tilastotieteilijöiden ainejärjestönä jo puoli
+        vuosisataa. Vuonna 1969 perustetun Luupin 50-vuotista taivalta
+        juhlistetaan ennennäkemättömällä tavalla koko viikon 8 ajan, joka
+        huipentuu <b>23.&nbsp;helmikuuta&nbsp;2019</b> Paja Kongressissa
+        järjestettävään pääjuhlaan. Juhlaviikon ohjelman kokonaisuudessaan
+        pääset näkemään täältä.
       </p>
 
       <p>
-        Lippu juhliin maksaa Luuppi ry:n jäsenille 100€ (muut 120€) sisältäen pääjuhlan, pääjuhlan jatkot, pääjuhlan
-        jatkojen jatkot, seuraavan päivän silliksen sekä silliksen jatkot. Ilmoittautuminen vuosijuhlille tapahtuu Luupin
-        verkkosivuilta sekä jäsenille että jäsenten aveceille. Kutsuvieraille on lähetetty oma ilmoittautumislinkki.
-        Yleinen ilmoittautuminen kaikille luuppilaisille alkaa marraskuussa.
+        Lippu juhliin maksaa Luuppi ry:n jäsenille 100€ (muut 120€) sisältäen
+        pääjuhlan, pääjuhlan jatkot, pääjuhlan jatkojen jatkot, seuraavan päivän
+        silliksen sekä silliksen jatkot. Ilmoittautuminen vuosijuhlille tapahtuu
+        Luupin verkkosivuilta sekä jäsenille että jäsenten aveceille.
+        Kutsuvieraille on lähetetty oma ilmoittautumislinkki. Yleinen
+        ilmoittautuminen kaikille luuppilaisille alkaa marraskuussa.
       </p>
 
       <p>Luupin historiaan mahtuu paljon tapahtumia: …</p>
     </Center>
-
 
     <SkewedContrast>
       <Center>
@@ -73,12 +77,9 @@ const IndexPage = () => (
 
     <AfterSkewedContrast>
       <Center>
-        <p>
-          Tähän jotain?
-        </p>
+        <p>Tähän jotain?</p>
       </Center>
     </AfterSkewedContrast>
-
   </>
 )
 
