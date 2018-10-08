@@ -32,10 +32,9 @@ injectGlobal`
 
   a {
     text-decoration: none;
-    color: ${theme.contrastHighlight};
-
+    color: black;
     &:hover {
-      text-decoration: underline;
+      color: ${theme.contrastHighlight}
     }
   }
 
@@ -45,6 +44,14 @@ injectGlobal`
     font-size: 2.2rem;
     font-family: 'Crimson Text', serif;
   }
+
+  h4 {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+
 
   ${media.mobile`
     h3 {

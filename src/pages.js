@@ -24,7 +24,11 @@ const pages = [
     link: '/kumppanit',
   },
   {
-    text: 'Ilmoittautuminen',
+    text: 'Yhteystiedot',
+    link: '/yhteystiedot',
+  },
+  {
+    text: '',
     link: '/ilmoittautuminen',
   },
 ]

@@ -8,19 +8,22 @@ const IndexPage = () => (
   <>
     <Center>
       <p>
-        Luuppi on perustettu vuonna 1969 matematiikan ja tietojenkäsittelyn
-        oppiaineiden ainejärjestöksi. Tätä 50-vuotista taivalta Luuppi juhlistaa{' '}
-        <b>23.&nbsp;helmikuuta&nbsp;2019</b> järjestettävillä vuosijuhlillaan.
+      Luuppi ry on toiminut Tampereen yliopiston tietojenkäsittelijöiden, matemaatikkojen ja
+      tilastotieteilijöiden ainejärjestönä jo puoli vuosisataa. Vuonna 1969 perustetun Luupin 50-vuotista
+      taivalta juhlistetaan ennennäkemättömällä tavalla koko viikon 8 ajan, joka huipentuu <b>23.&nbsp;helmikuuta&nbsp;2019</b>
+      { ' ' }Paja Kongressissa järjestettävään pääjuhlaan. Juhlaviikon ohjelman kokonaisuudessaan pääset näkemään täältä.
       </p>
 
       <p>
-        Inasen verran täytettä vielä tänne! Inasen verran täytettä vielä tänne!
-        Inasen verran täytettä vielä tänne! Inasen verran täytettä vielä tänne!
-        Inasen verran täytettä vielä tänne!
+        Lippu juhliin maksaa Luuppi ry:n jäsenille 100€ (muut 120€) sisältäen pääjuhlan, pääjuhlan jatkot, pääjuhlan
+        jatkojen jatkot, seuraavan päivän silliksen sekä silliksen jatkot. Ilmoittautuminen vuosijuhlille tapahtuu Luupin
+        verkkosivuilta sekä jäsenille että jäsenten aveceille. Kutsuvieraille on lähetetty oma ilmoittautumislinkki.
+        Yleinen ilmoittautuminen kaikille luuppilaisille alkaa marraskuussa.
       </p>
 
       <p>Luupin historiaan mahtuu paljon tapahtumia: …</p>
     </Center>
+
 
     <SkewedContrast>
       <Center>
@@ -71,23 +74,11 @@ const IndexPage = () => (
     <AfterSkewedContrast>
       <Center>
         <p>
-          50-vuotisjuhlia vietetään ennennäkemättömällä tavalla. Tapahtumaa
-          riittää koko vuosijuhlaviikon, jonka ohjelma löytyy TÄÄLTÄ. Itse
-          pääjuhla järjestetään 23.2. Paja Kongressissa aivan Torni-hotellin
-          juuressa. Lippu juhliin maksaa 100 euroa jäsenille (120 euroa
-          ei-jäsenille) ja se sisältää pääsyn pääjuhlaan, pääjuhlan jatkoille,
-          pääjuhlan jatkojen jatkoille, seuraavan päivän sillikselle sekä
-          silliksen jatkoille.
-        </p>
-
-        <p>
-          Ilmoittautuminen vuosijuhlille tapahtuu Luupin verkkosivuilta sekä
-          jäsenille että jäsenten aveceille. Kutsuvieraille on lähetetty oma
-          ilmoittautumislinkki. Yleinen ilmoittautuminen kaikille luuppilaisille
-          alkaa marraskuussa.
+          Tähän jotain?
         </p>
       </Center>
     </AfterSkewedContrast>
+
   </>
 )
 

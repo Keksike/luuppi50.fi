@@ -6,27 +6,24 @@ import Helmet from 'react-helmet'
 
 import Center from '../components/Center'
 import { Pair, Text, Image } from '../components/Pair'
-import ribbon from '../static/images/logonauha2.png'
 
-const Ribbon = styled.div`
-  background: url(${ribbon});
-  background-size: cover;
-  background-repeat: repeat-x;
-  background-position: 30%;
-  width: 100%;
-  height: 2rem;
-  margin-top: 2rem;
-`
 
-const Link = styled.a`
+
+const Link2 = styled.a`
   font-size: 1.5rem;
   color: #000;
 `
 
+const Time = styled.h4`
+  margin-top: -1em;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.3rem;
+`
+
 const FacebookLink = ({ url }) => (
-  <Link href={url}>
+  <Link2 href={url}>
     <FaFacebookF />
-  </Link>
+  </Link2>
 )
 
 FacebookLink.propTypes = {
@@ -46,12 +43,14 @@ const SchedulePage = () => (
       päivän sillikselle sekä silliksen jatkoille.
     </p>
 
-    <Ribbon />
+
 
     <Pair>
       <Text>
-        <h3>5. maaliskuuta 2019</h3>
-        <p>Juhlaviikon Avajaiset ft. GASELLIT (Olympia)</p>
+        <h3>Vuosijuhlaseminaari</h3>
+        <Time>18. helmikuuta kello 16:00</Time>
+        <p>IT-alan ajankohtaisiin kysymyksiin pureutuva vuosijuhlaseminaari järjestetään yhteistyöyritystemme
+        kanssa Tampereen yliopiston tiloissa. Seminaarista lisätietoa löytyy <a href="/seminaari">TÄÄLTÄ.</a></p>
         <p>
           <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
         </p>
@@ -59,12 +58,12 @@ const SchedulePage = () => (
       <Image />
     </Pair>
 
-    <Ribbon />
 
     <Pair>
       <Text>
-        <h3>6. maaliskuuta 2019</h3>
-        <p>BOSAn kuohuviini-tasting (Deli 1909 & Wine Bar)</p>
+        <h3>Myöhemmin ilmoitettava tapahtuma</h3>
+        <Time>19. helmikuuta kello 18:00</Time>
+        <p>...</p>
         <p>
           <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
         </p>
@@ -72,12 +71,14 @@ const SchedulePage = () => (
       <Image />
     </Pair>
 
-    <Ribbon />
+
 
     <Pair>
       <Text>
-        <h3>7. maaliskuuta 2019</h3>
-        <p>Boomi Poker Championship (Feel Vegas)</p>
+        <h3>Tanssikurssi</h3>
+        <Time>20. helmikuuta</Time>
+        <p>Tanssikurssi palauttaa vuosijuhlaosallistujien mieleen perinteisten paritanssien salat.
+        Lisätietoa tapahtumasta ja ilmoittautumisesta tulee myöhemmin.</p>
         <p>
           <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
         </p>
@@ -85,12 +86,13 @@ const SchedulePage = () => (
       <Image />
     </Pair>
 
-    <Ribbon />
 
     <Pair>
       <Text>
-        <h3>8. maaliskuuta 2019</h3>
-        <p>Haalaribileet 25 vuotta (Viihdemaailma Ilona)</p>
+        <h3>Kolmiot</h3>
+        <Time>21. helmikuuta kello 21:00</Time>
+        <p>Komioilla pääset laittamaan tanssijalan koreaksi ja virittäytymään jo vuosijuhlatunnelmaan.
+        Lisätietoa tapahtumasta ja lipunmyynnistä tulee myöhemmin.</p>
         <p>
           <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
         </p>
@@ -98,12 +100,13 @@ const SchedulePage = () => (
       <Image />
     </Pair>
 
-    <Ribbon />
 
     <Pair>
       <Text>
-        <h3>9. maaliskuuta 2019</h3>
-        <p>Tulevaisuusareena (Tampereen Yliopisto)</p>
+        <h3>Cocktail-tilaisuus</h3>
+        <Time>23. helmikuuta kello 15:30</Time>
+        <p>Ennen iltajuhlaa järjestetään kutsuvieraille cocktail-tilaisuus, jonka aikana kutsuvieraiden
+        on mahdollisuus muistaa 50-vuotiasta Luuppia. </p>
         <p>
           <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
         </p>
@@ -111,12 +114,13 @@ const SchedulePage = () => (
       <Image />
     </Pair>
 
-    <Ribbon />
 
     <Pair>
       <Text>
-        <h3>10. maaliskuuta 2019</h3>
-        <p>Tulevaisuusareena (Tampereen Yliopisto)</p>
+        <h3>Luupin 50-vuotis vuosijuhlat</h3>
+        <Time>23. helmikuuta kello 18:00</Time>
+        <p>Vuosijuhlaviikon kohokohta on Paja Kongressissa järjestettävä arvokas iltajuhla. Lisätietoa iltajuhlasta
+        löytyy <a href="/paajuhla">TÄÄLTÄ</a></p>
         <p>
           <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
         </p>
@@ -124,12 +128,14 @@ const SchedulePage = () => (
       <Image />
     </Pair>
 
-    <Ribbon />
+
 
     <Pair>
       <Text>
-        <h3>11. maaliskuuta 2019</h3>
-        <p>Tulevaisuusareena (Tampereen Yliopisto)</p>
+        <h3>Sillis</h3>
+        <Time>24. helmikuuta kello 12:00</Time>
+        <p>Vuosijuhlaviikon päättää rento silliaamiainen, jota monet nimittävät juhlien pääpäiväksi. Lisätietoa
+        silliksestä löytyy <a href="/paajuhla">TÄÄLTÄ</a></p>
         <p>
           <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
         </p>
@@ -137,7 +143,7 @@ const SchedulePage = () => (
       <Image />
     </Pair>
 
-    <Ribbon />
+
   </Center>
 )
 

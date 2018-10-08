@@ -37,7 +37,7 @@ const Text = styled.div`
 `
 
 const Image = styled.div`
-  background-image: url('https://comic-news.com/wp-content/uploads/2017/05/99a2ea397db015a4d30362f16151ff73.jpg');
+  background-image: url('https://images.unsplash.com/photo-1501255133540-c675b2234546?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2dd742438e13eacdea7d6d8ac6864579&auto=format&fit=crop&w=1950&q=80');
   background-size: cover;
   width: 50rem;
   margin: 0 1rem;

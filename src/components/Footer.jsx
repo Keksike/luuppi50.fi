@@ -24,6 +24,12 @@ const ContactsWrapper = styled.div`
   color: ${props => props.theme.contrastText};
 `
 
+const Link3 = styled.a`
+  text-decoration: none;
+  color: ${props => props.theme.contrastHighlight};
+  &:hover: text-decoration: underline;
+`
+
 const Footer = () => (
   <FooterWrapper>
     <SponsorsWrapper>
@@ -31,7 +37,7 @@ const Footer = () => (
     </SponsorsWrapper>
     <ContactsWrapper>
       <div>
-        <a href="https://www.luuppi.fi/">luuppi.fi</a>
+        <Link3 href="https://www.luuppi.fi/" >luuppi.fi</Link3>
       </div>
       © Luuppi ry 2018
     </ContactsWrapper>
