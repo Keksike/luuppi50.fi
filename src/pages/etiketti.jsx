@@ -1,10 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Center from '../components/Center'
+import Content from '../components/Content'
 
 const Etiquette = () => (
-  <Center>
+  <Content>
     <Helmet>
       <title>Etiketti</title>
     </Helmet>
@@ -75,7 +75,7 @@ const Etiquette = () => (
       perinteisesti avecille, jonka jälkeen voi musiikin tahtiin liikahdella
       vapaasti muiden kanssa. Tanssi jatkuu, kunnes on aika siirtyä jatkoille.
     </p>
-  </Center>
+  </Content>
 )
 
 export default Etiquette

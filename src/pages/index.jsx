@@ -1,20 +1,18 @@
 import React from 'react'
 
-import Center from '../components/Center'
+import Content from '../components/Content'
 import { SkewedContrast, AfterSkewedContrast } from '../components/Skewed'
 import { Pair, Text, Image } from '../components/Pair'
 
 const IndexPage = () => (
   <>
-    <Center>
+    <Content>
       <p>
-        Luuppi ry on toiminut Tampereen yliopiston tietojenkäsittelijöiden,
-        matemaatikkojen ja tilastotieteilijöiden ainejärjestönä jo puoli
-        vuosisataa. Vuonna 1969 perustetun Luupin 50-vuotista taivalta
-        juhlistetaan ennennäkemättömällä tavalla koko viikon 8 ajan, joka
-        huipentuu <b>23.&nbsp;helmikuuta&nbsp;2019</b> Paja Kongressissa
-        järjestettävään pääjuhlaan. Juhlaviikon ohjelman kokonaisuudessaan
-        pääset näkemään täältä.
+        Luuppi ry on toiminut Tampereen yliopiston tietojenkäsittelijöiden, matemaatikkojen ja
+        tilastotieteilijöiden ainejärjestönä jo puoli vuosisataa. Vuonna 1969 perustetun Luupin 50-vuotista
+        taivalta juhlistetaan ennennäkemättömällä tavalla koko viikon 8 ajan, joka huipentuu <b>23.&nbsp;helmikuuta&nbsp;2019</b>
+        { ' ' }Paja Kongressissa järjestettävään pääjuhlaan. Juhlaviikon ohjelman kokonaisuudessaan pääset näkemään
+        <a href="/vuosijuhlaviikko"> TÄÄLTÄ</a>.
       </p>
 
       <p>
@@ -26,60 +24,7 @@ const IndexPage = () => (
         ilmoittautuminen kaikille luuppilaisille alkaa marraskuussa.
       </p>
 
-      <p>Luupin historiaan mahtuu paljon tapahtumia: …</p>
-    </Center>
-
-    <SkewedContrast>
-      <Center>
-        <Pair>
-          <Text>
-            <h3>Luupin pikkujoulut</h3>
-            <p>
-              Luuppi on perustettu vuonna 1969 matematiikan ja
-              tietojenkäsittelyn oppiaineiden ainejärjestöksi. Tätä 50-vuotista
-              taivalta Luuppi juhlistaa <b>23.&nbsp;helmikuuta&nbsp;2019</b>{' '}
-              järjestettävillä vuosijuhlillaan.
-            </p>
-          </Text>
-
-          <Image src="https://images.unsplash.com/photo-1501255133540-c675b2234546?ixlib=rb-0.3.5…EyMDd9&s=2dd7424…&auto=format&fit=crop&w=1950&q=80" />
-        </Pair>
-
-        <Pair>
-          <Image src="https://images.unsplash.com/photo-1501255133540-c675b2234546?ixlib=rb-0.3.5…EyMDd9&s=2dd7424…&auto=format&fit=crop&w=1950&q=80" />
-
-          <Text>
-            <h3>Luupin pikkujoulujen jatkot</h3>
-            <p>
-              Luuppi on perustettu vuonna 1969 matematiikan ja
-              tietojenkäsittelyn oppiaineiden ainejärjestöksi. Tätä 50-vuotista
-              taivalta Luuppi juhlistaa <b>23.&nbsp;helmikuuta&nbsp;2019</b>{' '}
-              järjestettävillä vuosijuhlillaan.
-            </p>
-          </Text>
-        </Pair>
-
-        <Pair>
-          <Text>
-            <h3>Luupin pikkujoulujen jatkojen jatkot</h3>
-            <p>
-              Luuppi on perustettu vuonna 1969 matematiikan ja
-              tietojenkäsittelyn oppiaineiden ainejärjestöksi. Tätä 50-vuotista
-              taivalta Luuppi juhlistaa <b>23.&nbsp;helmikuuta&nbsp;2019</b>{' '}
-              järjestettävillä vuosijuhlillaan.
-            </p>
-          </Text>
-
-          <Image src="https://images.unsplash.com/photo-1501255133540-c675b2234546?ixlib=rb-0.3.5…EyMDd9&s=2dd7424…&auto=format&fit=crop&w=1950&q=80" />
-        </Pair>
-      </Center>
-    </SkewedContrast>
-
-    <AfterSkewedContrast>
-      <Center>
-        <p>Tähän jotain?</p>
-      </Center>
-    </AfterSkewedContrast>
+    </Content>
   </>
 )
 

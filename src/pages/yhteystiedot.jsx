@@ -1,11 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Center from '../components/Center'
+import Content from '../components/Content'
 import { Pair, Text } from '../components/Pair'
 
 const ContactPage = () => (
-  <Center>
+  <Content>
     <Helmet>
       <title>Yhteystiedot</title>
     </Helmet>
@@ -16,6 +16,7 @@ const ContactPage = () => (
       <Text>
         <h4>Tuomas Himmanen</h4>
         <p>Vuosijuhlakoordinaattori</p>
+        <p>vuosijuhlat@luuppi.fi</p>
       </Text>
 
       <Text>
@@ -43,6 +44,7 @@ const ContactPage = () => (
       <Text>
         <h4>Loviisa Hurme</h4>
         <p>Yritysvastaava</p>
+        <p>loviisa.hurme@luuppi.fi</p>
       </Text>
     </Pair>
 
@@ -50,7 +52,7 @@ const ContactPage = () => (
       <h4>Lydia Isokallio</h4>
       <p>Grafiikkavastaava</p>
     </Text>
-  </Center>
+  </Content>
 )
 
 export default ContactPage

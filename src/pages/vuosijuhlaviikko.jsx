@@ -4,8 +4,15 @@ import { FaFacebookF } from 'react-icons/fa'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Center from '../components/Center'
+import Content from '../components/Content'
 import { Pair, Text, Image } from '../components/Pair'
+import Seminaari from '../static/images/light.jpg'
+import Unknown from '../static/images/unknown.jpg'
+import Tanssi from '../static/images/tanssi.jpg'
+import Kolmiot from '../static/images/kolmiot.jpg'
+import Cocktail from '../static/images/cocktail.jpg'
+import Paajuhla from '../static/images/paajuhla.jpg'
+import Sillis from '../static/images/sillis.jpg'
 
 const Link = styled.a`
   font-size: 1.5rem;
@@ -29,7 +36,7 @@ FacebookLink.propTypes = {
 }
 
 const SchedulePage = () => (
-  <Center>
+  <Content>
     <Helmet>
       <title>Vuosijuhlaviikko</title>
     </Helmet>
@@ -51,11 +58,9 @@ const SchedulePage = () => (
           tiloissa. Seminaarista lisätietoa löytyy{' '}
           <a href="/seminaari">TÄÄLTÄ.</a>
         </p>
-        <p>
-          <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
-        </p>
+
       </Text>
-      <Image />
+      <Image src={Seminaari}/>
     </Pair>
 
     <Pair>
@@ -63,11 +68,9 @@ const SchedulePage = () => (
         <h3>Myöhemmin ilmoitettava tapahtuma</h3>
         <Time>19. helmikuuta kello 18:00</Time>
         <p>...</p>
-        <p>
-          <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
-        </p>
+
       </Text>
-      <Image />
+      <Image src={Unknown}/>
     </Pair>
 
     <Pair>
@@ -79,11 +82,9 @@ const SchedulePage = () => (
           paritanssien salat. Lisätietoa tapahtumasta ja ilmoittautumisesta
           tulee myöhemmin.
         </p>
-        <p>
-          <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
-        </p>
+
       </Text>
-      <Image />
+      <Image src={Tanssi}/>
     </Pair>
 
     <Pair>
@@ -95,11 +96,9 @@ const SchedulePage = () => (
           vuosijuhlatunnelmaan. Lisätietoa tapahtumasta ja lipunmyynnistä tulee
           myöhemmin.
         </p>
-        <p>
-          <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
-        </p>
+
       </Text>
-      <Image />
+      <Image src={Kolmiot}/>
     </Pair>
 
     <Pair>
@@ -110,11 +109,9 @@ const SchedulePage = () => (
           Ennen iltajuhlaa järjestetään kutsuvieraille cocktail-tilaisuus, jonka
           aikana kutsuvieraiden on mahdollisuus muistaa 50-vuotiasta Luuppia.{' '}
         </p>
-        <p>
-          <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
-        </p>
+
       </Text>
-      <Image />
+      <Image src={Cocktail}/>
     </Pair>
 
     <Pair>
@@ -126,11 +123,9 @@ const SchedulePage = () => (
           iltajuhla. Lisätietoa iltajuhlasta löytyy{' '}
           <a href="/paajuhla">TÄÄLTÄ</a>
         </p>
-        <p>
-          <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
-        </p>
+
       </Text>
-      <Image />
+      <Image src={Paajuhla}/>
     </Pair>
 
     <Pair>
@@ -142,13 +137,14 @@ const SchedulePage = () => (
           juhlien pääpäiväksi. Lisätietoa silliksestä löytyy{' '}
           <a href="/paajuhla">TÄÄLTÄ</a>
         </p>
-        <p>
-          <FacebookLink url="https://www.facebook.com/events/919508404878025/" />
-        </p>
+
       </Text>
-      <Image />
+      <Image src={Sillis}/>
     </Pair>
-  </Center>
+
+    <br/>
+    <br/>
+  </Content>
 )
 
 export default SchedulePage
