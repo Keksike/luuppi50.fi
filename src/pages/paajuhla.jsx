@@ -1,10 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Center from '../components/Center'
+import Content from '../components/Content'
 
 const MainCeremonyPage = () => (
-  <Center>
+  <Content>
     <Helmet>
       <title>Pääjuhla ja sillis</title>
     </Helmet>
@@ -81,7 +81,7 @@ const MainCeremonyPage = () => (
       19:00 Bussit lähtevät jatkoille <br />
       19:30 Silliksen jatkot <br />
     </p>
-  </Center>
+  </Content>
 )
 
 export default MainCeremonyPage

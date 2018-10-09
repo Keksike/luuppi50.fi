@@ -1,10 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Center from '../components/Center'
+import Content from '../components/Content'
 
 const Seminar = () => (
-  <Center>
+  <Content>
     <Helmet>
       <title>Vuosijuhlaseminaari</title>
     </Helmet>
@@ -19,7 +19,7 @@ const Seminar = () => (
     </p>
 
     <p>Seminaarin luennoitsijat ja tarkka aikataulu ilmoitetaan myöhemmin.</p>
-  </Center>
+  </Content>
 )
 
 export default Seminar

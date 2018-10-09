@@ -27,10 +27,10 @@ const pages = [
     text: 'Yhteystiedot',
     link: '/yhteystiedot',
   },
-  {
-    text: '',
-    link: '/ilmoittautuminen',
-  },
+  // {
+  //   text: '',
+  //   link: '/ilmoittautuminen',
+  // },
 ]
 
 export default pages

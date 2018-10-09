@@ -13,17 +13,23 @@ import Center from '../components/Center'
 
 import headerLogo from '../static/images/header3.png'
 import favicon from '../static/images/favicon2.png'
+import backgroundPattern from '../static/images/luuppi3.jpg'
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
   html, body {
     margin: 0;
-    height: 100%;
     background-color: ${theme.background};
     color: ${theme.text};
     font-family: 'Raleway', sans-serif;
     line-height: 1.6;
     font-size: 17px;
+  }
+
+  body {
+    background: url(${backgroundPattern});
+    background-size: 100% auto;
+    background-attachment: fixed;
   }
 
   button {
@@ -64,6 +70,8 @@ const Page = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: #fff;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 `
 
 const HeaderLogo = styled.img`
@@ -131,36 +139,36 @@ class Layout extends React.Component {
         `}
         render={data => (
           <ThemeProvider theme={theme}>
-            <Page>
-              <Helmet
-                titleTemplate={`%s - ${data.site.siteMetadata.title}`}
-                defaultTitle={data.site.siteMetadata.title}
-              >
-                <html lang="fi" />
-                <link rel="icon" type="image/png" href={favicon} />
-              </Helmet>
+            <Center>
+              <Page>
+                <Helmet
+                  titleTemplate={`%s - ${data.site.siteMetadata.title}`}
+                  defaultTitle={data.site.siteMetadata.title}
+                >
+                  <html lang="fi" />
+                  <link rel="icon" type="image/png" href={favicon} />
+                </Helmet>
 
-              <MobileNavigation />
+                <MobileNavigation />
 
-              <Center>
                 <HeaderLogo
                   src={headerLogo}
                   alt="Luuppi 50"
                   onClick={openFrontpage}
                 />
                 <Navigation />
-              </Center>
 
-              <ContentContainer>
-                <PoseGroup>
-                  <RoutesContainer key={location.key}>
-                    {children}
-                  </RoutesContainer>
-                </PoseGroup>
-              </ContentContainer>
+                <ContentContainer>
+                  <PoseGroup>
+                    <RoutesContainer key={location.key}>
+                      {children}
+                    </RoutesContainer>
+                  </PoseGroup>
+                </ContentContainer>
 
-              <Footer />
-            </Page>
+                <Footer />
+              </Page>
+            </Center>
           </ThemeProvider>
         )}
       />

@@ -1,11 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Center from '../components/Center'
+import Content from '../components/Content'
 import SignupForm from '../components/SignupForm'
 
 const SignupPage = () => (
-  <Center>
+  <Content>
     <Helmet>
       <title>Ilmottautuminen</title>
     </Helmet>
@@ -26,7 +26,7 @@ const SignupPage = () => (
     <h3>Kutsuvieras&shy;ilmoittautuminen</h3>
 
     <SignupForm />
-  </Center>
+  </Content>
 )
 
 export default SignupPage
