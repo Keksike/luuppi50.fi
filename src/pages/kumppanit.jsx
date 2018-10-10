@@ -45,7 +45,7 @@ const partnersPage = () => (
       fragment companyImage on File {
         childImageSharp {
           sizes(maxWidth: 600) {
-            ...GatsbyImageSharpSizes_tracedSVG
+            ...GatsbyImageSharpSizes
           }
         }
       }
