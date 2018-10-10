@@ -14,6 +14,7 @@ const AlignCenter = styled.div`
 const Sponsor = styled(Image)`
   width: 15rem !important;
   height: 4rem !important;
+  margin: 0 auto;
 
   img {
     width: 15rem !important;
@@ -24,6 +25,7 @@ const Sponsor = styled(Image)`
 
 const MainSponsor = styled(Image)`
   width: 30rem !important;
+  margin: 0 auto;
   margin-bottom: 1rem;
 
   img {
@@ -42,8 +44,8 @@ const partnersPage = () => (
     query={graphql`
       fragment companyImage on File {
         childImageSharp {
-          fixed(width: 600) {
-            ...GatsbyImageSharpFixed
+          sizes(maxWidth: 600) {
+            ...GatsbyImageSharpSizes_tracedSVG
           }
         }
       }
@@ -78,22 +80,22 @@ const partnersPage = () => (
 
         <AlignCenter>
           <a href="http://gofore.com">
-            <MainSponsor fixed={data.gofore.childImageSharp.fixed} />
+            <MainSponsor sizes={data.gofore.childImageSharp.sizes} />
           </a>
         </AlignCenter>
 
         <MultipleSponsors>
           <a href="http://futurice.com">
-            <Sponsor fixed={data.futurice.childImageSharp.fixed} />
+            <Sponsor sizes={data.futurice.childImageSharp.sizes} />
           </a>
           <a href="http://eatech.com">
-            <Sponsor fixed={data.eatech.childImageSharp.fixed} />
+            <Sponsor sizes={data.eatech.childImageSharp.sizes} />
           </a>
         </MultipleSponsors>
 
         <AlignCenter>
           <a href="http://eatech.com">
-            <Sponsor fixed={data.reaktor.childImageSharp.fixed} />
+            <Sponsor sizes={data.reaktor.childImageSharp.sizes} />
           </a>
         </AlignCenter>
 
