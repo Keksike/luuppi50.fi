@@ -13,6 +13,11 @@ const Pair = styled.div`
     margin-bottom: -5rem;
   }
 
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
+
   ${media.smallMobile`
     flex-wrap: wrap;
   `};

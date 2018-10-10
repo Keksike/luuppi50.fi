@@ -27,7 +27,7 @@ injectGlobal`
   }
 
   body {
-    background: url(${backgroundPattern});
+    background-image: url(${backgroundPattern});
     background-size: 100% auto;
     background-attachment: fixed;
   }
@@ -56,8 +56,6 @@ injectGlobal`
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
   }
-
-
 
   ${media.mobile`
     h3 {
