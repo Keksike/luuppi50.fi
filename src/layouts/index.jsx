@@ -71,7 +71,7 @@ const Page = styled.div`
   display: flex;
   flex-direction: column;
   background: #fff;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 `
 
 const HeaderLogo = styled.img`
@@ -84,7 +84,7 @@ const HeaderLogo = styled.img`
     align-self: flex-start
     width: 155px;
     opacity: 0.95;
-    margin: 1rem 0;
+    margin: 1rem 1rem;
     max-width: none;
   `};
 `
@@ -156,6 +156,7 @@ class Layout extends React.Component {
                   alt="Luuppi 50"
                   onClick={openFrontpage}
                 />
+
                 <Navigation />
 
                 <ContentContainer>

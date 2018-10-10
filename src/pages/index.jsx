@@ -1,17 +1,18 @@
 import React from 'react'
 
 import Content from '../components/Content'
-import { SkewedContrast, AfterSkewedContrast } from '../components/Skewed'
-import { Pair, Text, Image } from '../components/Pair'
 
 const IndexPage = () => (
   <>
     <Content>
       <p>
-        Luuppi ry on toiminut Tampereen yliopiston tietojenkäsittelijöiden, matemaatikkojen ja
-        tilastotieteilijöiden ainejärjestönä jo puoli vuosisataa. Vuonna 1969 perustetun Luupin 50-vuotista
-        taivalta juhlistetaan ennennäkemättömällä tavalla koko viikon 8 ajan, joka huipentuu <b>23.&nbsp;helmikuuta&nbsp;2019</b>
-        { ' ' }Paja Kongressissa järjestettävään pääjuhlaan. Juhlaviikon ohjelman kokonaisuudessaan pääset näkemään
+        Luuppi ry on toiminut Tampereen yliopiston tietojenkäsittelijöiden,
+        matemaatikkojen ja tilastotieteilijöiden ainejärjestönä jo puoli
+        vuosisataa. Vuonna 1969 perustetun Luupin 50-vuotista taivalta
+        juhlistetaan ennennäkemättömällä tavalla koko viikon 8 ajan, joka
+        huipentuu <b>23.&nbsp;helmikuuta&nbsp;2019</b> Paja Kongressissa
+        järjestettävään pääjuhlaan. Juhlaviikon ohjelman kokonaisuudessaan
+        pääset näkemään
         <a href="/vuosijuhlaviikko"> TÄÄLTÄ</a>.
       </p>
 
@@ -23,7 +24,6 @@ const IndexPage = () => (
         Kutsuvieraille on lähetetty oma ilmoittautumislinkki. Yleinen
         ilmoittautuminen kaikille luuppilaisille alkaa marraskuussa.
       </p>
-
     </Content>
   </>
 )

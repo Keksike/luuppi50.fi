@@ -14,6 +14,10 @@ const Center = styled.div`
   ${media.mobile`
     width: 100%;
   `};
+
+  ${media.smallMobile`
+    padding: 0;
+  `};
 `
 
 export default Center

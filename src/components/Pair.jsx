@@ -21,15 +21,10 @@ const Pair = styled.div`
 const Text = styled.div`
   padding: 2rem 0;
   min-width: 60%;
-  margin: 0 1rem;
-
+  margin-right: 2rem;
   ${media.mobile`
     max-width: 50%;
   `};
-
-  ${Pair}:last-child & {
-    padding-bottom: 5rem;
-  }
 
   ${media.smallMobile`
     max-width: none;
