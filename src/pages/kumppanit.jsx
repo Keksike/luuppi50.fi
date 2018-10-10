@@ -5,10 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 
 import Content from '../components/Content'
-
-const AlignCenter = styled.div`
-  text-align: center;
-`
+import { media } from '../theme'
 
 // !important is needed to overwrite gatsby-image styles
 const Sponsor = styled(Image)`
@@ -25,11 +22,13 @@ const Sponsor = styled(Image)`
 
 const MainSponsor = styled(Image)`
   width: 30rem !important;
+  max-width: 100% !important;
   margin: 0 auto;
   margin-bottom: 1rem;
 
   img {
     width: 30rem !important;
+    max-width: 100%;
     object-fit: contain !important;
   }
 `
@@ -37,6 +36,22 @@ const MainSponsor = styled(Image)`
 const MultipleSponsors = styled.div`
   display: flex;
   justify-content: space-evenly;
+
+  a {
+    margin: 0 1rem;
+  }
+
+  ${media.smallMobile`
+    flex-wrap: wrap;
+  `};
+`
+
+const ReaktorSponsor = styled(Sponsor)`
+  margin-top: -1rem;
+`
+
+const EatechSponsor = styled(Sponsor)`
+  margin-top: 0.4rem;
 `
 
 const partnersPage = () => (
@@ -78,26 +93,22 @@ const partnersPage = () => (
 
         <p>Luupin 50-vuotis vuosijuhlia sponsoroivat:</p>
 
-        <AlignCenter>
-          <a href="http://gofore.com">
-            <MainSponsor sizes={data.gofore.childImageSharp.sizes} />
-          </a>
-        </AlignCenter>
+        <a href="http://gofore.com">
+          <MainSponsor sizes={data.gofore.childImageSharp.sizes} />
+        </a>
 
         <MultipleSponsors>
           <a href="http://futurice.com">
             <Sponsor sizes={data.futurice.childImageSharp.sizes} />
           </a>
-          <a href="http://eatech.com">
-            <Sponsor sizes={data.eatech.childImageSharp.sizes} />
+          <a href="http://eatech.fi">
+            <EatechSponsor sizes={data.eatech.childImageSharp.sizes} />
           </a>
         </MultipleSponsors>
 
-        <AlignCenter>
-          <a href="http://eatech.com">
-            <Sponsor sizes={data.reaktor.childImageSharp.sizes} />
-          </a>
-        </AlignCenter>
+        <a href="http://reaktor.com">
+          <ReaktorSponsor sizes={data.reaktor.childImageSharp.sizes} />
+        </a>
 
         <h4>Edut</h4>
         <p>Tietoa eduista tulossa myöhemmin.</p>
