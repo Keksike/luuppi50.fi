@@ -79,10 +79,9 @@ const HeaderLogo = styled.img`
   margin: 3rem 0 2rem 0;
 
   ${media.mobile`
-    align-self: flex-start
-    width: 155px;
-    opacity: 0.95;
-    margin: 1rem 1rem;
+    align-self: flex-start;
+    width: 230px;
+    margin: 1rem 1rem 0 1rem;
     max-width: none;
   `};
 `

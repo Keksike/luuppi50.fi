@@ -23,8 +23,8 @@ const MenuStyleWrapper = styled.div`
     position: absolute;
     width: 1.8rem;
     height: 1.5rem;
-    right: 1.8rem;
-    top: 1.8rem;
+    right: 2.22rem;
+    top: 2.22rem;
 
     .bm-burger-bars {
       background: ${props => props.theme.contrastText};
@@ -36,7 +36,7 @@ const MenuStyleWrapper = styled.div`
     width: 1rem;
 
     .bm-cross {
-      background: ${props => props.theme.contrastHighlight};
+      background: ${props => props.theme.contrastText};
     }
   }
 
@@ -54,7 +54,7 @@ const MenuStyleWrapper = styled.div`
     padding: 0.7rem;
     display: block;
     background: ${props => props.theme.contrastBackground};
-    color: ${props => props.theme.contrastHighlight};
+    color: ${props => props.theme.contrastText};
     font-family: 'Crimson Text', serif;
   }
 
