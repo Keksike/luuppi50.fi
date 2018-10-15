@@ -13,7 +13,7 @@ import Center from '../components/Center'
 
 import headerLogo from '../static/images/header3.png'
 import favicon from '../static/images/favicon2.png'
-import backgroundPattern from '../static/images/luuppi3.jpg'
+import backgroundPattern from '../static/images/Logo-pattern.png'
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
@@ -28,7 +28,7 @@ injectGlobal`
 
   body {
     background-image: url(${backgroundPattern});
-    background-size: 100% auto;
+    background-repeat: repeat;
     background-attachment: fixed;
   }
 
