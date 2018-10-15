@@ -13,7 +13,7 @@ import Center from '../components/Center'
 
 import headerLogo from '../static/images/header3.png'
 import favicon from '../static/images/favicon2.png'
-import backgroundPattern from '../static/images/Logo-pattern.png'
+import backgroundPattern from '../static/images/Logo-pattern2.png'
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
