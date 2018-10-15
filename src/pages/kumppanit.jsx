@@ -1,64 +1,120 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Pair, Text, Image } from '../components/Pair'
 import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
+import Image from 'gatsby-image'
 
 import Content from '../components/Content'
-import Gofore from '../static/images/gofore.png'
-import Futurice from '../static/images/futurice.png'
-import Eatech from '../static/images/eatech.png'
-import Reaktor from '../static/images/reaktor.png'
+import { media } from '../theme'
 
+// !important is needed to overwrite gatsby-image styles
+const Sponsor = styled(Image)`
+  width: 15rem !important;
+  height: 4rem !important;
+  margin: 0 auto;
 
-const MainSponsor = styled.div`
-background-image: url(${props => props.src});
-background-size: contain;
-background-repeat: no-repeat;
-height: 5rem;
-width: 30rem;
-margin: auto;
-padding: 1rem;
+  img {
+    width: 15rem !important;
+    object-fit: contain;
+    height: auto !important;
+  }
+`
+
+const MainSponsor = styled(Image)`
+  width: 30rem !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+  img {
+    width: 30rem !important;
+    max-width: 100%;
+    object-fit: contain !important;
+  }
 `
 
 const MultipleSponsors = styled.div`
-display: flex;
-flex-wrap: wrap;
-justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+
+  a {
+    margin: 0 1rem;
+  }
+
+  ${media.smallMobile`
+    flex-wrap: wrap;
+  `};
 `
 
-const Sponsor = styled.div`
-background-image: url(${props => props.src});
-background-size: contain;
-background-repeat: no-repeat;
-height: 3rem;
-width: 15rem;
-padding: 1rem;
+const ReaktorSponsor = styled(Sponsor)`
+  margin-top: -1rem;
 `
 
+const EatechSponsor = styled(Sponsor)`
+  margin-top: 0.4rem;
+`
 
 const partnersPage = () => (
-  <Content>
-    <Helmet>
-      <title>Kumppanit ja edut</title>
-    </Helmet>
+  <StaticQuery
+    query={graphql`
+      fragment companyImage on File {
+        childImageSharp {
+          sizes(maxWidth: 600) {
+            ...GatsbyImageSharpSizes
+          }
+        }
+      }
 
-    <h3>Kumppanit ja edut</h3>
+      query {
+        gofore: file(relativePath: { eq: "gofore.png" }) {
+          ...companyImage
+        }
 
-    <p>Luupin 50-vuotis vuosijuhlia sponsoroivat:</p>
-    <MainSponsor src={Gofore}/>
-    <MultipleSponsors>
-    	<Sponsor src={Futurice}/>
-    	<Sponsor src={Eatech}/>
-    </MultipleSponsors>
-    <MultipleSponsors>
-    	<Sponsor src={Reaktor}/>
-    </MultipleSponsors>
+        reaktor: file(relativePath: { eq: "reaktor.png" }) {
+          ...companyImage
+        }
 
+        eatech: file(relativePath: { eq: "eatech.png" }) {
+          ...companyImage
+        }
 
+        futurice: file(relativePath: { eq: "futurice.png" }) {
+          ...companyImage
+        }
+      }
+    `}
+    render={data => (
+      <Content>
+        <Helmet>
+          <title>Kumppanit ja edut</title>
+        </Helmet>
 
-    <h4>Edut</h4>
-    <p>Tietoa eduista tulossa myöhemmin.</p>
-  </Content>
+        <h3>Kumppanit ja edut</h3>
+
+        <p>Luupin 50-vuotis vuosijuhlia sponsoroivat:</p>
+
+        <a href="http://gofore.com">
+          <MainSponsor sizes={data.gofore.childImageSharp.sizes} />
+        </a>
+
+        <MultipleSponsors>
+          <a href="http://futurice.com">
+            <Sponsor sizes={data.futurice.childImageSharp.sizes} />
+          </a>
+          <a href="http://eatech.fi">
+            <EatechSponsor sizes={data.eatech.childImageSharp.sizes} />
+          </a>
+        </MultipleSponsors>
+
+        <a href="http://reaktor.com">
+          <ReaktorSponsor sizes={data.reaktor.childImageSharp.sizes} />
+        </a>
+
+        <h4>Edut</h4>
+        <p>Tietoa eduista tulossa myöhemmin.</p>
+      </Content>
+    )}
+  />
 )
 
 export default partnersPage

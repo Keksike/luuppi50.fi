@@ -27,7 +27,7 @@ injectGlobal`
   }
 
   body {
-    background: url(${backgroundPattern});
+    background-image: url(${backgroundPattern});
     background-size: 100% auto;
     background-attachment: fixed;
   }
@@ -57,8 +57,6 @@ injectGlobal`
     margin-bottom: 0.5rem;
   }
 
-
-
   ${media.mobile`
     h3 {
       font-size: 1.7rem;
@@ -71,7 +69,7 @@ const Page = styled.div`
   display: flex;
   flex-direction: column;
   background: #fff;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 `
 
 const HeaderLogo = styled.img`
@@ -81,10 +79,9 @@ const HeaderLogo = styled.img`
   margin: 3rem 0 2rem 0;
 
   ${media.mobile`
-    align-self: flex-start
-    width: 155px;
-    opacity: 0.95;
-    margin: 1rem 0;
+    align-self: flex-start;
+    width: 230px;
+    margin: 1rem 1rem 0 1rem;
     max-width: none;
   `};
 `
@@ -156,6 +153,7 @@ class Layout extends React.Component {
                   alt="Luuppi 50"
                   onClick={openFrontpage}
                 />
+
                 <Navigation />
 
                 <ContentContainer>
