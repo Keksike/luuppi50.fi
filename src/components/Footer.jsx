@@ -16,12 +16,14 @@ const SponsorsWrapper = styled.div`
 
 const SponsorsText = styled.div`
   font-size: 12px;
+  text-align: left;
   color: ${props => props.theme.contrastText};
 `
 
 const ContactsWrapper = styled.div`
   text-align: right;
   color: ${props => props.theme.contrastText};
+  width: 80em;
 `
 
 const Link3 = styled.a`
@@ -30,14 +32,33 @@ const Link3 = styled.a`
   &:hover: text-decoration: underline;
 `
 
+const SponsorImage = styled.img`
+  width: 10%;
+  height: auto;
+  margin-right: 1em;
+`
+
+const SponsorImages = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.5em;
+`
+
 const Footer = () => (
   <FooterWrapper>
     <SponsorsWrapper>
       <SponsorsText>Yhteistyössä</SponsorsText>
+      <SponsorImages>
+        <SponsorImage src={require('../static/images/gofore.png')} />
+        <SponsorImage src={require('../static/images/futurice.png')} />
+        <SponsorImage src={require('../static/images/eatech.png')} />
+        <SponsorImage src={require('../static/images/reaktor.png')} />
+      </SponsorImages>
     </SponsorsWrapper>
     <ContactsWrapper>
       <div>
-        <Link3 href="https://www.luuppi.fi/" >luuppi.fi</Link3>
+        <Link3 href="https://www.luuppi.fi/">luuppi.fi</Link3>
       </div>
       © Luuppi ry 2018
     </ContactsWrapper>

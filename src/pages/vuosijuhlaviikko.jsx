@@ -179,11 +179,11 @@ const SchedulePage = () => (
       }
 
       query {
-        seminaari: file(relativePath: { eq: "light.jpg" }) {
+        seminaari: file(relativePath: { eq: "hand.jpg" }) {
           ...partyImage
         }
 
-        unknown: file(relativePath: { eq: "unknown.jpg" }) {
+        unknown: file(relativePath: { eq: "question.jpg" }) {
           ...partyImage
         }
 
