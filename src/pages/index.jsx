@@ -12,20 +12,21 @@ const IndexPage = () => (
         juhlistetaan ennennäkemättömällä tavalla koko viikon 8 ajan, joka
         huipentuu <b>23.&nbsp;helmikuuta&nbsp;2019</b> Paja Kongressissa
         järjestettävään pääjuhlaan. Juhlaviikon ohjelman kokonaisuudessaan
-        pääset näkemään
-        <a href="/vuosijuhlaviikko"> TÄÄLTÄ</a>.
+        pääset näkemään <a href="/vuosijuhlaviikko">täältä</a>.
       </p>
-
       <p>
-        Lippu juhliin maksaa Luuppi ry:n jäsenille 100€ (muut 120€) sisältäen
-        pääjuhlan, pääjuhlan jatkot, pääjuhlan jatkojen jatkot, seuraavan päivän
-        silliksen sekä silliksen jatkot. Ilmoittautuminen vuosijuhlille tapahtuu
-        Luupin verkkosivuilta sekä jäsenille että jäsenten aveceille. Mikäli
-        olet Luupin jäsen ja sinulla ei ole tunnuksia Luupin sivuille otathan
-        yhteyttä vuosijuhlat@luuppi.fi hyvissä ajoin ennen ilmoittautumisen
-        alkamista. Kutsuvieraille on lähetetty oma ilmoittautumislinkki. Yleinen
-        ilmoittautuminen kaikille luuppilaisille alkaa marraskuussa.
+        Osallistuminen vuosijuhlaan maksaa yhdistyksen jäsenille <b>100€</b>{' '}
+        (muille 120€) sisältäen pääjuhlan, pääjuhlan jatkot, pääjuhlan jatkojen
+        jatkot, seuraavan päivän silliksen sekä silliksen jatkot.
       </p>
+      <p>
+        Yhdistyksen jäsenten sekä heidän avecien ilmoittautuminen tapahtuu
+        Luupin verkkosivujen kautta. Yleinen ilmoittautuminen kaikille jäsenille
+        alkaa <b>marraskuussa</b>. Mikäli olet Luupin jäsen ja sinulla ei ole
+        tunnuksia Luupin sivuille otathan yhteyttä vuosijuhlat@luuppi.fi hyvissä
+        ajoin ennen ilmoittautumisen alkamista.
+      </p>
+      <p>Kutsuvieraille lähetetään linkki kutsuvierasilmoittautumiseen.</p>
     </Content>
   </>
 )

@@ -93,7 +93,7 @@ const ScheduleContent = ({ data }) => (
           IT-alan ajankohtaisiin kysymyksiin pureutuva vuosijuhlaseminaari
           järjestetään yhteistyöyritystemme kanssa Tampereen yliopiston
           tiloissa. Seminaarista lisätietoa löytyy{' '}
-          <a href="/seminaari">TÄÄLTÄ.</a>
+          <a href="/seminaari">täältä.</a>
         </p>
       </Text>
       <Img fixed={data.seminaari.childImageSharp.fixed} />
@@ -153,7 +153,7 @@ const ScheduleContent = ({ data }) => (
         <p>
           Vuosijuhlaviikon kohokohta on Paja Kongressissa järjestettävä arvokas
           iltajuhla. Lisätietoa iltajuhlasta löytyy{' '}
-          <a href="/paajuhla">TÄÄLTÄ</a>
+          <a href="/paajuhla">täältä</a>
         </p>
       </Text>
       <Img fixed={data.paajuhla.childImageSharp.fixed} />
@@ -165,8 +165,8 @@ const ScheduleContent = ({ data }) => (
         <Time>24. helmikuuta kello 12:00</Time>
         <p>
           Vuosijuhlaviikon päättää rento silliaamiainen, jota monet nimittävät
-          juhlien pääpäiväksi. Lisätietoa silliksestä löytyy{' '}
-          <a href="/paajuhla">TÄÄLTÄ</a>
+          juhlien pääpäiväksi. Lisätietoa silliaamiaisesta löytyy{' '}
+          <a href="/paajuhla">täältä</a>
         </p>
       </Text>
       <Img fixed={data.sillis.childImageSharp.fixed} />
