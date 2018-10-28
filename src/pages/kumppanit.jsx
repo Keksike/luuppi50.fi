@@ -23,8 +23,7 @@ const Sponsor = styled(Image)`
 const MainSponsor = styled(Image)`
   width: 30rem !important;
   max-width: 100% !important;
-  margin: 0 auto;
-  margin-bottom: 1rem;
+  margin: 2rem auto;
 
   img {
     width: 30rem !important;
@@ -38,7 +37,7 @@ const MultipleSponsors = styled.div`
   justify-content: space-evenly;
 
   a {
-    margin: 0 1rem;
+    margin: 1rem 1rem;
   }
 
   ${media.smallMobile`
@@ -47,7 +46,7 @@ const MultipleSponsors = styled.div`
 `
 
 const ReaktorSponsor = styled(Sponsor)`
-  margin-top: -1rem;
+  margin-top: 0.8rem;
 `
 
 const EatechSponsor = styled(Sponsor)`

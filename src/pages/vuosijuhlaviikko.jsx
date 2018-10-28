@@ -14,10 +14,16 @@ const Pair = styled.div`
   justify-content: space-between;
   margin-bottom: 2rem;
   min-height: 15rem;
+  text-align: right;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
 
   ${media.smallMobile`
+    border: none;
     flex-wrap: wrap;
     flex-direction: column-reverse;
+    text-align: left;
+    padding: 0;
   `};
 `
 
@@ -39,7 +45,8 @@ const Time = styled.h4`
 
 const Img = styled(Image)`
   height: auto !important;
-  min-width: 20rem;
+  width: 55rem !important;
+  opacity: 0.79;
 
   ${media.smallMobile`
     height: 17rem !important;

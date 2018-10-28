@@ -1,10 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { media } from '../theme'
+
+import goforeLogo from '../static/images/gofore.png'
+import futuriceLogo from '../static/images/futurice.png'
+import eatechLogo from '../static/images/eatech.png'
+import reaktorLogo from '../static/images/reaktor.png'
+
 const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0.5em 1em;
+  padding: 0.8rem 1rem;
   z-index: 2;
   background: ${props => props.theme.contrastBackground};
 `
@@ -32,17 +39,26 @@ const Link3 = styled.a`
   &:hover: text-decoration: underline;
 `
 
+const SponsorLink = styled.a`
+  display: inline-block;
+`
+
 const SponsorImage = styled.img`
-  width: 10%;
-  height: auto;
-  margin-right: 1em;
+  height: 20px;
+  opacity: 0.48;
+  margin-right: 1.4rem;
 `
 
 const SponsorImages = styled.div`
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   margin-top: 0.5em;
+
+  ${media.smallMobile`
+    flex-direction: column;
+  `};
 `
 
 const Footer = () => (
@@ -50,10 +66,18 @@ const Footer = () => (
     <SponsorsWrapper>
       <SponsorsText>Yhteistyössä</SponsorsText>
       <SponsorImages>
-        <SponsorImage src={require('../static/images/gofore.png')} />
-        <SponsorImage src={require('../static/images/futurice.png')} />
-        <SponsorImage src={require('../static/images/eatech.png')} />
-        <SponsorImage src={require('../static/images/reaktor.png')} />
+        <SponsorLink href="https://gofore.com/">
+          <SponsorImage src={goforeLogo} />
+        </SponsorLink>
+        <SponsorLink href="https://www.futurice.com/">
+          <SponsorImage src={futuriceLogo} />
+        </SponsorLink>
+        <SponsorLink href="https://www.eatech.fi/">
+          <SponsorImage src={eatechLogo} />
+        </SponsorLink>
+        <SponsorLink href="https://www.reaktor.com/">
+          <SponsorImage src={reaktorLogo} />
+        </SponsorLink>
       </SponsorImages>
     </SponsorsWrapper>
     <ContactsWrapper>
