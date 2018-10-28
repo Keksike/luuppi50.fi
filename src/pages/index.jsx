@@ -20,8 +20,10 @@ const IndexPage = () => (
         Lippu juhliin maksaa Luuppi ry:n jäsenille 100€ (muut 120€) sisältäen
         pääjuhlan, pääjuhlan jatkot, pääjuhlan jatkojen jatkot, seuraavan päivän
         silliksen sekä silliksen jatkot. Ilmoittautuminen vuosijuhlille tapahtuu
-        Luupin verkkosivuilta sekä jäsenille että jäsenten aveceille.
-        Kutsuvieraille on lähetetty oma ilmoittautumislinkki. Yleinen
+        Luupin verkkosivuilta sekä jäsenille että jäsenten aveceille. Mikäli
+        olet Luupin jäsen ja sinulla ei ole tunnuksia Luupin sivuille otathan
+        yhteyttä vuosijuhlat@luuppi.fi hyvissä ajoin ennen ilmoittautumisen
+        alkamista. Kutsuvieraille on lähetetty oma ilmoittautumislinkki. Yleinen
         ilmoittautuminen kaikille luuppilaisille alkaa marraskuussa.
       </p>
     </Content>
