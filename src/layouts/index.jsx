@@ -37,6 +37,7 @@ injectGlobal`
   }
 
   a {
+    text-decoration: none;
     color: ${theme.contrastHighlight};
 
     &:hover {
