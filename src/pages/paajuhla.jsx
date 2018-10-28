@@ -17,7 +17,7 @@ const MainCeremonyPage = () => (
       Kongressissa kello 18:00 alkaen, olethan ehdottomasti ajoissa. Pääjuhlassa
       on luvassa puheita, lauluja, kolmen ruokalajin illalinen, esiintymisiä
       sekä tietenkin maljojen kilistelyä. Tutustu pääjuhlan etikettiin{' '}
-      <a href="/etiketti">TÄÄLLÄ</a>.
+      <a href="/etiketti">täällä</a>.
     </p>
 
     <h4>Aikataulu</h4>

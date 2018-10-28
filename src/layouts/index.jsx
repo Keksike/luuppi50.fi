@@ -37,10 +37,10 @@ injectGlobal`
   }
 
   a {
-    text-decoration: none;
-    color: black;
+    color: ${theme.contrastHighlight};
+
     &:hover {
-      color: ${theme.contrastHighlight}
+      text-decoration: underline;
     }
   }
 

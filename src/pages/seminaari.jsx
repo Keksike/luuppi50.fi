@@ -12,10 +12,10 @@ const Seminar = () => (
     <h3>Vuosijuhlaseminaari</h3>
 
     <p>
-      Vuosijuhlaviikon avaa vuosijuhlaseminaari, joka järjestetään maanantaina
-      18.2. Tampereen yliopistolla. Seminaarissa yhteistyöyrityksiemme edustajat
-      luennoivat IT-maailman ajankohtaisista aiheista. Seminaari on kaikille
-      avoin tapahtuma.
+      Vuosijuhlaviikon avaa vuosijuhlaseminaari, joka järjestetään
+      <b>maanantaina 18.2.2019</b> Tampereen yliopistolla. Seminaarissa
+      yhteistyöyrityksiemme edustajat luennoivat IT-maailman ajankohtaisista
+      aiheista. Seminaari on kaikille avoin tapahtuma.
     </p>
 
     <p>Seminaarin luennoitsijat ja tarkka aikataulu ilmoitetaan myöhemmin.</p>

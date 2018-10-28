@@ -40,7 +40,7 @@ const Etiquette = () => (
       olkapään yli ja on kiinnitetty vasempaan kylkeen. Naiset käyttävät
       juhlanauhaa ruusukkeena rinnankorkeudella vasemmalla puolella.
       Juhlanauhasta ja sen kiinnittämisestä lisää{' '}
-      <a href="https://www.luuppi.fi/yhdistys/juhlanauha">TÄÄLLÄ</a>.
+      <a href="https://www.luuppi.fi/yhdistys/juhlanauha">täällä</a>.
     </p>
 
     <h4>Juhlan kulku</h4>
