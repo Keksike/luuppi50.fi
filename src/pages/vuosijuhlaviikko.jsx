@@ -27,6 +27,11 @@ const Pair = styled.div`
   `};
 `
 
+const EventTitle = styled.h3`
+  line-height: 1;
+  margin-bottom: 1.5rem;
+`
+
 const Text = styled.div`
   width: 100%;
   margin-right: 2rem;
@@ -77,7 +82,7 @@ const ScheduleContent = ({ data }) => (
     </Helmet>
 
     <Wrapper>
-      <h3>Vuosijuhlaviikon ohjelma</h3>
+      <EventTitle>Vuosijuhlaviikon ohjelma</EventTitle>
       <p>
         Vuosijuhlaviikolle mahtuu paljon ohjelmaa. Lippu juhliin sisältää pääsyn
         pääjuhlaan, pääjuhlan jatkoille, pääjuhlan jatkojen jatkoille, seuraavan
@@ -87,7 +92,7 @@ const ScheduleContent = ({ data }) => (
 
     <Pair>
       <Text>
-        <h3>Vuosijuhlaseminaari</h3>
+        <EventTitle>Vuosijuhlaseminaari</EventTitle>
         <Time>18. helmikuuta kello 16:00</Time>
         <p>
           IT-alan ajankohtaisiin kysymyksiin pureutuva vuosijuhlaseminaari
@@ -101,7 +106,7 @@ const ScheduleContent = ({ data }) => (
 
     <Pair>
       <Text>
-        <h3>Myöhemmin ilmoitettava tapahtuma</h3>
+        <EventTitle>Myöhemmin ilmoitettava tapahtuma</EventTitle>
         <Time>19. helmikuuta kello 18:00</Time>
         <p>...</p>
       </Text>
@@ -110,7 +115,7 @@ const ScheduleContent = ({ data }) => (
 
     <Pair>
       <Text>
-        <h3>Tanssikurssi</h3>
+        <EventTitle>Tanssikurssi</EventTitle>
         <Time>20. helmikuuta</Time>
         <p>
           Tanssikurssi palauttaa vuosijuhlaosallistujien mieleen perinteisten
@@ -123,7 +128,7 @@ const ScheduleContent = ({ data }) => (
 
     <Pair>
       <Text>
-        <h3>Kolmiot</h3>
+        <EventTitle>Kolmiot</EventTitle>
         <Time>21. helmikuuta kello 21:00</Time>
         <p>
           Komioilla pääset laittamaan tanssijalan koreaksi ja virittäytymään jo
@@ -136,7 +141,7 @@ const ScheduleContent = ({ data }) => (
 
     <Pair>
       <Text>
-        <h3>Cocktail-tilaisuus</h3>
+        <EventTitle>Cocktail-tilaisuus</EventTitle>
         <Time>23. helmikuuta kello 15:30</Time>
         <p>
           Ennen iltajuhlaa järjestetään kutsuvieraille cocktail-tilaisuus, jonka
@@ -148,7 +153,7 @@ const ScheduleContent = ({ data }) => (
 
     <Pair>
       <Text>
-        <h3>Luupin 50-vuotis vuosijuhlat</h3>
+        <EventTitle>Luupin 50-vuotis vuosijuhlat</EventTitle>
         <Time>23. helmikuuta kello 18:00</Time>
         <p>
           Vuosijuhlaviikon kohokohta on Paja Kongressissa järjestettävä arvokas
@@ -161,7 +166,7 @@ const ScheduleContent = ({ data }) => (
 
     <Pair>
       <Text>
-        <h3>Sillis</h3>
+        <EventTitle>Sillis</EventTitle>
         <Time>24. helmikuuta kello 12:00</Time>
         <p>
           Vuosijuhlaviikon päättää rento silliaamiainen, jota monet nimittävät
