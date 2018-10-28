@@ -34,6 +34,10 @@ const ContactPage = () => (
       <title>Yhteystiedot</title>
     </Helmet>
     <h3>Yhteystiedot</h3>
+    <p>
+      Otathan yhteyttä vuosijuhliin liittyvissä tiedusteluissa
+      vuosijuhlat@luuppi.fi
+    </p>
     <ContentRow>
       <Half>
         <Text>
