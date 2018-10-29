@@ -15,7 +15,7 @@ const MainCeremonyPage = () => (
       Vuosijuhlaviikon kohokohta on 23.2. järjestettävä iltajuhla. Tyyliltään
       arvokas iltajuhla järjestetään Torni hotellin juurella sijaitsevassa Paja
       Kongressissa kello 18:00 alkaen, olethan ehdottomasti ajoissa. Pääjuhlassa
-      on luvassa puheita, lauluja, kolmen ruokalajin illalinen, esiintymisiä
+      on luvassa puheita, lauluja, kolmen ruokalajin illallinen, esiintymisiä
       sekä tietenkin maljojen kilistelyä. Tutustu pääjuhlan etikettiin{' '}
       <a href="/etiketti">täällä</a>.
     </p>
