@@ -21,9 +21,9 @@ const IndexPage = () => (
     <p>
       Yhdistyksen jäsenten sekä heidän avecien ilmoittautuminen tapahtuu Luupin
       verkkosivujen kautta. Yleinen ilmoittautuminen kaikille jäsenille alkaa{' '}
-      <b>marraskuussa</b>. Mikäli olet Luupin jäsen ja sinulla ei ole tunnuksia
-      Luupin sivuille otathan yhteyttä vuosijuhlat@luuppi.fi hyvissä ajoin ennen
-      ilmoittautumisen alkamista.
+      <b>29. marraskuuta kello 17:00</b>. Mikäli olet Luupin jäsen ja sinulla ei
+      ole tunnuksia Luupin sivuille otathan yhteyttä vuosijuhlat@luuppi.fi
+      hyvissä ajoin ennen ilmoittautumisen alkamista.
     </p>
     <p>Kutsuvieraille lähetetään linkki kutsuvierasilmoittautumiseen.</p>
   </Content>
