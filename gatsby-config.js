@@ -37,5 +37,14 @@ module.exports = {
     // Image helper plugins
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-128273037-1',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
   ],
 }

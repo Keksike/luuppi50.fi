@@ -8,6 +8,7 @@
     "formik": "^1.2.0",
     "gatsby": "^2.0.0-rc.25",
     "gatsby-image": "^2.0.13",
+    "gatsby-plugin-google-analytics": "^2.0.7",
     "gatsby-plugin-google-fonts": "0.0.4",
     "gatsby-plugin-layout": "^1.0.0-rc.4",
     "gatsby-plugin-nprogress": "^1.0.14",
