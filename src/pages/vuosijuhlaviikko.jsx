@@ -158,7 +158,7 @@ const ScheduleContent = ({ data }) => (
         <p>
           Vuosijuhlaviikon kohokohta on Paja Kongressissa järjestettävä arvokas
           iltajuhla. Lisätietoa iltajuhlasta löytyy{' '}
-          <a href="/paajuhla">täältä</a>
+          <a href="/paajuhla">täältä</a>.
         </p>
       </Text>
       <Img fixed={data.paajuhla.childImageSharp.fixed} />
@@ -171,7 +171,7 @@ const ScheduleContent = ({ data }) => (
         <p>
           Vuosijuhlaviikon päättää rento silliaamiainen, jota monet nimittävät
           juhlien pääpäiväksi. Lisätietoa silliaamiaisesta löytyy{' '}
-          <a href="/paajuhla">täältä</a>
+          <a href="/paajuhla">täältä</a>.
         </p>
       </Text>
       <Img fixed={data.sillis.childImageSharp.fixed} />
