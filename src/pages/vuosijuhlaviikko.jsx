@@ -153,7 +153,7 @@ const ScheduleContent = ({ data }) => (
 
     <Pair>
       <Text>
-        <EventTitle>Luupin 50-vuotis vuosijuhlat</EventTitle>
+        <EventTitle>Luupin 50-vuotisvuosijuhlat</EventTitle>
         <Time>23. helmikuuta kello 18:00</Time>
         <p>
           Vuosijuhlaviikon kohokohta on Paja Kongressissa järjestettävä arvokas

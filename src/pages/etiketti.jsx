@@ -49,32 +49,33 @@ const Etiquette = () => (
       Juhla alkaa lippujen saapumisella, alkumaljalla ja tervehdyksellä.
       Alkuruoka nautitaan pääsääntöisesti tämän jälkeen. Alkuruuan ollessa kylmä
       ruoka, aloitetaan ruokailu vasta kun koko pöytä on saanut ruuan.
-      Illallisen kohokohta on pääruoka, jonka nauttimisen voi aloittaa kun
+      Illallisen kohokohta on pääruoka, jonka nauttimisen voi aloittaa, kun
       seuralainen ja lähimmät vierustoverit ovat sen saaneet. Jälkiruoka
       tarjoillaan juhlan loppupuolella.
     </p>
 
     <p>
-      Puhe naiselle on yksi juhlien kohokohdista. Puheen jälkeen miehet laulavat
-      korkeassa polviasennossa seuralaiselleen laulun ”Niin minä neitonen
-      sinulle laulan”.
-    </p>
-
-    <p>
       Juhlien aikana voi saada puheenvuoroja ja esittää lauluja laulettavaksi
       erillisellä lomakkeella, joita on pöytiin jaettu. Lauluja on sopivaa
-      toivoa lähinnä pöytiin jaetusta käsiohjelmasta. Vuosijuhlilla ei ole
-      sopivaa huutaa sitseiltä tuttuja “mellansuu”, “tempo” yms. huutoja.
-      Akateemisissa pöytäjuhlissa lauletaan usein myös
-      yhteislauluja. Lauluja on sopiva toivoa pöytiin jaetusta käsiohjelmasta.
-      Muita, kuin ohjelmassa oleviä säkeistöjä ei lauleta.
+      toivoa lähinnä pöytiin jaetusta käsiohjelmasta ja muita, kuin ohjelmassa
+      olevia säkeistöjä ei lauleta. Vuosijuhlilla ei ole sopivaa huutaa
+      sitseiltä tuttuja “mellansuu”, “tempo” ynnä muita huutoja. Akateemisissa
+      pöytäjuhlissa lauletaan usein myös yhteislauluja.
     </p>
 
     <p>
-      Kun liput ovat
-      poistuneet, on tanssin aika. Ensimmäinen tanssivuoro varataan
-      perinteisesti avecille, jonka jälkeen voi musiikin tahtiin liikahdella
-      vapaasti muiden kanssa. Tanssi jatkuu, kunnes on aika siirtyä jatkoille.
+      Juhlien aikana pidetään myös puhe naiselle sekä puhe miehelle. Puheiden
+      jälkeen lauletaan ”Niin minä neitonen sinulle laulan”, joka lauletaan
+      avecille polviasennossa, jonka jälkeen laulettavalle ojennetaan ruusu.
+      Avecittomat voivat halutessaan esittää laulun vapaasti valitsemalleen
+      henkilölle.
+    </p>
+
+    <p>
+      Kun liput ovat poistuneet, on tanssin aika. Ensimmäinen tanssivuoro
+      varataan perinteisesti avecille, jonka jälkeen voi musiikin tahtiin
+      liikahdella vapaasti muiden kanssa. Tanssi jatkuu, kunnes on aika siirtyä
+      jatkoille.
     </p>
   </Content>
 )
