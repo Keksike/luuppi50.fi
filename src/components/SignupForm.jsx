@@ -186,7 +186,7 @@ const FormWrapper = ({ submitCallback }) => (
     }}
   >
     {({ touched, errors, isSubmitting }) => (
-      <Form netlify>
+      <Form data-netlify="true">
         <InputWrapper>
           <InputLabel>Nimi</InputLabel>
           <TextInput type="text" name="name" />
