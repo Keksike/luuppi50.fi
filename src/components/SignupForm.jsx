@@ -177,16 +177,9 @@ const FormWrapper = ({ submitCallback }) => (
 
       return errors
     }}
-    onSubmit={(values, { setSubmitting }) => {
-      setTimeout(() => {
-        console.log(values)
-        setSubmitting(false)
-        submitCallback()
-      }, 500)
-    }}
   >
     {({ touched, errors, isSubmitting }) => (
-      <Form data-netlify="true">
+      <Form data-netlify="true" data-netlify-honeypot="bot-field">
         <InputWrapper>
           <InputLabel>Nimi</InputLabel>
           <TextInput type="text" name="name" />
