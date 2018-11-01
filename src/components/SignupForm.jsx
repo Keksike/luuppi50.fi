@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
-import fetch from 'isomorphic-fetch'
 import { Formik, Form, Field } from 'formik'
 import { media } from '../theme'
 
@@ -141,12 +140,6 @@ const SubmitButton = styled.button`
   }
 `
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&')
-}
-
 const FormWrapper = ({ submitCallback }) => (
   <Formik
     initialValues={{
@@ -185,18 +178,11 @@ const FormWrapper = ({ submitCallback }) => (
       return errors
     }}
     onSubmit={(values, { setSubmitting }) => {
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'contact', ...values }),
-      })
-        .then(() => setSubmitting(false))
-        .catch(error => {
-          console.log(error)
-          setSubmitting(false)
-        })
-
-      // submitCallback()
+      setTimeout(() => {
+        console.log(values)
+        setSubmitting(false)
+        submitCallback()
+      }, 500)
     }}
   >
     {({ touched, errors, isSubmitting }) => (
