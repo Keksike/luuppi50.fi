@@ -62,7 +62,12 @@ const StyledLink = styled(Link)`
 `
 
 const NavigationLink = ({ page }) => (
-  <StyledLink key={page.text} exact to={page.link} activeClassName="activeLink">
+  <StyledLink
+    key={page.text}
+    exact="true"
+    to={page.link}
+    activeClassName="activeLink"
+  >
     {page.text}
   </StyledLink>
 )
@@ -73,7 +78,7 @@ NavigationLink.propTypes = {
 
 const Navigation = () => (
   <NavigationWrapper>
-    {pages.map(page => <NavigationLink page={page} />)}
+    {pages.map(page => <NavigationLink key={page.text} page={page} />)}
   </NavigationWrapper>
 )
 
