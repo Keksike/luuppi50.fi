@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Formik, Form, Field } from 'formik'
+import fetch from 'isomorphic-fetch'
 import { media } from '../theme'
 
 const Separator = styled.div`
@@ -140,7 +141,11 @@ const SubmitButton = styled.button`
   }
 `
 
-const FormWrapper = ({ submitCallback }) => (
+const ErrorText = styled.p`
+  color: red;
+`
+
+const FormWrapper = ({ submitCallback, error }) => (
   <Formik
     initialValues={{
       name: '',
@@ -153,6 +158,7 @@ const FormWrapper = ({ submitCallback }) => (
       food: undefined,
       specialDiet: '',
       sillis: false,
+      isAvecOfInvitee: false,
       avec: '',
       other: '',
     }}
@@ -178,11 +184,25 @@ const FormWrapper = ({ submitCallback }) => (
       return errors
     }}
     onSubmit={(values, { setSubmitting }) => {
-      setTimeout(() => {
-        console.log(values)
-        setSubmitting(false)
-        submitCallback()
-      }, 500)
+      fetch(
+        'https://o172ua8qya.execute-api.eu-west-1.amazonaws.com/dev/email/send',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ content: values }),
+        }
+      )
+        .then(() => {
+          setSubmitting(false)
+          submitCallback(true)
+        })
+        .catch(e => {
+          console.log(e)
+          setSubmitting(false)
+          submitCallback(false)
+        })
     }}
   >
     {({ touched, errors, isSubmitting }) => (
@@ -289,6 +309,14 @@ const FormWrapper = ({ submitCallback }) => (
           <InputLabel>Avec / pöytäseuratoive</InputLabel>
           <TextInput type="text" name="avec" />
           <Separator />
+          <label htmlFor="isAvecOfInvitee">
+            <Field
+              type="checkbox"
+              id="isAvecOfInvitee"
+              name="isAvecOfInvitee"
+            />
+            Olen kutsuvieraan avec
+          </label>
           <ErrorBox />
         </InputWrapper>
 
@@ -298,6 +326,12 @@ const FormWrapper = ({ submitCallback }) => (
           <Separator />
           <ErrorBox />
         </InputWrapper>
+
+        {error && (
+          <ErrorText>
+            Virhe ilmoittautumisessa. Ota yhteyttä vuosijuhlat@luuppi.fi
+          </ErrorText>
+        )}
 
         <SubmitButton type="submit" disabled={isSubmitting}>
           Ilmottaudu
@@ -309,21 +343,30 @@ const FormWrapper = ({ submitCallback }) => (
 
 FormWrapper.propTypes = {
   submitCallback: PropTypes.func.isRequired,
+  error: PropTypes.bool.isRequired,
 }
 
 class SignupForm extends React.Component {
   state = {
     submitted: false,
+    error: false,
   }
 
-  submit() {
-    this.setState({
-      submitted: true,
-    })
+  submit(success) {
+    if (success) {
+      this.setState({
+        submitted: true,
+      })
+    } else {
+      this.setState({
+        submitted: false,
+        error: true,
+      })
+    }
   }
 
   render() {
-    const { submitted } = this.state
+    const { submitted, error } = this.state
 
     if (submitted) {
       return (
@@ -336,7 +379,12 @@ class SignupForm extends React.Component {
       )
     }
 
-    return <FormWrapper submitCallback={() => this.submit()} />
+    return (
+      <FormWrapper
+        error={error}
+        submitCallback={success => this.submit(success)}
+      />
+    )
   }
 }
 
