@@ -141,6 +141,12 @@ const SubmitButton = styled.button`
   }
 `
 
+const SmallText = styled.p`
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+`
+
 const ErrorText = styled.p`
   color: red;
 `
@@ -152,6 +158,7 @@ const FormWrapper = ({ submitCallback, error }) => (
       email: '',
       phone: '',
       organization: '',
+      startingYear: '',
       cocktail: false,
       greeting: false,
       drink: undefined,
@@ -208,14 +215,14 @@ const FormWrapper = ({ submitCallback, error }) => (
     {({ touched, errors, isSubmitting }) => (
       <Form>
         <InputWrapper>
-          <InputLabel>Nimi</InputLabel>
+          <InputLabel>Nimi*</InputLabel>
           <TextInput type="text" name="name" />
           <Separator />
           <ErrorBox>{touched.name && errors.name}</ErrorBox>
         </InputWrapper>
 
         <InputWrapper>
-          <InputLabel>Sähköposti</InputLabel>
+          <InputLabel>Sähköposti*</InputLabel>
           <TextInput type="email" name="email" />
           <Separator />
           <ErrorBox>{touched.email && errors.email}</ErrorBox>
@@ -231,6 +238,13 @@ const FormWrapper = ({ submitCallback, error }) => (
         <InputWrapper>
           <InputLabel>Edustamani taho</InputLabel>
           <TextInput type="text" name="organization" />
+          <Separator />
+          <ErrorBox />
+        </InputWrapper>
+
+        <InputWrapper>
+          <InputLabel>Opiskelujen aloitusvuosi</InputLabel>
+          <TextInput type="text" name="startingYear" />
           <Separator />
           <ErrorBox />
         </InputWrapper>
@@ -251,7 +265,7 @@ const FormWrapper = ({ submitCallback, error }) => (
         </Checkboxes>
 
         <>
-          <InputLabel>Juomavaihtoehto</InputLabel>
+          <InputLabel>Juomavaihtoehto*</InputLabel>
           <RadioWrapper>
             <label htmlFor="redwine">
               <Field type="radio" name="drink" id="redwine" value="redwine" />
@@ -280,7 +294,10 @@ const FormWrapper = ({ submitCallback, error }) => (
         </>
 
         <>
-          <InputLabel>Ruokavaihtoehto</InputLabel>
+          <InputLabel>Ruokavaihtoehto*</InputLabel>
+          <SmallText>
+            Ruokamenut näet tarkemmin <a href="/paajuhla">täältä</a>.
+          </SmallText>
           <RadioWrapper>
             <label htmlFor="meat">
               <Field type="radio" name="food" id="meat" value="meat" />
@@ -309,12 +326,13 @@ const FormWrapper = ({ submitCallback, error }) => (
           <InputLabel>Avec / pöytäseuratoive</InputLabel>
           <TextInput type="text" name="avec" />
           <Separator />
+          <Separator />
           <label htmlFor="isAvecOfInvitee">
             <Field
               type="checkbox"
               id="isAvecOfInvitee"
               name="isAvecOfInvitee"
-            />
+            />{' '}
             Olen kutsuvieraan avec
           </label>
           <ErrorBox />
