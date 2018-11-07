@@ -1,7 +1,20 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
 
 import Content from '../components/Content'
+
+const Menus = styled.div`
+  text-align: center;
+`
+
+const MenuItemHeader = styled.h6`
+  margin: 0rem 0;
+`
+
+const MenuItemText = styled.p`
+  margin-top: 0rem;
+`
 
 const MainCeremonyPage = () => (
   <Content>
@@ -31,23 +44,44 @@ const MainCeremonyPage = () => (
     <h4>Menu</h4>
     <p>
       Juhlaan sisältyy kolmen ruokalajin illallinen, johon on valittavissa liha,
-      kala tai vegaaninen menu. Illalliseen sisältyy juhlan aikana tarjoiltavat
-      viini sekä snapsit.
+      kala tai vegaaninen menu. Illalliseen sisältyy alkumalja, viini ja
+      snapsit.
     </p>
-    <details>
-      <summary>Liha</summary>
-      <p>Menu tarkentuu myöhemmin.</p>
-    </details>
 
-    <details>
-      <summary>Kala</summary>
-      <p>Menu tarkentuu myöhemmin.</p>
-    </details>
-
-    <details>
-      <summary>Vegaani</summary>
-      <p>Menu tarkentuu myöhemmin.</p>
-    </details>
+    <Menus>
+      <h5>Liha</h5>
+      <MenuItemHeader>Alkuruoka</MenuItemHeader>
+      <MenuItemText>Sokerisuolattua siikaa, ruista ja kananmunaa</MenuItemText>
+      <MenuItemHeader>Pääruoka</MenuItemHeader>
+      <MenuItemText>
+        Kotimaista naudan entrecotea, grillattua maa-artisokkaa ja
+        karamellisoitua porkkanaa
+      </MenuItemText>
+      <MenuItemHeader>Jälkiruoka</MenuItemHeader>
+      <MenuItemText>Mustikkaleivos, kauracrumblea ja marenkia</MenuItemText>
+      <h5>Kala</h5>
+      <MenuItemHeader>Alkuruoka</MenuItemHeader>
+      <MenuItemText>Sokerisuolattua siikaa, ruista ja kananmunaa</MenuItemText>
+      <MenuItemHeader>Pääruoka</MenuItemHeader>
+      <MenuItemText>
+        Paistettua nieriää, kukkakaalia ja savustettua fenkolivoikastiketta
+      </MenuItemText>
+      <MenuItemHeader>Jälkiruoka</MenuItemHeader>
+      <MenuItemText>Mustikkaleivos, kauracrumblea ja marenkia</MenuItemText>
+      <h5>Vegaani</h5>
+      <MenuItemHeader>Alkuruoka</MenuItemHeader>
+      <MenuItemText>
+        Paahdettua maa-artisokkaa, osterivinokkaita ja marinoitua papusalaattia
+      </MenuItemText>
+      <MenuItemHeader>Pääruoka</MenuItemHeader>
+      <MenuItemText>
+        Kurpitsarisottoa, kylmäsavustettua tofua ja salviaöljyä
+      </MenuItemText>
+      <MenuItemHeader>Jälkiruoka</MenuItemHeader>
+      <MenuItemText>
+        Manteli-suklaamoussea, vaniljacrumblea ja vadelmaa
+      </MenuItemText>
+    </Menus>
 
     <br />
     <br />
@@ -69,7 +103,7 @@ const MainCeremonyPage = () => (
       pizzaa, siipiä, lettuja ynnä muuta pääjuhlan jälkeistä oloa parantavaa
       mättöä! Silliksen ohjelmaan kuuluu ruokailun ja juomisen lisäksi
       leikkimielisiä kisoja, DJ, useampi bändi, pihapelejä kuten kyykkää,
-      viinavartti ™, sekä tietenkin ajanviettoa muiden luuppilaisten kanssa!
+      viinavartti™ sekä tietenkin ajanviettoa muiden luuppilaisten kanssa!
       Juhlapaikalta löytyy myös sauna ja paljuja joten pyyhe ja uimapuku
       kannattaa ottaa mukaan.
     </p>
