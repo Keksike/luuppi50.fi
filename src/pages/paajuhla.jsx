@@ -8,7 +8,12 @@ const Menus = styled.div`
   text-align: center;
 `
 
+const MenuHeader = styled.h5`
+  font-size: 16px;
+`
+
 const MenuItemHeader = styled.h6`
+  font-size: 13px;
   margin: 0rem 0;
 `
 
@@ -49,7 +54,7 @@ const MainCeremonyPage = () => (
     </p>
 
     <Menus>
-      <h5>Liha</h5>
+      <MenuHeader>Liha</MenuHeader>
       <MenuItemHeader>Alkuruoka</MenuItemHeader>
       <MenuItemText>Sokerisuolattua siikaa, ruista ja kananmunaa</MenuItemText>
       <MenuItemHeader>Pääruoka</MenuItemHeader>
@@ -59,7 +64,7 @@ const MainCeremonyPage = () => (
       </MenuItemText>
       <MenuItemHeader>Jälkiruoka</MenuItemHeader>
       <MenuItemText>Mustikkaleivos, kauracrumblea ja marenkia</MenuItemText>
-      <h5>Kala</h5>
+      <MenuHeader>Kala</MenuHeader>
       <MenuItemHeader>Alkuruoka</MenuItemHeader>
       <MenuItemText>Sokerisuolattua siikaa, ruista ja kananmunaa</MenuItemText>
       <MenuItemHeader>Pääruoka</MenuItemHeader>
@@ -68,7 +73,7 @@ const MainCeremonyPage = () => (
       </MenuItemText>
       <MenuItemHeader>Jälkiruoka</MenuItemHeader>
       <MenuItemText>Mustikkaleivos, kauracrumblea ja marenkia</MenuItemText>
-      <h5>Vegaani</h5>
+      <MenuHeader>Vegaani</MenuHeader>
       <MenuItemHeader>Alkuruoka</MenuItemHeader>
       <MenuItemText>
         Paahdettua maa-artisokkaa, osterivinokkaita ja marinoitua papusalaattia

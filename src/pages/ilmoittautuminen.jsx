@@ -23,21 +23,23 @@ const SignupPage = () => (
         Luupin tapahtumakalenterista
       </a>.
     </p>
+
+    <h3>Kutsuvieras&shy;ilmoittautuminen</h3>
+
     <p>
       Osallistuminen vuosijuhlaan maksaa yhdistyksen jäsenille <b>100€</b> ja
       muille <b>120€</b>. Osallistumismaksu sisältää pääjuhlan, pääjuhlan
       jatkot, pääjuhlan jatkojen jatkot, seuraavan päivän silliksen sekä
       silliksen jatkot.
     </p>
+
     <p>
-      voit maksaa Luuppi ry:n tilille <b>FI68 8216 9710 0006 17</b> ja
+      Voit maksaa Luuppi ry:n tilille <b>FI68 8216 9710 0006 17</b> ja
       laittamalla komenttikenttään viestin muotoa <b>”oma nimi/Luuppi50”</b>.
       Mikäli maksat myös avecin samalla maksulla, ilmoitathan myös tästä
       kommenttikentässä. Maksu tulee suorittaa ilmoittautumisen jälkeen,
       viimeistään kuitenkin <b>25.11.</b>
     </p>
-
-    <h3>Kutsuvieras&shy;ilmoittautuminen</h3>
 
     <SignupForm />
   </Content>
