@@ -163,6 +163,7 @@ const FormWrapper = ({ submitCallback, error }) => (
       greeting: false,
       drink: undefined,
       food: undefined,
+      coffeeAvec: undefined,
       specialDiet: '',
       sillis: false,
       isAvecOfInvitee: false,
@@ -182,6 +183,10 @@ const FormWrapper = ({ submitCallback, error }) => (
 
       if (!values.drink) {
         errors.drink = 'Kerro juomatoiveesi'
+      }
+
+      if (!values.coffeeAvec) {
+        errors.coffeeAvec = 'Kerro kahviavec-toiveesi'
       }
 
       if (!values.food) {
@@ -313,6 +318,40 @@ const FormWrapper = ({ submitCallback, error }) => (
             </label>
           </RadioWrapper>
           <ErrorBox>{touched.food && errors.food}</ErrorBox>
+        </>
+
+        <>
+          <InputLabel>Kahviavec*</InputLabel>
+          <RadioWrapper>
+            <label htmlFor="liqour">
+              <Field
+                type="radio"
+                name="coffeeAvec"
+                id="liqour"
+                value="liqour"
+              />
+              Likööri
+            </label>
+            <label htmlFor="jaloviina">
+              <Field
+                type="radio"
+                name="coffeeAvec"
+                id="jaloviina"
+                value="jaloviina"
+              />
+              Jaloviina
+            </label>
+            <label htmlFor="nonalcoholic">
+              <Field
+                type="radio"
+                name="coffeeAvec"
+                id="nonalcoholic"
+                value="nonalcoholic"
+              />
+              Alkoholiton
+            </label>
+          </RadioWrapper>
+          <ErrorBox>{touched.drink && errors.drink}</ErrorBox>
         </>
 
         <InputWrapper>
