@@ -301,7 +301,10 @@ const FormWrapper = ({ submitCallback, error }) => (
         <>
           <InputLabel>Ruokavaihtoehto*</InputLabel>
           <SmallText>
-            Ruokamenut näet tarkemmin <a href="/paajuhla">täältä</a>.
+            Ruokamenut näet tarkemmin{' '}
+            <a href="/paajuhla" target="_blank">
+              täältä
+            </a>.
           </SmallText>
           <RadioWrapper>
             <label htmlFor="meat">
