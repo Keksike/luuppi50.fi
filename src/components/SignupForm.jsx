@@ -394,7 +394,7 @@ const FormWrapper = ({ submitCallback, error }) => (
         )}
 
         <SubmitButton type="submit" disabled={isSubmitting}>
-          Ilmottaudu
+          Ilmoittaudu
         </SubmitButton>
       </Form>
     )}
