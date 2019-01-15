@@ -45,16 +45,12 @@ const MultipleSponsors = styled.div`
   `};
 `
 
-const ReaktorSponsor = styled(Sponsor)`
-  margin-top: 0.8rem;
-`
-
 const EatechSponsor = styled(Sponsor)`
-  margin-top: 0.4rem;
+  padding-bottom: 2rem;
 `
 
 const CybercomSponsor = styled(Sponsor)`
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.6rem;
 `
 
 const WapiceSponsor = styled(Sponsor)`
@@ -120,8 +116,8 @@ const partnersPage = () => (
           <a href="http://futurice.com">
             <Sponsor sizes={data.futurice.childImageSharp.sizes} />
           </a>
-          <a href="http://eatech.fi">
-            <EatechSponsor sizes={data.eatech.childImageSharp.sizes} />
+          <a href="http://reaktor.com">
+            <Sponsor sizes={data.reaktor.childImageSharp.sizes} />
           </a>
         </MultipleSponsors>
 
@@ -135,8 +131,8 @@ const partnersPage = () => (
         </MultipleSponsors>
 
         <MultipleSponsors>
-          <a href="http://reaktor.com">
-            <ReaktorSponsor sizes={data.reaktor.childImageSharp.sizes} />
+          <a href="http://eatech.fi">
+            <EatechSponsor sizes={data.eatech.childImageSharp.sizes} />
           </a>
           <a href="http://wapice.com">
             <WapiceSponsor sizes={data.wapice.childImageSharp.sizes} />
