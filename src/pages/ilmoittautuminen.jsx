@@ -7,13 +7,13 @@ import SignupForm from '../components/SignupForm'
 const SignupPage = () => (
   <Content>
     <Helmet>
-      <title>Ilmottautuminen</title>
+      <title>Ilmoittautuminen</title>
     </Helmet>
 
     <h3>Luuppi ry:n jäsenet</h3>
 
     <p>
-      <b>Luupin jäsenet</b>, jotka eivät ole kutsuvieraita, voivat ilmottautua
+      <b>Luupin jäsenet</b>, jotka eivät ole kutsuvieraita, voivat ilmoittautua
       vuosijuhlaan{' '}
       <a
         target="_blank"
@@ -35,10 +35,10 @@ const SignupPage = () => (
 
     <p>
       Voit maksaa Luuppi ry:n tilille <b>FI68 8216 9710 0006 17</b> ja
-      laittamalla komenttikenttään viestin muotoa <b>”oma nimi/Luuppi50”</b>.
+      laittamalla kommenttikenttään viestin muotoa <b>”oma nimi/Luuppi50”</b>.
       Mikäli maksat myös avecin samalla maksulla, ilmoitathan myös tästä
       kommenttikentässä. Maksu tulee suorittaa ilmoittautumisen jälkeen,
-      viimeistään kuitenkin <b>25.11.</b>
+      viimeistään <b>12.12.</b>
     </p>
 
     <SignupForm />

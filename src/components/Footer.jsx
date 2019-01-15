@@ -6,7 +6,10 @@ import { media } from '../theme'
 import goforeLogo from '../static/images/gofore.png'
 import futuriceLogo from '../static/images/futurice.png'
 import eatechLogo from '../static/images/eatech.png'
+import cybercomLogo from '../static/images/cybercom.png'
+import symbioLogo from '../static/images/symbio.png'
 import reaktorLogo from '../static/images/reaktor.png'
+import wapiceLogo from '../static/images/wapice.png'
 
 const FooterWrapper = styled.div`
   display: flex;
@@ -75,8 +78,17 @@ const Footer = () => (
         <SponsorLink href="https://www.eatech.fi/">
           <SponsorImage src={eatechLogo} />
         </SponsorLink>
+        <SponsorLink href="https://www.cybercom.fi/">
+          <SponsorImage src={cybercomLogo} />
+        </SponsorLink>
+        <SponsorLink href="https://www.symbio.com/">
+          <SponsorImage src={symbioLogo} />
+        </SponsorLink>
         <SponsorLink href="https://www.reaktor.com/">
           <SponsorImage src={reaktorLogo} />
+        </SponsorLink>
+        <SponsorLink href="https://www.wapice.com/">
+          <SponsorImage src={wapiceLogo} />
         </SponsorLink>
       </SponsorImages>
     </SponsorsWrapper>

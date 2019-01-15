@@ -45,12 +45,16 @@ const MultipleSponsors = styled.div`
   `};
 `
 
-const ReaktorSponsor = styled(Sponsor)`
-  margin-top: 0.8rem;
+const EatechSponsor = styled(Sponsor)`
+  padding-bottom: 2rem;
 `
 
-const EatechSponsor = styled(Sponsor)`
-  margin-top: 0.4rem;
+const CybercomSponsor = styled(Sponsor)`
+  padding-bottom: 0.6rem;
+`
+
+const WapiceSponsor = styled(Sponsor)`
+  margin-top: 0.8rem;
 `
 
 const partnersPage = () => (
@@ -80,6 +84,18 @@ const partnersPage = () => (
         futurice: file(relativePath: { eq: "futurice.png" }) {
           ...companyImage
         }
+
+        symbio: file(relativePath: { eq: "symbio.png" }) {
+          ...companyImage
+        }
+
+        cybercom: file(relativePath: { eq: "cybercom.png" }) {
+          ...companyImage
+        }
+
+        wapice: file(relativePath: { eq: "wapice.png" }) {
+          ...companyImage
+        }
       }
     `}
     render={data => (
@@ -100,14 +116,28 @@ const partnersPage = () => (
           <a href="http://futurice.com">
             <Sponsor sizes={data.futurice.childImageSharp.sizes} />
           </a>
-          <a href="http://eatech.fi">
-            <EatechSponsor sizes={data.eatech.childImageSharp.sizes} />
+          <a href="http://reaktor.com">
+            <Sponsor sizes={data.reaktor.childImageSharp.sizes} />
           </a>
         </MultipleSponsors>
 
-        <a href="http://reaktor.com">
-          <ReaktorSponsor sizes={data.reaktor.childImageSharp.sizes} />
-        </a>
+        <MultipleSponsors>
+          <a href="http://cybercom.fi">
+            <CybercomSponsor sizes={data.cybercom.childImageSharp.sizes} />
+          </a>
+          <a href="http://symbio.com">
+            <Sponsor sizes={data.symbio.childImageSharp.sizes} />
+          </a>
+        </MultipleSponsors>
+
+        <MultipleSponsors>
+          <a href="http://eatech.fi">
+            <EatechSponsor sizes={data.eatech.childImageSharp.sizes} />
+          </a>
+          <a href="http://wapice.com">
+            <WapiceSponsor sizes={data.wapice.childImageSharp.sizes} />
+          </a>
+        </MultipleSponsors>
 
         <h4>Edut</h4>
         <p>Tietoa eduista tulossa myöhemmin.</p>
