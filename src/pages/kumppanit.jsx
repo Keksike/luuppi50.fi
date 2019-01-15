@@ -53,6 +53,14 @@ const EatechSponsor = styled(Sponsor)`
   margin-top: 0.4rem;
 `
 
+const CybercomSponsor = styled(Sponsor)`
+  padding-bottom: 0.4rem;
+`
+
+const WapiceSponsor = styled(Sponsor)`
+  margin-top: 0.8rem;
+`
+
 const partnersPage = () => (
   <StaticQuery
     query={graphql`
@@ -80,6 +88,18 @@ const partnersPage = () => (
         futurice: file(relativePath: { eq: "futurice.png" }) {
           ...companyImage
         }
+
+        symbio: file(relativePath: { eq: "symbio.png" }) {
+          ...companyImage
+        }
+
+        cybercom: file(relativePath: { eq: "cybercom.png" }) {
+          ...companyImage
+        }
+
+        wapice: file(relativePath: { eq: "wapice.png" }) {
+          ...companyImage
+        }
       }
     `}
     render={data => (
@@ -105,9 +125,23 @@ const partnersPage = () => (
           </a>
         </MultipleSponsors>
 
-        <a href="http://reaktor.com">
-          <ReaktorSponsor sizes={data.reaktor.childImageSharp.sizes} />
-        </a>
+        <MultipleSponsors>
+          <a href="http://cybercom.fi">
+            <CybercomSponsor sizes={data.cybercom.childImageSharp.sizes} />
+          </a>
+          <a href="http://symbio.com">
+            <Sponsor sizes={data.symbio.childImageSharp.sizes} />
+          </a>
+        </MultipleSponsors>
+
+        <MultipleSponsors>
+          <a href="http://reaktor.com">
+            <ReaktorSponsor sizes={data.reaktor.childImageSharp.sizes} />
+          </a>
+          <a href="http://wapice.com">
+            <WapiceSponsor sizes={data.wapice.childImageSharp.sizes} />
+          </a>
+        </MultipleSponsors>
 
         <h4>Edut</h4>
         <p>Tietoa eduista tulossa myöhemmin.</p>
