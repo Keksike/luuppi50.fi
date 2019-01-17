@@ -45,7 +45,7 @@ const MultipleSponsors = styled.div`
   `};
 `
 
-const EatechSponsor = styled(Sponsor)`
+const MoreSponsor = styled(Sponsor)`
   padding-bottom: 2rem;
 `
 
@@ -77,7 +77,7 @@ const partnersPage = () => (
           ...companyImage
         }
 
-        eatech: file(relativePath: { eq: "eatech.png" }) {
+        more: file(relativePath: { eq: "eatech.png" }) {
           ...companyImage
         }
 
@@ -131,8 +131,8 @@ const partnersPage = () => (
         </MultipleSponsors>
 
         <MultipleSponsors>
-          <a href="http://eatech.fi">
-            <EatechSponsor sizes={data.eatech.childImageSharp.sizes} />
+          <a href="https://www.etteplanmore.com/">
+            <MoreSponsor sizes={data.more.childImageSharp.sizes} />
           </a>
           <a href="http://wapice.com">
             <WapiceSponsor sizes={data.wapice.childImageSharp.sizes} />
