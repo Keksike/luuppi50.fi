@@ -13,12 +13,17 @@ const Seminar = () => (
 
     <p>
       Vuosijuhlaviikon avaa vuosijuhlaseminaari, joka järjestetään{' '}
-      <b>maanantaina 18.2.2019</b> Tampereen yliopistolla. Seminaarissa
-      yhteistyöyrityksiemme edustajat luennoivat IT-maailman ajankohtaisista
-      aiheista. Seminaari on kaikille avoin tapahtuma.
+      <b>maanantaina 18.2.2019</b> Tampereen yliopiston päätalon juhlasalissa.
+      Seminaarissa yhteistyöyrityksiemme edustajat luennoivat IT-maailman
+      ajankohtaisista aiheista. Seminaari on kaikille avoin tapahtuma.
     </p>
 
-    <p>Seminaarin luennoitsijat ja tarkka aikataulu ilmoitetaan myöhemmin.</p>
+    <p>
+      Seminaarissa puhuvat seuraavat yhteistyöyritykset: Gofore, Etteplan MORE,
+      Cybercom, Futurice ja Symbio.
+    </p>
+
+    <p>Seminaarin tarkka aikataulu ilmoitetaan myöhemmin.</p>
   </Content>
 )
 
