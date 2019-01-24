@@ -75,7 +75,7 @@ const Footer = () => (
         <SponsorLink href="https://www.futurice.com/">
           <SponsorImage src={futuriceLogo} />
         </SponsorLink>
-        <SponsorLink href="https://www.eatech.fi/">
+        <SponsorLink href="https://www.etteplanmore.com/">
           <SponsorImage src={eatechLogo} />
         </SponsorLink>
         <SponsorLink href="https://www.cybercom.fi/">
