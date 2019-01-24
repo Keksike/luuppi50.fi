@@ -98,7 +98,7 @@ const ScheduleContent = ({ data }) => (
           IT-alan ajankohtaisiin kysymyksiin pureutuva vuosijuhlaseminaari
           järjestetään yhteistyöyritystemme kanssa Tampereen yliopiston
           tiloissa. Seminaarista lisätietoa löytyy{' '}
-          <a href="/seminaari">täältä.</a>
+          <a href="/seminaari">täältä</a>.
         </p>
       </Text>
       <Img fixed={data.seminaari.childImageSharp.fixed} />
@@ -106,9 +106,19 @@ const ScheduleContent = ({ data }) => (
 
     <Pair>
       <Text>
-        <EventTitle>Myöhemmin ilmoitettava tapahtuma</EventTitle>
+        <EventTitle>Vuosijuhlasitsit</EventTitle>
         <Time>19. helmikuuta kello 18:00</Time>
-        <p>...</p>
+        <p>
+          Kyllähän opiskelijan pitää sitsata kunnolla vuosijuhlien kunniaksi!
+          Vuosijuhlasitsit järjestetään Hatanpään soutupaviljongilla
+          (Hatanpäänkatu 6). Mukaan mahtuu noin sata henkilöä! Ilmoittautuminen
+          ja lisätietoa
+          <a href="https://www.luuppi.fi/tapahtumat/tapahtuma?id=1752">
+            Luupin nettisivuilta
+          </a>.<br />
+          Sitsien teemana toimii not smart but not casual eli haalarit jalkaan,
+          mutta muuten hienoa päälle!
+        </p>
       </Text>
       <Img fixed={data.unknown.childImageSharp.fixed} />
     </Pair>
