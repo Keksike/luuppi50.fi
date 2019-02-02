@@ -10,6 +10,7 @@ import cybercomLogo from '../static/images/cybercom.png'
 import symbioLogo from '../static/images/symbio.png'
 import reaktorLogo from '../static/images/reaktor.png'
 import wapiceLogo from '../static/images/wapice.png'
+import digiaLogo from '../static/images/digia.png'
 
 const FooterWrapper = styled.div`
   display: flex;
@@ -89,6 +90,9 @@ const Footer = () => (
         </SponsorLink>
         <SponsorLink href="https://www.wapice.com/">
           <SponsorImage src={wapiceLogo} />
+        </SponsorLink>
+        <SponsorLink href="https://www.digia.com/">
+          <SponsorImage src={digiaLogo} />
         </SponsorLink>
       </SponsorImages>
     </SponsorsWrapper>
