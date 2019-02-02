@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Content from '../components/Content'
 
-const Menus = styled.div`
+const Centered = styled.div`
   text-align: center;
 `
 
@@ -18,7 +18,7 @@ const MenuItemHeader = styled.h6`
 `
 
 const MenuItemText = styled.p`
-  margin-top: 0rem;
+  margin-top: 0re a;
 `
 
 const MainCeremonyPage = () => (
@@ -39,12 +39,31 @@ const MainCeremonyPage = () => (
     </p>
 
     <h4>Aikataulu</h4>
-    <p>
-      17:00 Paja Kongressi aukeaa <br />
-      18:00 Vuosijuhlat alkavat <br />
-      23:00 Varsinainen osuus päättyy, kuljetukset jatkoille <br />
-      3:00 Kuljetukset jatkojen jatkoille
-    </p>
+    <Centered>
+      <p>
+        <p>17:00 Paja Kongressi aukeaa </p>
+        <p>18:00 Pääjuhla alkaa </p>
+        <p>Liput saapuvat </p>
+        <p>Alkutervehdys </p>
+        <p>Puheenjohtajan puhe </p>
+        <p>Yhteistyökumppanin puhe </p>
+        <p>Alkuruoka </p>
+        <p>Puhe menneiltä vuosilta </p>
+        <p>Tauko </p>
+        <p>Puhe menneiltä vuosilta </p>
+        <p>Pääruoka </p>
+        <p>Kunniamaininnat </p>
+        <p>Tauko </p>
+        <p>Puhe menneiltä vuosilta </p>
+        <p>Jälkiruoka </p>
+        <p>Puhe naiselle </p>
+        <p>Puhe miehelle </p>
+        <p>Liput poistuvat </p>
+        <p>Tanssiaiset </p>
+        <p>23:00 Kuljetukset jatkoille alkavat </p>
+        <p>3:00 Kuljetukset jatkojen jatkoille </p>
+      </p>
+    </Centered>
 
     <h4>Menu</h4>
     <p>
@@ -53,7 +72,7 @@ const MainCeremonyPage = () => (
       snapsit.
     </p>
 
-    <Menus>
+    <Centered>
       <MenuHeader>Liha</MenuHeader>
       <MenuItemHeader>Alkuruoka</MenuItemHeader>
       <MenuItemText>Sokerisuolattua siikaa, ruista ja kananmunaa</MenuItemText>
@@ -86,7 +105,7 @@ const MainCeremonyPage = () => (
       <MenuItemText>
         Manteli-suklaamoussea, vaniljacrumblea ja vadelmaa
       </MenuItemText>
-    </Menus>
+    </Centered>
 
     <br />
     <br />
