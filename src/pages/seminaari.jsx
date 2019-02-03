@@ -19,8 +19,8 @@ const Seminar = () => (
     </p>
 
     <p>
-      Seminaarissa puhuvat seuraavat yhteistyöyritykset: Gofore, Etteplan MORE,
-      Cybercom, Futurice ja Symbio.
+      Seminaarissa puhuvat seuraavat yhteistyöyritykset: Gofore, Futurice,
+      Etteplan MORE, Symbio ja Cybercom.
     </p>
 
     <p>Seminaarin tarkka aikataulu ilmoitetaan myöhemmin.</p>
