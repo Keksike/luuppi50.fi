@@ -134,11 +134,18 @@ const MainCeremonyPage = () => (
 
     <h4>Aikataulu</h4>
 
-    <p>
-      12:00 Bussit lähtevät Tampere-talolta <br />
-      19:00 Bussit lähtevät jatkoille <br />
-      19:30 Silliksen jatkot <br />
-    </p>
+    <Centered>
+      <p>12:00 Silliskuljetus</p>
+      <p>13:00 Saapuminen</p>
+      <p>14:00 Viinavartti™</p>
+      <p>14:30 Kilpailu</p>
+      <p>15:15 Viinavartti™</p>
+      <p>15:30 Bändi</p>
+      <p>16:30 Pääesiintyjä</p>
+      <p>18:30 Viinavartti™</p>
+      <p>19:00 Lähtö</p>
+      <p>19:30 Silliksen jatkot</p>
+    </Centered>
   </Content>
 )
 

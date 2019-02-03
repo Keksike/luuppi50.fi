@@ -111,13 +111,11 @@ const ScheduleContent = ({ data }) => (
         <p>
           Kyllähän opiskelijan pitää sitsata kunnolla vuosijuhlien kunniaksi!
           Vuosijuhlasitsit järjestetään Hatanpään soutupaviljongilla
-          (Hatanpäänkatu 6). Mukaan mahtuu noin sata henkilöä! Ilmoittautuminen
-          ja lisätietoa
+          (Hatanpäänkatu 6) ja mukaan mahtuu noin sata henkilöä!
+          Ilmoittautuminen ja lisätietoa{' '}
           <a href="https://www.luuppi.fi/tapahtumat/tapahtuma?id=1752">
             Luupin nettisivuilta
-          </a>.<br />
-          Sitsien teemana toimii not smart but not casual eli haalarit jalkaan,
-          mutta muuten hienoa päälle!
+          </a>.
         </p>
       </Text>
       <Img fixed={data.unknown.childImageSharp.fixed} />
@@ -205,7 +203,7 @@ const SchedulePage = () => (
           ...partyImage
         }
 
-        unknown: file(relativePath: { eq: "question.jpg" }) {
+        unknown: file(relativePath: { eq: "sitsit.png" }) {
           ...partyImage
         }
 
@@ -225,7 +223,7 @@ const SchedulePage = () => (
           ...partyImage
         }
 
-        sillis: file(relativePath: { eq: "sillis.jpg" }) {
+        sillis: file(relativePath: { eq: "sillis.png" }) {
           ...partyImage
         }
       }
