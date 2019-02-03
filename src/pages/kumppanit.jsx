@@ -57,6 +57,12 @@ const WapiceSponsor = styled(Sponsor)`
   margin-top: 0.8rem;
 `
 
+const DigiaSponsor = styled(Image)`
+  height: 5rem;
+  width: 5rem;
+  margin: 0 auto;
+`
+
 const partnersPage = () => (
   <StaticQuery
     query={graphql`
@@ -94,6 +100,10 @@ const partnersPage = () => (
         }
 
         wapice: file(relativePath: { eq: "wapice.png" }) {
+          ...companyImage
+        }
+
+        digia: file(relativePath: { eq: "digia.png" }) {
           ...companyImage
         }
       }
@@ -138,6 +148,10 @@ const partnersPage = () => (
             <WapiceSponsor sizes={data.wapice.childImageSharp.sizes} />
           </a>
         </MultipleSponsors>
+
+        <a href="http://digia.com">
+          <DigiaSponsor sizes={data.digia.childImageSharp.sizes} />
+        </a>
 
         <h4>Edut</h4>
         <p>Tietoa eduista tulossa myöhemmin.</p>

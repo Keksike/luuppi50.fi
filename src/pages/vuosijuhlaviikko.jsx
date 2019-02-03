@@ -8,6 +8,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Content from '../components/Content'
 import { media } from '../theme'
+import facebookLogo from '../static/images/facebook.png'
 
 const Pair = styled.div`
   display: flex;
@@ -38,8 +39,8 @@ const Text = styled.div`
 `
 
 const Link = styled.a`
-  font-size: 1.5rem;
-  color: #000;
+  opacity: 0.48;
+  color: black;
 `
 
 const Time = styled.h4`
@@ -64,9 +65,14 @@ const Wrapper = styled.div`
   margin-bottom: 2rem;
 `
 
+const FacebookImg = styled.img`
+  color: #7e7e7e;
+  height: 15px;
+`
+
 const FacebookLink = ({ url }) => (
-  <Link href={url}>
-    <FaFacebookF />
+  <Link target="_blank" href={url}>
+    <FacebookImg src={facebookLogo} /> Facebook tapahtuma
   </Link>
 )
 
@@ -98,17 +104,30 @@ const ScheduleContent = ({ data }) => (
           IT-alan ajankohtaisiin kysymyksiin pureutuva vuosijuhlaseminaari
           järjestetään yhteistyöyritystemme kanssa Tampereen yliopiston
           tiloissa. Seminaarista lisätietoa löytyy{' '}
-          <a href="/seminaari">täältä.</a>
+          <a href="/seminaari">täältä</a>.
         </p>
+        <FacebookLink url="https://www.facebook.com/events/618532605266285" />
       </Text>
       <Img fixed={data.seminaari.childImageSharp.fixed} />
     </Pair>
 
     <Pair>
       <Text>
-        <EventTitle>Myöhemmin ilmoitettava tapahtuma</EventTitle>
+        <EventTitle>Vuosijuhlasitsit</EventTitle>
         <Time>19. helmikuuta kello 18:00</Time>
-        <p>...</p>
+        <p>
+          Kyllähän opiskelijan pitää sitsata kunnolla vuosijuhlien kunniaksi!
+          Vuosijuhlasitsit järjestetään Hatanpään soutupaviljongilla
+          (Hatanpäänkatu 6) ja mukaan mahtuu noin sata henkilöä!
+          Ilmoittautuminen ja lisätietoa{' '}
+          <a
+            href="https://www.luuppi.fi/tapahtumat/tapahtuma?id=1752"
+            target="_blank"
+          >
+            Luupin nettisivuilta
+          </a>.
+        </p>
+        <FacebookLink url="https://www.facebook.com/events/392701934814750/" />
       </Text>
       <Img fixed={data.unknown.childImageSharp.fixed} />
     </Pair>
@@ -135,6 +154,7 @@ const ScheduleContent = ({ data }) => (
           vuosijuhlatunnelmaan. Lisätietoa tapahtumasta ja lipunmyynnistä tulee
           myöhemmin.
         </p>
+        <FacebookLink url="https://www.facebook.com/events/968047883405234/" />
       </Text>
       <Img fixed={data.kolmiot.childImageSharp.fixed} />
     </Pair>
@@ -160,6 +180,7 @@ const ScheduleContent = ({ data }) => (
           iltajuhla. Lisätietoa iltajuhlasta löytyy{' '}
           <a href="/paajuhla">täältä</a>.
         </p>
+        <FacebookLink url="https://www.facebook.com/events/1099146036894490/" />
       </Text>
       <Img fixed={data.paajuhla.childImageSharp.fixed} />
     </Pair>
@@ -173,6 +194,7 @@ const ScheduleContent = ({ data }) => (
           juhlien pääpäiväksi. Lisätietoa silliaamiaisesta löytyy{' '}
           <a href="/paajuhla">täältä</a>.
         </p>
+        <FacebookLink url="https://www.facebook.com/events/370511576866704/" />
       </Text>
       <Img fixed={data.sillis.childImageSharp.fixed} />
     </Pair>
@@ -195,7 +217,7 @@ const SchedulePage = () => (
           ...partyImage
         }
 
-        unknown: file(relativePath: { eq: "question.jpg" }) {
+        unknown: file(relativePath: { eq: "sitsit.png" }) {
           ...partyImage
         }
 
@@ -215,7 +237,7 @@ const SchedulePage = () => (
           ...partyImage
         }
 
-        sillis: file(relativePath: { eq: "sillis.jpg" }) {
+        sillis: file(relativePath: { eq: "sillis.png" }) {
           ...partyImage
         }
       }
