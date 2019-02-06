@@ -124,6 +124,10 @@ class Layout extends React.Component {
   render() {
     const { location, children } = this.props
 
+    if (location.pathname === '/privacy') {
+      return children
+    }
+
     return (
       <StaticQuery
         query={graphql`
