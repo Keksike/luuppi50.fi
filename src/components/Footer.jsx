@@ -11,6 +11,7 @@ import symbioLogo from '../static/images/symbio.png'
 import reaktorLogo from '../static/images/reaktor.png'
 import wapiceLogo from '../static/images/wapice.png'
 import digiaLogo from '../static/images/digia.png'
+import tekLogo from '../static/images/tek.png'
 
 const FooterWrapper = styled.div`
   display: flex;
@@ -60,7 +61,7 @@ const SponsorImages = styled.div`
   align-items: baseline;
   margin-top: 0.5em;
 
-  ${media.smallMobile`
+  ${media.mobile`
     flex-direction: column;
   `};
 `
@@ -90,6 +91,9 @@ const Footer = () => (
         </SponsorLink>
         <SponsorLink href="https://www.wapice.com/">
           <SponsorImage src={wapiceLogo} />
+        </SponsorLink>
+        <SponsorLink href="https://www.tek.fi/">
+          <SponsorImage src={tekLogo} />
         </SponsorLink>
         <SponsorLink href="https://www.digia.com/">
           <SponsorImage src={digiaLogo} />
