@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
+import gloLogo from '../static/images/glohair.png'
 
 import Content from '../components/Content'
 import { media } from '../theme'
@@ -45,6 +46,11 @@ const MultipleSponsors = styled.div`
   `};
 `
 
+const OfferContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 const MoreSponsor = styled(Sponsor)`
   padding-bottom: 2rem;
 `
@@ -59,6 +65,12 @@ const DigiaSponsor = styled(Image)`
   margin: 0 auto;
   margin-left: 4rem;
   margin-right: 4rem;
+`
+
+const GlohairLogo = styled.img`
+  height: 3rem;
+  width: auto;
+  margin-right: 1.5rem;
 `
 
 const partnersPage = () => (
@@ -161,7 +173,14 @@ const partnersPage = () => (
         </MultipleSponsors>
 
         <h4>Edut</h4>
-        <p>Tietoa eduista tulossa myöhemmin.</p>
+
+        <OfferContainer>
+          <GlohairLogo src={gloLogo} />
+          <p>
+            Glohair Satamakatu ja Glohair Tammela tarjoavat kampaukset hintaan
+            30 min 30€ ja 60 min 60€, kun mainitset loop-50 varatessasi aikaa.
+          </p>
+        </OfferContainer>
       </Content>
     )}
   />
