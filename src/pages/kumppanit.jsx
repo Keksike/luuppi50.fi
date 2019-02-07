@@ -53,14 +53,12 @@ const CybercomSponsor = styled(Sponsor)`
   padding-bottom: 0.6rem;
 `
 
-const WapiceSponsor = styled(Sponsor)`
-  margin-top: 0.8rem;
-`
-
 const DigiaSponsor = styled(Image)`
   height: 5rem;
   width: 5rem;
   margin: 0 auto;
+  margin-left: 4rem;
+  margin-right: 4rem;
 `
 
 const partnersPage = () => (
@@ -106,6 +104,10 @@ const partnersPage = () => (
         digia: file(relativePath: { eq: "digia.png" }) {
           ...companyImage
         }
+
+        tek: file(relativePath: { eq: "tek.png" }) {
+          ...companyImage
+        }
       }
     `}
     render={data => (
@@ -141,17 +143,22 @@ const partnersPage = () => (
         </MultipleSponsors>
 
         <MultipleSponsors>
-          <a href="https://www.etteplanmore.com/">
-            <MoreSponsor sizes={data.more.childImageSharp.sizes} />
+          <a href="http://tek.fi">
+            <Sponsor sizes={data.tek.childImageSharp.sizes} />
           </a>
           <a href="http://wapice.com">
-            <WapiceSponsor sizes={data.wapice.childImageSharp.sizes} />
+            <Sponsor sizes={data.wapice.childImageSharp.sizes} />
           </a>
         </MultipleSponsors>
 
-        <a href="http://digia.com">
-          <DigiaSponsor sizes={data.digia.childImageSharp.sizes} />
-        </a>
+        <MultipleSponsors>
+          <a href="https://www.etteplanmore.com/">
+            <MoreSponsor sizes={data.more.childImageSharp.sizes} />
+          </a>
+          <a href="http://digia.com">
+            <DigiaSponsor sizes={data.digia.childImageSharp.sizes} />
+          </a>
+        </MultipleSponsors>
 
         <h4>Edut</h4>
         <p>Tietoa eduista tulossa myöhemmin.</p>
