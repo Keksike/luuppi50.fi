@@ -99,7 +99,7 @@ const ScheduleContent = ({ data }) => (
     <Pair>
       <Text>
         <EventTitle>Vuosijuhlaseminaari</EventTitle>
-        <Time>18. helmikuuta kello 16:00</Time>
+        <Time>18. helmikuuta kello 12:00</Time>
         <p>
           IT-alan ajankohtaisiin kysymyksiin pureutuva vuosijuhlaseminaari
           järjestetään yhteistyöyritystemme kanssa Tampereen yliopiston
@@ -141,6 +141,7 @@ const ScheduleContent = ({ data }) => (
           paritanssien salat. Lisätietoa tapahtumasta ja ilmoittautumisesta
           tulee myöhemmin.
         </p>
+        <FacebookLink url="https://www.facebook.com/events/1992141447569579/" />
       </Text>
       <Img fixed={data.tanssi.childImageSharp.fixed} />
     </Pair>
