@@ -61,7 +61,7 @@ const SponsorImages = styled.div`
   align-items: baseline;
   margin-top: 0.5em;
 
-  ${media.smallMobile`
+  ${media.mobile`
     flex-direction: column;
   `};
 `
