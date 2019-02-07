@@ -141,6 +141,7 @@ const ScheduleContent = ({ data }) => (
           paritanssien salat. Lisätietoa tapahtumasta ja ilmoittautumisesta
           tulee myöhemmin.
         </p>
+        <FacebookLink url="https://www.facebook.com/events/1992141447569579/" />
       </Text>
       <Img fixed={data.tanssi.childImageSharp.fixed} />
     </Pair>
