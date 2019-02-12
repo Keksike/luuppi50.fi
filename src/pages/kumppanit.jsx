@@ -60,11 +60,10 @@ const CybercomSponsor = styled(Sponsor)`
 `
 
 const DigiaSponsor = styled(Image)`
-  height: 5rem;
-  width: 5rem;
-  margin: 0 auto;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  height: 4.5rem;
+  width: 10.2rem;
+  margin-right: 2rem;
+  margin-left: 2.5rem;
 `
 
 const GlohairLogo = styled.img`
@@ -164,11 +163,11 @@ const partnersPage = () => (
         </MultipleSponsors>
 
         <MultipleSponsors>
-          <a href="https://www.etteplanmore.com/">
-            <MoreSponsor sizes={data.more.childImageSharp.sizes} />
-          </a>
           <a href="http://digia.com">
             <DigiaSponsor sizes={data.digia.childImageSharp.sizes} />
+          </a>
+          <a href="https://www.etteplanmore.com/">
+            <MoreSponsor sizes={data.more.childImageSharp.sizes} />
           </a>
         </MultipleSponsors>
 
