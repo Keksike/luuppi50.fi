@@ -138,8 +138,13 @@ const ScheduleContent = ({ data }) => (
         <Time>20. helmikuuta</Time>
         <p>
           Tanssikurssi palauttaa vuosijuhlaosallistujien mieleen perinteisten
-          paritanssien salat. Lisätietoa tapahtumasta ja ilmoittautumisesta
-          tulee myöhemmin.
+          paritanssien salat. Ilmoittautuminen ja lisätietoa{' '}
+          <a
+            href="https://www.luuppi.fi/tapahtumat/tapahtuma?id=1753"
+            target="_blank"
+          >
+            Luupin nettisivuilta
+          </a>.
         </p>
         <FacebookLink url="https://www.facebook.com/events/1992141447569579/" />
       </Text>
@@ -152,8 +157,13 @@ const ScheduleContent = ({ data }) => (
         <Time>21. helmikuuta kello 21:00</Time>
         <p>
           Komioilla pääset laittamaan tanssijalan koreaksi ja virittäytymään jo
-          vuosijuhlatunnelmaan. Lisätietoa tapahtumasta ja lipunmyynnistä tulee
-          myöhemmin.
+          vuosijuhlatunnelmaan. Lisätietoa tapahtumasta ja lipunmyynnistä{' '}
+          <a
+            href="https://www.luuppi.fi/tapahtumat/tapahtuma?id=1626"
+            target="_blank"
+          >
+            Luupin nettisivuilta
+          </a>.
         </p>
         <FacebookLink url="https://www.facebook.com/events/968047883405234/" />
       </Text>
