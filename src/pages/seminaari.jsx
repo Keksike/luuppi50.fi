@@ -42,7 +42,8 @@ const Seminar = () => (
       15:55 - 16:25 Cybercom: Aurora A.I- julkissektorin hyppy kohti
       proaktiivista yhteiskuntaa tekoälyn avustamana. / Antti Hahto
     </p>
-    <p>16:30 Seminaari päättyy.</p>
+    <p>16:30 Digia: Tietoturvallinen ketterä ohjelmistokehitys / Henri Laine</p>
+    <p>17:00 Seminaari päättyy.</p>
 
     <h4>Aiheista lyhyesti</h4>
 
