@@ -27,39 +27,60 @@ const Seminar = () => (
 
     <p>12:00 Seminaari alkaa</p>
     <p>
-      12:05 - 13:05 Gofore: Netin varjopuoli. / Tapio Vuorinen ja Akseli
-      Piilola.
+      12:05 - 13:05 Gofore: Netin varjopuoli / Tapio Vuorinen ja Akseli Piilola
     </p>
     <p>
       13:10 - 14:10 Futurice: Kuinka tehdä elääkseen sitä mitä haluaa, kun
-      kaikki on mahdollista? / Antti Pitkänen.
+      kaikki on mahdollista? / Antti Pitkänen
     </p>
     <p>
-      14:15 - 15:15 Etteplan MORE: IT-alan ikuisuuskysymykset. / Elice Pynninen.
+      14:15 - 15:15 Etteplan MORE: Kokemuksien suunnittelu digitaalisen
+      murroksen reunalle / Elice Pynninen
     </p>
-    <p>15:20 - 15:50 Symbio: Tekoäly ja Vision AI. / Ville Kankainen.</p>
+    <p>15:20 - 15:50 Symbio: Tekoäly ja Vision AI. / Ville Kankainen</p>
     <p>
       15:55 - 16:25 Cybercom: Aurora A.I- julkissektorin hyppy kohti
-      proaktiivista yhteiskuntaa tekoälyn avustamana. / Antti Hahto
+      proaktiivista yhteiskuntaa tekoälyn avustamana / Antti Hahto
     </p>
     <p>16:30 Digia: Tietoturvallinen ketterä ohjelmistokehitys / Henri Laine</p>
     <p>17:00 Seminaari päättyy.</p>
 
+
     <h4>Aiheista lyhyesti</h4>
 
     <p>
-      <b>Gofore</b> <br />Goforen asiantuntijat näyttävät livenä, kuinka helppoa
-      tietojärjestelmiin murtautuminen parhaimmillaan on.
+      <b>Gofore</b>
+      <br /> <b>Netin varjopuoli / Tapio Vuorinen ja Akseli Piilola</b> <br />
+      Goforen asiantuntijat näyttävät livenä, kuinka helppoa tietojärjestelmiin
+      murtautuminen parhaimmillaan on.
     </p>
 
     <p>
-      <b>Futurice</b> <br />Miksi Patrik Laine on hyvä jääkiekkoilija? Miksi
-      Steve Wozniak on hyvä insinööri? Miten olla hyvä työssään ja onnellinen
-      työtä tekiessään?
+      <b>Futurice</b>
+      <br />{' '}
+      <b>
+        Kuinka tehdä elääkseen sitä mitä haluaa, kun kaikki on mahdollista? /
+        Antti Pitkänen
+      </b>{' '}
+      <br />
+      Miksi Patrik Laine on hyvä jääkiekkoilija? Miksi Steve Wozniak on hyvä
+      insinööri? Miten olla hyvä työssään ja onnellinen työtä tekiessään?
     </p>
 
     <p>
-      <b>Etteplan MORE</b> <br />IT-alan ikuisuuskysymykset.
+      <b>Etteplan MORE</b>
+      <br />{' '}
+      <b>
+        Kokemuksien suunnittelu digitaalisen murroksen reunalle / Elice Pynninen
+      </b>{' '}
+      <br />
+      Teknologiatikkaita digitalisaation pilvilinnoihin nakutellaan parhaillaan
+      kasaan joka ilmansuunnalla. Samaan aikaan Internet of Things täyttyy
+      kaikenlaisella sälällä, oppivat jääkaapit ja älyvalaisimet huutelevat
+      käyttäjää juttutuokioon, tutut kosketuspisteet muuttuvat jatkuvasti ja
+      datariippuvuus vaanii puskissa. Miten hassu, epälooginen ihminen, hitaasti
+      muuttuvilla ajattelumalleillaan mahtuu tähän yhtälöön? Miten ihmeessä
+      suunnitellaan kokemuksia digitaalisen murroksen reunalle?
     </p>
 
     <p>
@@ -67,14 +88,20 @@ const Seminar = () => (
     </p>
 
     <p>
-      <b>Cybercom</b> <br />Aurora A.I. on Suomen julkisen sektorin tähän asti
-      kunnianhimoisin tekoälyhanke, joka pyrkii vastaamaan uudenlaisiin
-      haasteisiin modernissa, digitalisoituvassa yhteiskunnassa. Sen sijaan että
-      meillä olisi yksittäinen tekoäly, joka tekniikaltaan vanhentuisi joka
-      tapauksessa muutamassa vuodessa, on tavoitteena muodostaa kokonainen
-      verkosto älykkäitä palveluita, joita sekä julkiset instanssit, yritykset -
-      ehkäpä jopa yksittäiset kansalaiset - voivat rinta rinnan yhdessä
-      rakentaa.
+      <b>Cybercom</b>
+      <br />{' '}
+      <b>
+        Aurora A.I- julkissektorin hyppy kohti proaktiivista yhteiskuntaa
+        tekoälyn avustamana / Antti Hahto
+      </b>{' '}
+      <br />
+      Aurora A.I. on Suomen julkisen sektorin tähän asti kunnianhimoisin
+      tekoälyhanke, joka pyrkii vastaamaan uudenlaisiin haasteisiin modernissa,
+      digitalisoituvassa yhteiskunnassa. Sen sijaan että meillä olisi
+      yksittäinen tekoäly, joka tekniikaltaan vanhentuisi joka tapauksessa
+      muutamassa vuodessa, on tavoitteena muodostaa kokonainen verkosto
+      älykkäitä palveluita, joita sekä julkiset instanssit, yritykset - ehkäpä
+      jopa yksittäiset kansalaiset - voivat rinta rinnan yhdessä rakentaa.
     </p>
   </Content>
 )

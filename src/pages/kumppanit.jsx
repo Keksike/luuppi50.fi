@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
+import gloLogo from '../static/images/glohair.png'
 
 import Content from '../components/Content'
 import { media } from '../theme'
@@ -45,6 +46,11 @@ const MultipleSponsors = styled.div`
   `};
 `
 
+const OfferContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 const MoreSponsor = styled(Sponsor)`
   padding-bottom: 2rem;
 `
@@ -53,14 +59,17 @@ const CybercomSponsor = styled(Sponsor)`
   padding-bottom: 0.6rem;
 `
 
-const WapiceSponsor = styled(Sponsor)`
-  margin-top: 0.8rem;
+const DigiaSponsor = styled(Image)`
+  height: 4.5rem;
+  width: 10.2rem;
+  margin-right: 2rem;
+  margin-left: 2.5rem;
 `
 
-const DigiaSponsor = styled(Image)`
-  height: 5rem;
-  width: 5rem;
-  margin: 0 auto;
+const GlohairLogo = styled.img`
+  height: 3rem;
+  width: auto;
+  margin-right: 1.5rem;
 `
 
 const partnersPage = () => (
@@ -106,6 +115,10 @@ const partnersPage = () => (
         digia: file(relativePath: { eq: "digia.png" }) {
           ...companyImage
         }
+
+        tek: file(relativePath: { eq: "tek.png" }) {
+          ...companyImage
+        }
       }
     `}
     render={data => (
@@ -141,20 +154,32 @@ const partnersPage = () => (
         </MultipleSponsors>
 
         <MultipleSponsors>
-          <a href="https://www.etteplanmore.com/">
-            <MoreSponsor sizes={data.more.childImageSharp.sizes} />
+          <a href="http://tek.fi">
+            <Sponsor sizes={data.tek.childImageSharp.sizes} />
           </a>
           <a href="http://wapice.com">
-            <WapiceSponsor sizes={data.wapice.childImageSharp.sizes} />
+            <Sponsor sizes={data.wapice.childImageSharp.sizes} />
           </a>
         </MultipleSponsors>
 
-        <a href="http://digia.com">
-          <DigiaSponsor sizes={data.digia.childImageSharp.sizes} />
-        </a>
+        <MultipleSponsors>
+          <a href="http://digia.com">
+            <DigiaSponsor sizes={data.digia.childImageSharp.sizes} />
+          </a>
+          <a href="https://www.etteplanmore.com/">
+            <MoreSponsor sizes={data.more.childImageSharp.sizes} />
+          </a>
+        </MultipleSponsors>
 
         <h4>Edut</h4>
-        <p>Tietoa eduista tulossa myöhemmin.</p>
+
+        <OfferContainer>
+          <GlohairLogo src={gloLogo} />
+          <p>
+            Glohair Satamakatu ja Glohair Tammela tarjoavat kampaukset hintaan
+            30 min 30€ ja 60 min 60€, kun mainitset loop-50 varatessasi aikaa.
+          </p>
+        </OfferContainer>
       </Content>
     )}
   />

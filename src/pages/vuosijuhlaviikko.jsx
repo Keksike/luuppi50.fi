@@ -99,7 +99,7 @@ const ScheduleContent = ({ data }) => (
     <Pair>
       <Text>
         <EventTitle>Vuosijuhlaseminaari</EventTitle>
-        <Time>18. helmikuuta kello 16:00</Time>
+        <Time>18. helmikuuta kello 12:00</Time>
         <p>
           IT-alan ajankohtaisiin kysymyksiin pureutuva vuosijuhlaseminaari
           järjestetään yhteistyöyritystemme kanssa Tampereen yliopiston
@@ -138,9 +138,15 @@ const ScheduleContent = ({ data }) => (
         <Time>20. helmikuuta</Time>
         <p>
           Tanssikurssi palauttaa vuosijuhlaosallistujien mieleen perinteisten
-          paritanssien salat. Lisätietoa tapahtumasta ja ilmoittautumisesta
-          tulee myöhemmin.
+          paritanssien salat. Ilmoittautuminen ja lisätietoa{' '}
+          <a
+            href="https://www.luuppi.fi/tapahtumat/tapahtuma?id=1753"
+            target="_blank"
+          >
+            Luupin nettisivuilta
+          </a>.
         </p>
+        <FacebookLink url="https://www.facebook.com/events/1992141447569579/" />
       </Text>
       <Img fixed={data.tanssi.childImageSharp.fixed} />
     </Pair>
@@ -151,8 +157,13 @@ const ScheduleContent = ({ data }) => (
         <Time>21. helmikuuta kello 21:00</Time>
         <p>
           Komioilla pääset laittamaan tanssijalan koreaksi ja virittäytymään jo
-          vuosijuhlatunnelmaan. Lisätietoa tapahtumasta ja lipunmyynnistä tulee
-          myöhemmin.
+          vuosijuhlatunnelmaan. Lisätietoa tapahtumasta ja lipunmyynnistä{' '}
+          <a
+            href="https://www.luuppi.fi/tapahtumat/tapahtuma?id=1626"
+            target="_blank"
+          >
+            Luupin nettisivuilta
+          </a>.
         </p>
         <FacebookLink url="https://www.facebook.com/events/968047883405234/" />
       </Text>
