@@ -37,29 +37,32 @@ const Seminar = () => (
       14:15 - 15:15 Etteplan MORE: Kokemuksien suunnittelu digitaalisen
       murroksen reunalle / Elice Pynninen
     </p>
-    <p>15:20 - 15:50 Symbio: Tekoäly ja Vision AI. / Ville Kankainen</p>
+    <p>15:20 - 15:50 Symbio: Tekoäly ja Vision AI / Ville Kankainen</p>
     <p>
       15:55 - 16:25 Cybercom: Aurora A.I- julkissektorin hyppy kohti
       proaktiivista yhteiskuntaa tekoälyn avustamana / Antti Hahto
     </p>
-    <p>16:30 Seminaari päättyy</p>
+    <p>16:30 Digia: Tietoturvallinen ketterä ohjelmistokehitys / Henri Laine</p>
+    <p>17:00 Seminaari päättyy.</p>
 
     <h4>Aiheista lyhyesti</h4>
 
     <p>
       <b>Gofore</b>
-      <br /> <b>Netin varjopuoli / Tapio Vuorinen ja Akseli Piilola</b> <br />
+      <br />
+      <b>Netin varjopuoli / Tapio Vuorinen ja Akseli Piilola</b>
+      <br />
       Goforen asiantuntijat näyttävät livenä, kuinka helppoa tietojärjestelmiin
       murtautuminen parhaimmillaan on.
     </p>
 
     <p>
       <b>Futurice</b>
-      <br />{' '}
+      <br />
       <b>
         Kuinka tehdä elääkseen sitä mitä haluaa, kun kaikki on mahdollista? /
         Antti Pitkänen
-      </b>{' '}
+      </b>
       <br />
       Miksi Patrik Laine on hyvä jääkiekkoilija? Miksi Steve Wozniak on hyvä
       insinööri? Miten olla hyvä työssään ja onnellinen työtä tekiessään?
@@ -67,10 +70,10 @@ const Seminar = () => (
 
     <p>
       <b>Etteplan MORE</b>
-      <br />{' '}
+      <br />
       <b>
         Kokemuksien suunnittelu digitaalisen murroksen reunalle / Elice Pynninen
-      </b>{' '}
+      </b>
       <br />
       Teknologiatikkaita digitalisaation pilvilinnoihin nakutellaan parhaillaan
       kasaan joka ilmansuunnalla. Samaan aikaan Internet of Things täyttyy
@@ -82,16 +85,20 @@ const Seminar = () => (
     </p>
 
     <p>
-      <b>Symbio</b> <br />Tekoäly ja Vision AI.
+      <b>Symbio</b>
+      <br />
+      <b>Tekoäly ja Vision AI / Ville Kankainen</b>
+      <br />
+      Tekoäly osana arkkitehtuuria, case Vision AI
     </p>
 
     <p>
       <b>Cybercom</b>
-      <br />{' '}
+      <br />
       <b>
         Aurora A.I- julkissektorin hyppy kohti proaktiivista yhteiskuntaa
         tekoälyn avustamana / Antti Hahto
-      </b>{' '}
+      </b>
       <br />
       Aurora A.I. on Suomen julkisen sektorin tähän asti kunnianhimoisin
       tekoälyhanke, joka pyrkii vastaamaan uudenlaisiin haasteisiin modernissa,
@@ -100,6 +107,16 @@ const Seminar = () => (
       muutamassa vuodessa, on tavoitteena muodostaa kokonainen verkosto
       älykkäitä palveluita, joita sekä julkiset instanssit, yritykset - ehkäpä
       jopa yksittäiset kansalaiset - voivat rinta rinnan yhdessä rakentaa.
+    </p>
+
+    <p>
+      <b>Digia</b>
+      <br />
+      <b>Tietoturvallinen ketterä ohjelmistokehitys / Henri Laine</b>
+      <br />
+      Tietoturva ja ketterä tekeminen ovat asioita, jotka eivät aina aivan
+      helposti asetu yhteen. Tätä problematiikkaa ja siihen liittyviä ratkaisuja
+      haluamme nyt käsitellä tässä arvovaltaisessa seminaarissa.
     </p>
   </Content>
 )
