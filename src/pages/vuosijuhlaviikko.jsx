@@ -154,7 +154,7 @@ const ScheduleContent = ({ data }) => (
     <Pair>
       <Text>
         <EventTitle>Kolmiot</EventTitle>
-        <Time>21. helmikuuta kello 21:00</Time>
+        <Time>21. helmikuuta kello 22:00</Time>
         <p>
           Komioilla pääset laittamaan tanssijalan koreaksi ja virittäytymään jo
           vuosijuhlatunnelmaan. Lisätietoa tapahtumasta ja lipunmyynnistä{' '}
@@ -203,7 +203,8 @@ const ScheduleContent = ({ data }) => (
         <p>
           Vuosijuhlaviikon päättää rento silliaamiainen, jota monet nimittävät
           juhlien pääpäiväksi. Lisätietoa silliaamiaisesta löytyy{' '}
-          <a href="/paajuhla">täältä</a>.
+          <a href="/paajuhla">täältä</a>. Huomaathan, että sillisbussit lähtevät
+          Tampere Talolta tasan kello 12!
         </p>
         <FacebookLink url="https://www.facebook.com/events/370511576866704/" />
       </Text>
