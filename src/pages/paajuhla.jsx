@@ -135,7 +135,9 @@ const MainCeremonyPage = () => (
     <h4>Aikataulu</h4>
 
     <Centered>
-      <p>12:00 Silliskuljetus</p>
+      <p>
+        <b>12:00</b> Silliskuljetus lähtee Tampere Talolta
+      </p>
       <p>13:00 Saapuminen</p>
       <p>14:00 Viinavartti™</p>
       <p>14:30 Kilpailu</p>
